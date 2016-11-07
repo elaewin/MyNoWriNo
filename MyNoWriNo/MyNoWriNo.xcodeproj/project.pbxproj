@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010B7FCA1DD0E6C50097A46F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */; };
 		5547B1471DCEE7570010CE9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B1461DCEE7570010CE9A /* AppDelegate.swift */; };
 		5547B14C1DCEE7570010CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5547B14A1DCEE7570010CE9A /* Main.storyboard */; };
 		5547B14E1DCEE7570010CE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5547B14D1DCEE7570010CE9A /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		5547B1431DCEE7570010CE9A /* MyNoWriNo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoWriNo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5547B1461DCEE7570010CE9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5547B14B1DCEE7570010CE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				5547B15C1DCEE8A30010CE9A /* HomeViewController.swift */,
+				010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -131,7 +134,7 @@
 				TargetAttributes = {
 					5547B1421DCEE7570010CE9A = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 4YFWUVNT8L;
+						DevelopmentTeam = U5DE7QAC5B;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				010B7FCA1DD0E6C50097A46F /* CalendarViewController.swift in Sources */,
 				5547B1471DCEE7570010CE9A /* AppDelegate.swift in Sources */,
 				5547B15D1DCEE8A30010CE9A /* HomeViewController.swift in Sources */,
 				5547B15F1DCEE8EE0010CE9A /* Project.swift in Sources */,
@@ -297,7 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4YFWUVNT8L;
+				DEVELOPMENT_TEAM = U5DE7QAC5B;
 				INFOPLIST_FILE = MyNoWriNo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com-elaewin.github.MyNoWriNo";
@@ -310,7 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4YFWUVNT8L;
+				DEVELOPMENT_TEAM = U5DE7QAC5B;
 				INFOPLIST_FILE = MyNoWriNo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com-elaewin.github.MyNoWriNo";
@@ -338,6 +342,7 @@
 				5547B1571DCEE7570010CE9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
