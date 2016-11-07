@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,9 +19,87 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="kmh-Eg-EgO" kind="presentation" id="akj-kN-lun"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--New Project View Controller-->
+        <scene sceneID="19p-8h-bxm">
+            <objects>
+                <viewController id="kmh-Eg-EgO" customClass="NewProjectViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vGQ-Zy-klz"/>
+                        <viewControllerLayoutGuide type="bottom" id="WkL-tt-W2y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a7p-zF-c8x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Title..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8N3-Yh-HfB">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjQ-vb-bdF">
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QeR-Pg-9h4">
+                                <date key="date" timeIntervalSinceReferenceDate="500241883.04997498">
+                                    <!--2016-11-07 20:04:43 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Genre..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6iE-9j-jvj">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="sBC-0s-hrv"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YI-dy-rka">
+                                <frame key="frameInset" minX="50" minY="580" width="275" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="CREATE"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Word Count..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Wa5-UB-LM3">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wa5-UB-LM3" secondAttribute="trailing" constant="130" id="2Pm-eR-zer"/>
+                            <constraint firstItem="Wa5-UB-LM3" firstAttribute="leading" secondItem="6iE-9j-jvj" secondAttribute="trailing" constant="-154" id="5wE-PO-fa4"/>
+                            <constraint firstItem="6iE-9j-jvj" firstAttribute="top" secondItem="QeR-Pg-9h4" secondAttribute="bottom" constant="76" id="9iG-Ai-K8E"/>
+                            <constraint firstAttribute="trailing" secondItem="8N3-Yh-HfB" secondAttribute="trailing" constant="8" id="Cgh-dk-GZW"/>
+                            <constraint firstItem="8N3-Yh-HfB" firstAttribute="leading" secondItem="a7p-zF-c8x" secondAttribute="leading" constant="8" id="HkC-LO-bYh"/>
+                            <constraint firstItem="jjQ-vb-bdF" firstAttribute="top" secondItem="8N3-Yh-HfB" secondAttribute="bottom" constant="8" id="IvF-zc-daY"/>
+                            <constraint firstItem="6iE-9j-jvj" firstAttribute="leading" secondItem="a7p-zF-c8x" secondAttribute="leading" constant="90" id="PAM-Uo-SWa"/>
+                            <constraint firstAttribute="trailing" secondItem="QeR-Pg-9h4" secondAttribute="trailing" constant="50" id="PEu-IS-5kS"/>
+                            <constraint firstAttribute="trailing" secondItem="8N3-Yh-HfB" secondAttribute="trailing" constant="8" id="PKc-iQ-ZNK"/>
+                            <constraint firstItem="QeR-Pg-9h4" firstAttribute="leading" secondItem="a7p-zF-c8x" secondAttribute="leading" constant="50" id="R1d-H1-CKh"/>
+                            <constraint firstItem="jjQ-vb-bdF" firstAttribute="top" secondItem="8N3-Yh-HfB" secondAttribute="bottom" constant="8" id="RYO-zm-TeU"/>
+                            <constraint firstItem="8N3-Yh-HfB" firstAttribute="top" secondItem="vGQ-Zy-klz" secondAttribute="bottom" constant="83" id="eVJ-Ga-Qa0"/>
+                            <constraint firstItem="QeR-Pg-9h4" firstAttribute="top" secondItem="jjQ-vb-bdF" secondAttribute="bottom" constant="20" id="jlj-VX-c8w"/>
+                            <constraint firstItem="6iE-9j-jvj" firstAttribute="baseline" secondItem="Wa5-UB-LM3" secondAttribute="baseline" constant="51" id="mfw-hY-9FO"/>
+                            <constraint firstItem="jjQ-vb-bdF" firstAttribute="leading" secondItem="a7p-zF-c8x" secondAttribute="leading" constant="16" id="o4S-TX-hml"/>
+                            <constraint firstItem="8N3-Yh-HfB" firstAttribute="leading" secondItem="a7p-zF-c8x" secondAttribute="leading" constant="8" id="uvV-nw-7gb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newProjectView" destination="a7p-zF-c8x" id="6iG-WV-ehU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jhX-Rh-5eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="760.56971514242889"/>
         </scene>
     </scenes>
 </document>
