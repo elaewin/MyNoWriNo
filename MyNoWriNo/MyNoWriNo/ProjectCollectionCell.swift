@@ -18,11 +18,15 @@ class ProjectCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var genreLabel: UILabel!
     
-    var project = Project! {
+    var project: Project! {
         didSet {
             self.projectNameLabel.text = project.name
-            self.deadlineLabel.text = project.deadline
-            self.percentCompleteLabel.text = project.percentComplete
+            
+            let dateFormatter = DateFormatter()
+            let dateAsString = dateFormatter.string(from: project.deadline)
+            
+            self.deadlineLabel.text = dateAsString
+            self.percentCompleteLabel.text = String(project.percentComplete)
             if let genre = project.genre {
                 self.genreLabel.text = genre
             }
