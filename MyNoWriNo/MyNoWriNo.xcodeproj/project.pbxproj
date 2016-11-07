@@ -15,6 +15,7 @@
 		5547B15D1DCEE8A30010CE9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B15C1DCEE8A30010CE9A /* HomeViewController.swift */; };
 		5547B15F1DCEE8EE0010CE9A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B15E1DCEE8EE0010CE9A /* Project.swift */; };
 		5547B1611DD0FDF80010CE9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B1601DD0FDF80010CE9A /* Extensions.swift */; };
+		5547B1631DD117A60010CE9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B1621DD117A60010CE9A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5547B15C1DCEE8A30010CE9A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5547B15E1DCEE8EE0010CE9A /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		5547B1601DD0FDF80010CE9A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5547B1621DD117A60010CE9A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				5547B15E1DCEE8EE0010CE9A /* Project.swift */,
+				5547B1621DD117A60010CE9A /* User.swift */,
 				5547B14A1DCEE7570010CE9A /* Main.storyboard */,
 			);
 			name = Model;
@@ -180,6 +183,7 @@
 			files = (
 				5547B1611DD0FDF80010CE9A /* Extensions.swift in Sources */,
 				010B7FCA1DD0E6C50097A46F /* CalendarViewController.swift in Sources */,
+				5547B1631DD117A60010CE9A /* User.swift in Sources */,
 				5547B1471DCEE7570010CE9A /* AppDelegate.swift in Sources */,
 				5547B15D1DCEE8A30010CE9A /* HomeViewController.swift in Sources */,
 				5547B15F1DCEE8EE0010CE9A /* Project.swift in Sources */,
