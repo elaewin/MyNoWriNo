@@ -12,11 +12,15 @@ class HomeViewController: UIViewController {
 
     // put outlets here
     
+    @IBOutlet weak var collectionView: UICollectionView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let nib = UINib(nibName: "projectCell", bundle: nil)
+        self.collectionView.register(nib, forCellWithReuseIdentifier: ProjectCollectionCell.identifier)
+        
         // Do any additional setup after loading the view.
     }
 

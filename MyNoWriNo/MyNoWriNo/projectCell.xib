@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="t0b-V9-LSG">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="t0b-V9-LSG" customClass="ProjectCollectionCell" customModule="MyNoWriNo" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -59,6 +59,12 @@
                 <constraint firstItem="phy-62-zBJ" firstAttribute="leading" secondItem="t0b-V9-LSG" secondAttribute="leading" constant="8" id="zbW-fX-KXU"/>
             </constraints>
             <size key="customSize" width="160" height="160"/>
+            <connections>
+                <outlet property="deadlineLabel" destination="phy-62-zBJ" id="h4l-dU-Km5"/>
+                <outlet property="genreLabel" destination="AJb-q3-Rfi" id="Q1f-9Q-XAM"/>
+                <outlet property="percentCompleteLabel" destination="lHV-Mk-nbP" id="MXx-Sm-Fhv"/>
+                <outlet property="projectNameLabel" destination="1SC-65-9pU" id="dTO-kR-Deq"/>
+            </connections>
             <point key="canvasLocation" x="23" y="51"/>
         </collectionViewCell>
     </objects>
