@@ -34,6 +34,13 @@ class HomeViewController: UIViewController {
         
         
     }
+    
+    
+    @IBAction func newProjectButtonPressed(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
+    }
+    
+    
 
 }
 
