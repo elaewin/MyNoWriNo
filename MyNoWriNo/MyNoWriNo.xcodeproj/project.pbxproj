@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		010B7FCA1DD0E6C50097A46F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */; };
+		010B7FCC1DD110970097A46F /* NewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B7FCB1DD110970097A46F /* NewProjectViewController.swift */; };
 		5547B1471DCEE7570010CE9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B1461DCEE7570010CE9A /* AppDelegate.swift */; };
 		5547B14C1DCEE7570010CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5547B14A1DCEE7570010CE9A /* Main.storyboard */; };
 		5547B14E1DCEE7570010CE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5547B14D1DCEE7570010CE9A /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		010B7FCB1DD110970097A46F /* NewProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProjectViewController.swift; sourceTree = "<group>"; };
 		5547B1431DCEE7570010CE9A /* MyNoWriNo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoWriNo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5547B1461DCEE7570010CE9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5547B14B1DCEE7570010CE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		5547B15B1DCEE8430010CE9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				010B7FCB1DD110970097A46F /* NewProjectViewController.swift */,
 				5547B15C1DCEE8A30010CE9A /* HomeViewController.swift */,
 				010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */,
 			);
@@ -187,6 +190,7 @@
 				5547B1471DCEE7570010CE9A /* AppDelegate.swift in Sources */,
 				5547B15D1DCEE8A30010CE9A /* HomeViewController.swift in Sources */,
 				5547B15F1DCEE8EE0010CE9A /* Project.swift in Sources */,
+				010B7FCC1DD110970097A46F /* NewProjectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
