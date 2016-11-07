@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    
+    // put outlets here
     
     
     
@@ -20,6 +20,14 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+    }
 
+}
+
+extension HomeViewController: UINavigationControllerDelegate {
+    
 }
