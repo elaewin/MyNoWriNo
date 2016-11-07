@@ -146,7 +146,7 @@
 				TargetAttributes = {
 					5547B1421DCEE7570010CE9A = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = U5DE7QAC5B;
+						DevelopmentTeam = 4YFWUVNT8L;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -317,7 +317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U5DE7QAC5B;
+				DEVELOPMENT_TEAM = 4YFWUVNT8L;
 				INFOPLIST_FILE = MyNoWriNo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com-elaewin.github.MyNoWriNo";
@@ -330,7 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U5DE7QAC5B;
+				DEVELOPMENT_TEAM = 4YFWUVNT8L;
 				INFOPLIST_FILE = MyNoWriNo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com-elaewin.github.MyNoWriNo";
