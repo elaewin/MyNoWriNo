@@ -21,7 +21,15 @@ class NewProjectViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
+    }
+    
+    
+    
+    @IBAction func createButtonPressed(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
     }
 
 
