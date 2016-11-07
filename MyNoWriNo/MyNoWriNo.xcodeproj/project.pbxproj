@@ -21,6 +21,7 @@
 		5547B1691DD120730010CE9A /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B1681DD120730010CE9A /* AlertsViewController.swift */; };
 		5547B16B1DD1208C0010CE9A /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B16A1DD1208C0010CE9A /* StatsViewController.swift */; };
 		5547B16D1DD121600010CE9A /* ProjectCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B16C1DD121600010CE9A /* ProjectCollectionCell.swift */; };
+		5547B16F1DD125B20010CE9A /* HomeCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B16E1DD125B20010CE9A /* HomeCollectionViewFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5547B1681DD120730010CE9A /* AlertsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		5547B16A1DD1208C0010CE9A /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		5547B16C1DD121600010CE9A /* ProjectCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCollectionCell.swift; sourceTree = "<group>"; };
+		5547B16E1DD125B20010CE9A /* HomeCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		5547B1591DCEE81C0010CE9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5547B16E1DD125B20010CE9A /* HomeCollectionViewFlowLayout.swift */,
 				5547B16C1DD121600010CE9A /* ProjectCollectionCell.swift */,
 			);
 			name = View;
@@ -201,6 +204,7 @@
 				010B7FCA1DD0E6C50097A46F /* CalendarViewController.swift in Sources */,
 				5547B1631DD117A60010CE9A /* User.swift in Sources */,
 				5547B1471DCEE7570010CE9A /* AppDelegate.swift in Sources */,
+				5547B16F1DD125B20010CE9A /* HomeCollectionViewFlowLayout.swift in Sources */,
 				5547B15D1DCEE8A30010CE9A /* HomeViewController.swift in Sources */,
 				5547B15F1DCEE8EE0010CE9A /* Project.swift in Sources */,
 				010B7FCC1DD110970097A46F /* NewProjectViewController.swift in Sources */,
