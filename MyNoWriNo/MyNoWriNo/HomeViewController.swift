@@ -49,23 +49,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    // MARK: NSCoder
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        allProjects = aDecoder.decodeObject(forKey: "projects") as! [Project]
-    }
-    
-    override func encode(with aCoder: NSCoder) {
-        super.encode(with: aCoder)
-        aCoder.encode(allProjects, forKey: "projects")
-    }
-
-    func saveProjectData(_ array: [Project]) {
-        let savedData = NSKeyedArchiver.archivedData(withRootObject: array)
-        let defaults = UserDefaults.standard
-        defaults.set(savedData, forKey: "projects")
-    }
-    
     //MARK: Actions
     @IBAction func newProjectButtonPressed(_ sender: AnyObject) {
         self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)

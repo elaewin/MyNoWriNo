@@ -17,23 +17,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let defaults = UserDefaults.standard
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         if let savedProjects = self.defaults.object(forKey: "projects") as? Data {
             self.homeController?.allProjects = NSKeyedUnarchiver.unarchiveObject(with: savedProjects) as! [Project]
         }
-        
         return true
+    }
+    
+    
+    func saveProjectData(_ array: [Project]) {
+        let savedData = NSKeyedArchiver.archivedData(withRootObject: array)
+        self.defaults.set(savedData, forKey: "projects")
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
         if let projects = homeController?.allProjects {
-            homeController?.saveProjectData(projects)
+            saveProjectData(projects)
+        } else {
+            print("Error saving data to file.")
         }
     }
-
 }
 
