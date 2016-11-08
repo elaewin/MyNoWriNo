@@ -49,6 +49,7 @@ class NewProjectViewController: UIViewController {
         print("New Date Selected is: \(newDate)")
     }
     
+    
     @IBAction func createButtonPressed(_ sender: Any) {
         let eventStore = EKEventStore()
         
@@ -62,12 +63,17 @@ class NewProjectViewController: UIViewController {
                 newProject?.genre = genre
             }
             delegate.newProjectCreated(project: newProject!)
+
         }
         
         dismiss(animated: true, completion: nil)
         
     }
 
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 }
 
