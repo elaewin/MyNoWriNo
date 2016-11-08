@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		010B7FCA1DD0E6C50097A46F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */; };
 		010B7FCC1DD110970097A46F /* NewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B7FCB1DD110970097A46F /* NewProjectViewController.swift */; };
+		010B7FCE1DD1581E0097A46F /* NewProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010B7FCD1DD1581E0097A46F /* NewProjectCell.xib */; };
+		010B7FD01DD15EC90097A46F /* CreateNewProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B7FCF1DD15EC90097A46F /* CreateNewProjectCell.swift */; };
 		5547B1471DCEE7570010CE9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B1461DCEE7570010CE9A /* AppDelegate.swift */; };
 		5547B14C1DCEE7570010CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5547B14A1DCEE7570010CE9A /* Main.storyboard */; };
 		5547B14E1DCEE7570010CE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5547B14D1DCEE7570010CE9A /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		010B7FCB1DD110970097A46F /* NewProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProjectViewController.swift; sourceTree = "<group>"; };
+		010B7FCD1DD1581E0097A46F /* NewProjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewProjectCell.xib; sourceTree = "<group>"; };
+		010B7FCF1DD15EC90097A46F /* CreateNewProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewProjectCell.swift; sourceTree = "<group>"; };
 		5547B1431DCEE7570010CE9A /* MyNoWriNo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoWriNo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5547B1461DCEE7570010CE9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5547B14B1DCEE7570010CE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		5547B1591DCEE81C0010CE9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				010B7FCF1DD15EC90097A46F /* CreateNewProjectCell.swift */,
+				010B7FCD1DD1581E0097A46F /* NewProjectCell.xib */,
 				5547B16E1DD125B20010CE9A /* HomeCollectionViewFlowLayout.swift */,
 				5547B16C1DD121600010CE9A /* ProjectCollectionCell.swift */,
 			);
@@ -187,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5547B1511DCEE7570010CE9A /* LaunchScreen.storyboard in Resources */,
+				010B7FCE1DD1581E0097A46F /* NewProjectCell.xib in Resources */,
 				5547B14E1DCEE7570010CE9A /* Assets.xcassets in Resources */,
 				5547B14C1DCEE7570010CE9A /* Main.storyboard in Resources */,
 				5547B1671DD11AFB0010CE9A /* projectCell.xib in Resources */,
@@ -210,6 +217,7 @@
 				010B7FCC1DD110970097A46F /* NewProjectViewController.swift in Sources */,
 				5547B16B1DD1208C0010CE9A /* StatsViewController.swift in Sources */,
 				5547B1691DD120730010CE9A /* AlertsViewController.swift in Sources */,
+				010B7FD01DD15EC90097A46F /* CreateNewProjectCell.swift in Sources */,
 				5547B16D1DD121600010CE9A /* ProjectCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

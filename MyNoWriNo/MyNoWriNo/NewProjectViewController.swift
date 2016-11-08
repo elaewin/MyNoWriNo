@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol NewProjectControllerDelegate: class {
+    func newProjectCreated(project: Project)
+}
+
 class NewProjectViewController: UIViewController {
+    
+    weak var delegate: NewProjectControllerDelegate? 
     
     var newProject: Project?
     
@@ -43,15 +49,21 @@ class NewProjectViewController: UIViewController {
     }
     
     @IBAction func createButtonPressed(_ sender: Any) {
+        guard let delegate = self.delegate else{ return }
         
-        if projectTitleTextField.text != "" && wordCountTextField.text != "" {
+        if projectTitleTextField.text != "" && wordCountTextField.text != "" && newDate != nil {
             print("Create button pressed")
-            
+            let wordCount = Int(wordCountTextField.text!)
+            self.newProject = Project(name: projectTitleTextField.text!, targetWordCount: wordCount!, deadline: self.newDate!)
+            if let genre = genreTextField.text {
+                newProject?.genre = genre
+            }
+            delegate.newProjectCreated(project: newProject!)
         }
         
         dismiss(animated: true, completion: nil)
+        
     }
-
 
 
 }

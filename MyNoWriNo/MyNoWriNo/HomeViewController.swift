@@ -10,7 +10,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    var allProjects = [Project]()
+    var allProjects = [Project]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
+    let kDisplayColumns = 2
     
     // put outlets here
     
@@ -26,7 +32,10 @@ class HomeViewController: UIViewController {
         let nib = UINib(nibName: "projectCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: ProjectCollectionCell.identifier)
         
-        // Do any additional setup after loading the view.
+        let newProjectNib = UINib(nibName: "newProjectCell", bundle: nil)
+        self.collectionView.register(newProjectNib, forCellWithReuseIdentifier: CreateNewProjectCell.identifier)
+        
+        self.collectionView.collectionViewLayout = HomeCollectionViewFlowLayout(columns: kDisplayColumns)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -41,26 +50,34 @@ class HomeViewController: UIViewController {
     }
     
     
+    
 
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
  
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "projectCell", for: indexPath) as! ProjectCollectionCell
+        if indexPath.row == allProjects.count {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newProjectCell", for: indexPath) as! CreateNewProjectCell
+                return cell
+        } else {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "projectCell", for: indexPath) as! ProjectCollectionCell
+            
+            var currentProject: Project
+            
+            currentProject = allProjects[indexPath.row]
+            
+            cell.project = currentProject
+            
+            return cell
+        }
         
-        var currentProject: Project
-        
-        currentProject = allProjects[indexPath.row]
-
-        cell.project = currentProject
-        
-        return cell
     }
     
  
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return allProjects.count
+        return allProjects.count + 1
     }
     
     
@@ -69,3 +86,22 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         
     }
 }
+
+
+extension HomeViewController: NewProjectControllerDelegate {
+    
+    func newProjectCreated(project: Project) {
+        allProjects.append(project)
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
