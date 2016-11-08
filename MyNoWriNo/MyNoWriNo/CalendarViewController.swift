@@ -25,14 +25,7 @@ class CalendarViewController: UIViewController {
         
     }
 
-    
-    
-    func requestAccessToCalendar() {
-        eventStore.requestAccess(to: EKEntityType.event, completion: {
-            (accessGranted: Bool, error: Error?) in
-            
-        }
-            
+                
             
             
 
