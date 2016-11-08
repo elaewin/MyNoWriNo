@@ -42,10 +42,20 @@ extension String {
     
 }
 
+
 extension UIResponder {
     
     static var identifier: String {
         return String(describing: self)
     }
 }
+
+
+extension URL {
+    func getDocumentsDirectory() -> URL {
+        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { fatalError("Error getting documents directories.") }
+        return documentsDirectory
+    }
+}
+
 

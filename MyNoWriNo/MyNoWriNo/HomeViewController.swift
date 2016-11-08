@@ -18,10 +18,7 @@ class HomeViewController: UIViewController {
     
     let kDisplayColumns = 2
     
-    // put outlets here
-    
     @IBOutlet weak var collectionView: UICollectionView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,14 +49,12 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
+    //MARK: Actions
     @IBAction func newProjectButtonPressed(_ sender: AnyObject) {
         self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
     }
-    
-    
-    
 
+    
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
