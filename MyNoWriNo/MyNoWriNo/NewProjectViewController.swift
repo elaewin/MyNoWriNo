@@ -59,6 +59,7 @@ class NewProjectViewController: UIViewController {
                 newProject?.genre = genre
             }
             delegate.newProjectCreated(project: newProject!)
+
         }
         
         dismiss(animated: true, completion: nil)

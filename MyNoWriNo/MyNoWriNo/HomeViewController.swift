@@ -99,6 +99,9 @@ extension HomeViewController: NewProjectControllerDelegate {
     
     func newProjectCreated(project: Project) {
         allProjects.append(project)
+        for project in allProjects {
+            print("Project: \(project.name)")
+        }
     }
     
 }
