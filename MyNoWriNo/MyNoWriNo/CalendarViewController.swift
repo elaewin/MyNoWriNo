@@ -9,19 +9,41 @@
 import UIKit
 import EventKit
 
+typealias CalendarAuthCompletion = (Bool) -> ()
+
+
+
 class CalendarViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    
+    
+    let eventStore = EKEventStore()
+    
+    
+    func checkCalendarAuthStatus() {
         
-        
-        
-        
-        
-        
-        
+        let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
         
     }
 
+                
+            
+            
+
+    
+    }
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        checkCalendarAuthStatus()
+
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+    }
+    
 }
