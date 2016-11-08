@@ -16,11 +16,12 @@ class HomeViewController: UIViewController {
         }
     }
     
-    let kNumberOfDisplayColumns = 2
+    let kDisplayColumns = 2
     
     // put outlets here
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +32,10 @@ class HomeViewController: UIViewController {
         let nib = UINib(nibName: "projectCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: ProjectCollectionCell.identifier)
         
-        let createNewProjectNib = UINib(nibName: "CreateNewProjectCell", bundle: nil)
-        self.collectionView.register(createNewProjectNib, forCellWithReuseIdentifier: CreateNewProjectCell.identifier)
+        let newProjectNib = UINib(nibName: "newProjectCell", bundle: nil)
+        self.collectionView.register(newProjectNib, forCellWithReuseIdentifier: CreateNewProjectCell.identifier)
         
-        self.collectionView.collectionViewLayout = HomeCollectionViewFlowLayout(columns: kNumberOfDisplayColumns)
+        self.collectionView.collectionViewLayout = HomeCollectionViewFlowLayout(columns: kDisplayColumns)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -57,10 +58,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
  
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == allProjects.count {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CreateNewProjectCell", for: indexPath) as! CreateNewProjectCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newProjectCell", for: indexPath) as! CreateNewProjectCell
                 return cell
         } else {
-        
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "projectCell", for: indexPath) as! ProjectCollectionCell
             
             var currentProject: Project
@@ -71,7 +72,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             
             return cell
         }
-    
+        
     }
     
  
