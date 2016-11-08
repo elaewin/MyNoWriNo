@@ -50,8 +50,30 @@ class NewProjectViewController: UIViewController {
     }
     
     
-    @IBAction func createButtonPressed(_ sender: Any) {
+    func writeToCalendar(projectTitle: String, deadline: Date) {
+        
         let eventStore = EKEventStore()
+        
+        var calendar: EKCalendar!
+        
+        if let calendarForEvent = eventStore.calendar(withIdentifier: calendar.calendarIdentifier) {
+            
+            let newEvent = EKEvent(eventStore: eventStore)
+            
+            newEvent.calendar = calendarForEvent
+            newEvent.title = projectTitle
+            newEvent.startDate = deadline
+            newEvent.endDate = deadline
+            
+        }
+        
+        //error handling
+        
+    }
+    
+    
+    @IBAction func createButtonPressed(_ sender: Any) {
+       
         
         guard let delegate = self.delegate else { return }
         
@@ -59,6 +81,9 @@ class NewProjectViewController: UIViewController {
             print("Create button pressed")
             let wordCount = Int(wordCountTextField.text!)
             self.newProject = Project(name: projectTitleTextField.text!, targetWordCount: wordCount!, deadline: self.newDate!)
+            
+            writeToCalendar(projectTitle: projectTitleTextField.text!, deadline: deadlineDatePicker.date)
+            
             if let genre = genreTextField.text {
                 newProject?.genre = genre
             }

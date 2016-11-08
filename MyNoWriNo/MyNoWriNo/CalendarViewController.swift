@@ -9,30 +9,41 @@
 import UIKit
 import EventKit
 
-class CalendarViewController: UIViewController {
+typealias CalendarAuthCompletion = (Bool) -> ()
 
+
+
+class CalendarViewController: UIViewController {
+    
     
     let eventStore = EKEventStore()
+    
+    
+    func checkCalendarAuthStatus() {
+        
+        let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
+        
+    }
+
+    
     
     func requestAccessToCalendar() {
         eventStore.requestAccess(to: EKEntityType.event, completion: {
             (accessGranted: Bool, error: Error?) in
             
-            if accessGranted == true {
-                
-                // we want to be able to write to the calendar 
-                
-            } else {
-                // we want to be able to simply save project details
-            }
-        
-        })
+        }
+            
+            
+            
+
+    
     }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkCalendarAuthStatus()
 
     }
     
@@ -42,17 +53,4 @@ class CalendarViewController: UIViewController {
         
     }
     
-    
-    func checkCalendarAuthStatus() {
-        
-        let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
-        
-        requestAccessToCalendar()
-        
-    }
-    
-    
-    
-    
-
 }
