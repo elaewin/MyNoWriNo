@@ -29,11 +29,12 @@ class HomeViewController: UIViewController {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
+        
+        let newProjectNib = UINib(nibName: "NewProjectCell", bundle: nil)
+        self.collectionView.register(newProjectNib, forCellWithReuseIdentifier: CreateNewProjectCell.identifier)
+        
         let nib = UINib(nibName: "projectCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: ProjectCollectionCell.identifier)
-        
-        let newProjectNib = UINib(nibName: "newProjectCell", bundle: nil)
-        self.collectionView.register(newProjectNib, forCellWithReuseIdentifier: CreateNewProjectCell.identifier)
         
         self.collectionView.collectionViewLayout = HomeCollectionViewFlowLayout(columns: kDisplayColumns)
     }
@@ -41,7 +42,14 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         
+        if let destinationController = segue.destination as? NewProjectViewController {
+            destinationController.delegate = self
+        }
     }
     
     
@@ -58,11 +66,11 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
  
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == allProjects.count {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newProjectCell", for: indexPath) as! CreateNewProjectCell
-                return cell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CreateNewProjectCell", for: indexPath) as! CreateNewProjectCell
+            return cell
         } else {
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "projectCell", for: indexPath) as! ProjectCollectionCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProjectCollectionCell", for: indexPath) as! ProjectCollectionCell
             
             var currentProject: Project
             
@@ -72,7 +80,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             
             return cell
         }
-        
     }
     
  

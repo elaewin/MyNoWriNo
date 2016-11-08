@@ -52,12 +52,31 @@
                     <connections>
                         <outlet property="collectionView" destination="rT1-7g-icK" id="DQZ-1E-74C"/>
                         <segue destination="kmh-Eg-EgO" kind="presentation" identifier="NewProjectViewController" id="akj-kN-lun"/>
-                        <segue destination="rfq-GO-7WN" kind="show" identifier="projectSelectedSegue" id="ubp-4K-gwf"/>
+                        <segue destination="nSx-Sr-bOT" kind="show" identifier="showProductDetailsSegue" id="4qE-4H-UnY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="69.599999999999994" y="42.728635682158924"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="M77-7U-8Yo">
+            <objects>
+                <viewController id="nSx-Sr-bOT" customClass="DetailsViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WpF-de-0tv"/>
+                        <viewControllerLayoutGuide type="bottom" id="bM8-NI-V9T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gwj-eW-W9V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Details" id="vIb-fU-Dq4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4s0-m5-468" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="43"/>
         </scene>
         <!--Alerts-->
         <scene sceneID="npV-km-Nbm">
@@ -76,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ynx-GY-0kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2524" y="43"/>
+            <point key="canvasLocation" x="3042" y="43"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="rjK-hX-pPL">
@@ -95,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZo-4v-md2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742" y="43"/>
+            <point key="canvasLocation" x="2359" y="43"/>
         </scene>
         <!--Stats-->
         <scene sceneID="tw8-Rl-vuC">
@@ -114,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGz-j7-1vA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="43"/>
+            <point key="canvasLocation" x="1658" y="43"/>
         </scene>
         <!--New Project View Controller-->
         <scene sceneID="19p-8h-bxm">
@@ -207,16 +226,18 @@
             </objects>
             <point key="canvasLocation" x="70" y="748"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Project Tab Bar Controller-->
         <scene sceneID="se1-54-fya">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ga8-Ji-gQn" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ga8-Ji-gQn" customClass="ProjectTabBarController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="DPw-le-27w">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="nSx-Sr-bOT" kind="relationship" relationship="viewControllers" id="B3j-jO-P5p"/>
                         <segue destination="rfq-GO-7WN" kind="relationship" relationship="viewControllers" id="PBo-nu-sWl"/>
                         <segue destination="WJt-KD-1T7" kind="relationship" relationship="viewControllers" id="hdq-Sn-G9y"/>
                         <segue destination="fLY-pm-3T2" kind="relationship" relationship="viewControllers" id="xxl-Y4-HzW"/>
@@ -224,10 +245,10 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkY-Ia-crF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742" y="-753"/>
+            <point key="canvasLocation" x="1999" y="-756"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ubp-4K-gwf"/>
+        <segue reference="B3j-jO-P5p"/>
     </inferredMetricsTieBreakers>
 </document>
