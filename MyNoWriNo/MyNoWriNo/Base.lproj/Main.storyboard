@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="69.599999999999994" y="42.728635682158924"/>
         </scene>
-        <!--Alerts View Controller-->
+        <!--Alerts-->
         <scene sceneID="npV-km-Nbm">
             <objects>
-                <viewController title="Alerts View Controller" id="fLY-pm-3T2" sceneMemberID="viewController">
+                <viewController title="Alerts" id="fLY-pm-3T2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hmE-bw-E9a"/>
                         <viewControllerLayoutGuide type="bottom" id="RG5-hf-6CE"/>
@@ -71,15 +71,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Alerts" id="jEf-d6-34R"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ynx-GY-0kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889" y="43"/>
+            <point key="canvasLocation" x="1822" y="802"/>
         </scene>
-        <!--Calendar View Controller-->
+        <!--Calendar-->
         <scene sceneID="rjK-hX-pPL">
             <objects>
-                <viewController title="Calendar View Controller" id="WJt-KD-1T7" sceneMemberID="viewController">
+                <viewController title="Calendar" id="WJt-KD-1T7" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0x9-Xe-Vx5"/>
                         <viewControllerLayoutGuide type="bottom" id="WrA-aA-ooM"/>
@@ -89,15 +90,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Calendar" id="xCC-YQ-HoU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZo-4v-md2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="43"/>
+            <point key="canvasLocation" x="1822" y="-664"/>
         </scene>
-        <!--Stats View Controller-->
+        <!--Stats-->
         <scene sceneID="tw8-Rl-vuC">
             <objects>
-                <viewController title="Stats View Controller" id="rfq-GO-7WN" sceneMemberID="viewController">
+                <viewController title="Stats" id="rfq-GO-7WN" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mLd-Fj-ow4"/>
                         <viewControllerLayoutGuide type="bottom" id="VWL-dE-zLj"/>
@@ -107,10 +109,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Stats" id="eQK-Da-QgU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGz-j7-1vA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2558" y="43"/>
+            <point key="canvasLocation" x="1823.2" y="42.728635682158924"/>
         </scene>
         <!--New Project View Controller-->
         <scene sceneID="19p-8h-bxm">
@@ -202,6 +205,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhX-Rh-5eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="70" y="748"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="se1-54-fya">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ga8-Ji-gQn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="DPw-le-27w">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rfq-GO-7WN" kind="relationship" relationship="viewControllers" id="PBo-nu-sWl"/>
+                        <segue destination="WJt-KD-1T7" kind="relationship" relationship="viewControllers" id="hdq-Sn-G9y"/>
+                        <segue destination="fLY-pm-3T2" kind="relationship" relationship="viewControllers" id="xxl-Y4-HzW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mkY-Ia-crF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="42.728635682158924"/>
         </scene>
     </scenes>
 </document>
