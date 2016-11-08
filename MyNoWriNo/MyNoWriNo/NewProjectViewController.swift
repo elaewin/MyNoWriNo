@@ -49,7 +49,7 @@ class NewProjectViewController: UIViewController {
     }
     
     @IBAction func createButtonPressed(_ sender: Any) {
-        guard let delegate = self.delegate else{ return }
+        guard let delegate = self.delegate else { return }
         
         if projectTitleTextField.text != "" && wordCountTextField.text != "" && newDate != nil {
             print("Create button pressed")
