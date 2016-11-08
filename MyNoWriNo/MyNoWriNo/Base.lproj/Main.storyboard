@@ -52,6 +52,7 @@
                     <connections>
                         <outlet property="collectionView" destination="rT1-7g-icK" id="DQZ-1E-74C"/>
                         <segue destination="kmh-Eg-EgO" kind="presentation" identifier="NewProjectViewController" id="akj-kN-lun"/>
+                        <segue destination="rfq-GO-7WN" kind="show" identifier="projectSelectedSegue" id="ubp-4K-gwf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ynx-GY-0kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822" y="802"/>
+            <point key="canvasLocation" x="2524" y="43"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="rjK-hX-pPL">
@@ -94,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZo-4v-md2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822" y="-664"/>
+            <point key="canvasLocation" x="1742" y="43"/>
         </scene>
         <!--Stats-->
         <scene sceneID="tw8-Rl-vuC">
@@ -113,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGz-j7-1vA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823.2" y="42.728635682158924"/>
+            <point key="canvasLocation" x="902" y="43"/>
         </scene>
         <!--New Project View Controller-->
         <scene sceneID="19p-8h-bxm">
@@ -223,7 +224,10 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkY-Ia-crF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884" y="42.728635682158924"/>
+            <point key="canvasLocation" x="1742" y="-753"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ubp-4K-gwf"/>
+    </inferredMetricsTieBreakers>
 </document>
