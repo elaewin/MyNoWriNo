@@ -94,11 +94,11 @@
 		5547B1581DCEE8100010CE9A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5547B15E1DCEE8EE0010CE9A /* Project.swift */,
-				5547B1621DD117A60010CE9A /* User.swift */,
 				5547B14A1DCEE7570010CE9A /* Main.storyboard */,
 				010B7FCD1DD1581E0097A46F /* NewProjectCell.xib */,
+				5547B15E1DCEE8EE0010CE9A /* Project.swift */,
 				5547B1661DD11AFB0010CE9A /* projectCell.xib */,
+				5547B1621DD117A60010CE9A /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -116,9 +116,9 @@
 		5547B15A1DCEE8260010CE9A /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				5547B1601DD0FDF80010CE9A /* Extensions.swift */,
 				5547B1461DCEE7570010CE9A /* AppDelegate.swift */,
 				5547B14D1DCEE7570010CE9A /* Assets.xcassets */,
+				5547B1601DD0FDF80010CE9A /* Extensions.swift */,
 				5547B1521DCEE7570010CE9A /* Info.plist */,
 			);
 			name = Supporting;
@@ -127,12 +127,12 @@
 		5547B15B1DCEE8430010CE9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				556294DA1DD255BB00C87029 /* ProjectTabBarController.swift */,
-				556294DC1DD2575900C87029 /* DetailsViewController.swift */,
-				010B7FCB1DD110970097A46F /* NewProjectViewController.swift */,
 				5547B1681DD120730010CE9A /* AlertsViewController.swift */,
-				5547B16A1DD1208C0010CE9A /* StatsViewController.swift */,
+				556294DC1DD2575900C87029 /* DetailsViewController.swift */,
 				5547B15C1DCEE8A30010CE9A /* HomeViewController.swift */,
+				010B7FCB1DD110970097A46F /* NewProjectViewController.swift */,
+				556294DA1DD255BB00C87029 /* ProjectTabBarController.swift */,
+				5547B16A1DD1208C0010CE9A /* StatsViewController.swift */,
 				010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */,
 			);
 			name = Controller;
