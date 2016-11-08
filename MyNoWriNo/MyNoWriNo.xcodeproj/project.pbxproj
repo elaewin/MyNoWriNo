@@ -93,6 +93,7 @@
 				5547B15E1DCEE8EE0010CE9A /* Project.swift */,
 				5547B1621DD117A60010CE9A /* User.swift */,
 				5547B14A1DCEE7570010CE9A /* Main.storyboard */,
+				010B7FCD1DD1581E0097A46F /* NewProjectCell.xib */,
 				5547B1661DD11AFB0010CE9A /* projectCell.xib */,
 			);
 			name = Model;
@@ -102,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				010B7FCF1DD15EC90097A46F /* CreateNewProjectCell.swift */,
-				010B7FCD1DD1581E0097A46F /* NewProjectCell.xib */,
 				5547B16E1DD125B20010CE9A /* HomeCollectionViewFlowLayout.swift */,
 				5547B16C1DD121600010CE9A /* ProjectCollectionCell.swift */,
 			);
