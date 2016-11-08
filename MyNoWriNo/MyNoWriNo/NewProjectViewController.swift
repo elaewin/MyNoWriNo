@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EventKit
 
 protocol NewProjectControllerDelegate: class {
     func newProjectCreated(project: Project)
@@ -49,6 +50,8 @@ class NewProjectViewController: UIViewController {
     }
     
     @IBAction func createButtonPressed(_ sender: Any) {
+        let eventStore = EKEventStore()
+        
         guard let delegate = self.delegate else { return }
         
         if projectTitleTextField.text != "" && wordCountTextField.text != "" && newDate != nil {
