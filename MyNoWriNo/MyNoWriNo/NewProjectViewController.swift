@@ -48,6 +48,7 @@ class NewProjectViewController: UIViewController {
         print("New Date Selected is: \(newDate)")
     }
     
+    
     @IBAction func createButtonPressed(_ sender: Any) {
         guard let delegate = self.delegate else { return }
         
@@ -66,6 +67,10 @@ class NewProjectViewController: UIViewController {
         
     }
 
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 }
 
