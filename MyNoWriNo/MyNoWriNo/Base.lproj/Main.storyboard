@@ -62,7 +62,7 @@
         <!--Details-->
         <scene sceneID="M77-7U-8Yo">
             <objects>
-                <viewController id="nSx-Sr-bOT" sceneMemberID="viewController">
+                <viewController id="nSx-Sr-bOT" customClass="DetailsViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WpF-de-0tv"/>
                         <viewControllerLayoutGuide type="bottom" id="bM8-NI-V9T"/>
@@ -226,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="70" y="748"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Project Tab Bar Controller-->
         <scene sceneID="se1-54-fya">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ga8-Ji-gQn" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ga8-Ji-gQn" customClass="ProjectTabBarController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="DPw-le-27w">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
