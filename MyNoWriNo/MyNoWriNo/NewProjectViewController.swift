@@ -63,20 +63,20 @@ class NewProjectViewController: UIViewController {
     
     func writeToCalendar(projectTitle: String, deadline: Date, completion: @escaping CalendarQueueCompletion) {
         
+        
         let eventStore = CalendarService.shared
         
         let calendarForEvent = eventStore.newCalendar
-            
+        
+        
             let newEvent = EKEvent(eventStore: eventStore.store)
-            let eventAlarm = EKAlarm(absoluteDate: deadline)
-            
+        
             newEvent.calendar = calendarForEvent
             newEvent.title = projectTitle
             newEvent.startDate = deadline
             newEvent.endDate = deadline
             newEvent.isAllDay = true
-           // eventAlarm.absoluteDate
-        
+
         
             do {
                 try eventStore.store.save(newEvent, span: .thisEvent, commit: true)
