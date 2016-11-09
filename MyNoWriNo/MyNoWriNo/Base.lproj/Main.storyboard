@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="956" y="43"/>
         </scene>
-        <!--Alerts-->
+        <!--Events-->
         <scene sceneID="npV-km-Nbm">
             <objects>
-                <viewController title="Alerts" id="fLY-pm-3T2" customClass="EventsViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Events" id="fLY-pm-3T2" customClass="EventsViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hmE-bw-E9a"/>
                         <viewControllerLayoutGuide type="bottom" id="RG5-hf-6CE"/>
@@ -184,7 +184,71 @@
                     <view key="view" contentMode="scaleToFill" id="33i-rg-gfV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percent Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5B-TQ-v9C">
+                                <rect key="frame" x="118.5" y="50" width="137.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Words to Target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5b-dz-Rlw">
+                                <rect key="frame" x="126" y="91" width="122.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="daily wordcount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1H-NM-Wqc">
+                                <rect key="frame" x="126" y="132" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="final wordcount at current pace" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-sJ-heh">
+                                <rect key="frame" x="67.5" y="173" width="239" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average wpd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSj-j5-4R7">
+                                <rect key="frame" x="137.5" y="214" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wordcount/week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uak-Tg-fqL">
+                                <rect key="frame" x="123.5" y="255" width="127.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="workdcount/month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpG-zD-Pnk">
+                                <rect key="frame" x="114.5" y="296" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uak-Tg-fqL" firstAttribute="top" secondItem="wSj-j5-4R7" secondAttribute="bottom" constant="20" id="34L-Ai-9CP"/>
+                            <constraint firstItem="lpG-zD-Pnk" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="5e7-cf-5iA"/>
+                            <constraint firstItem="dEJ-sJ-heh" firstAttribute="top" secondItem="f1H-NM-Wqc" secondAttribute="bottom" constant="20" id="7wa-6w-l6K"/>
+                            <constraint firstItem="f1H-NM-Wqc" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="A69-dU-DZO"/>
+                            <constraint firstItem="wSj-j5-4R7" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="Bv6-au-IsE"/>
+                            <constraint firstItem="lpG-zD-Pnk" firstAttribute="top" secondItem="Uak-Tg-fqL" secondAttribute="bottom" constant="20" id="Cnh-zg-i3D"/>
+                            <constraint firstItem="k5b-dz-Rlw" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="EUV-h0-ugm"/>
+                            <constraint firstItem="Uak-Tg-fqL" firstAttribute="top" secondItem="wSj-j5-4R7" secondAttribute="bottom" constant="20" id="Kdd-je-EVD"/>
+                            <constraint firstItem="f1H-NM-Wqc" firstAttribute="top" secondItem="k5b-dz-Rlw" secondAttribute="bottom" constant="20" id="Stl-0s-j79"/>
+                            <constraint firstItem="dEJ-sJ-heh" firstAttribute="top" secondItem="f1H-NM-Wqc" secondAttribute="bottom" constant="20" id="T9v-QS-RjJ"/>
+                            <constraint firstItem="dEJ-sJ-heh" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="Tvi-ZB-ZDE"/>
+                            <constraint firstItem="f1H-NM-Wqc" firstAttribute="top" secondItem="k5b-dz-Rlw" secondAttribute="bottom" constant="20" id="XEI-wk-niL"/>
+                            <constraint firstItem="Uak-Tg-fqL" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="dGE-Su-WkM"/>
+                            <constraint firstItem="k5b-dz-Rlw" firstAttribute="top" secondItem="W5B-TQ-v9C" secondAttribute="bottom" constant="20" id="izr-fM-V0q"/>
+                            <constraint firstItem="W5B-TQ-v9C" firstAttribute="top" secondItem="mLd-Fj-ow4" secondAttribute="bottom" constant="30" id="ka8-uu-mt1"/>
+                            <constraint firstItem="k5b-dz-Rlw" firstAttribute="top" secondItem="W5B-TQ-v9C" secondAttribute="bottom" constant="20" id="o9s-Pd-cXV"/>
+                            <constraint firstItem="wSj-j5-4R7" firstAttribute="top" secondItem="dEJ-sJ-heh" secondAttribute="bottom" constant="20" id="pZ3-lP-hsF"/>
+                            <constraint firstItem="W5B-TQ-v9C" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="s6n-Rj-7db"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stats" id="eQK-Da-QgU"/>
                 </viewController>
@@ -368,6 +432,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4qE-4H-UnY"/>
+        <segue reference="B3j-jO-P5p"/>
     </inferredMetricsTieBreakers>
 </document>
