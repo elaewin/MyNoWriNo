@@ -72,7 +72,9 @@ class NewProjectViewController: UIViewController {
             
             do {
                 try eventStore.save(newEvent, span: .thisEvent)
-                delegate?.even
+                
+            } catch {
+                print("add error handling here.")
             }
         }
         
