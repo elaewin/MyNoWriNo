@@ -24,3 +24,11 @@ class ProjectTabBarController: UITabBarController {
     }
     
 }
+
+extension ProjectTabBarController: HomeViewControllerDelegate {
+    
+    func getProject(project: Project) {
+        self.project = project
+    }
+    
+}

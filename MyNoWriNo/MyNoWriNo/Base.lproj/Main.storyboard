@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -32,14 +32,6 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIa-2h-BnK">
-                                <rect key="frame" x="16" y="606" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New Project"/>
-                                <connections>
-                                    <action selector="newProjectButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IWd-Jo-bXu"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -52,7 +44,7 @@
                     <connections>
                         <outlet property="collectionView" destination="rT1-7g-icK" id="DQZ-1E-74C"/>
                         <segue destination="kmh-Eg-EgO" kind="presentation" identifier="NewProjectViewController" id="akj-kN-lun"/>
-                        <segue destination="nSx-Sr-bOT" kind="show" identifier="showProductDetailsSegue" id="4qE-4H-UnY"/>
+                        <segue destination="nSx-Sr-bOT" kind="show" identifier="showProjectDetailsSegue" id="4qE-4H-UnY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -70,7 +62,72 @@
                     <view key="view" contentMode="scaleToFill" id="Gwj-eW-W9V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJh-5s-Pfx">
+                                <rect key="frame" x="74.5" y="52" width="226.5" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7F-uC-UtL">
+                                <rect key="frame" x="112" y="527" width="150" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Delete Project">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8F-Rv-QWw">
+                                <rect key="frame" x="133.5" y="128" width="109.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5c5-fQ-vKH">
+                                <rect key="frame" x="151" y="166" width="72.5" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA0-hO-Gkq">
+                                <rect key="frame" x="115" y="220" width="145" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAd-nP-5RK">
+                                <rect key="frame" x="112" y="358" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="L9r-Z4-cjO"/>
+                                    <constraint firstAttribute="height" constant="40" id="xHH-KO-dSD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9V-Ku-XAP">
+                                <rect key="frame" x="95" y="280" width="185" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PA0-hO-Gkq" firstAttribute="top" secondItem="5c5-fQ-vKH" secondAttribute="bottom" constant="12" id="DBX-sb-wUb"/>
+                            <constraint firstItem="W8F-Rv-QWw" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="DOZ-Kf-4Xd"/>
+                            <constraint firstItem="5c5-fQ-vKH" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="QMe-Vd-FZs"/>
+                            <constraint firstItem="vJh-5s-Pfx" firstAttribute="top" secondItem="WpF-de-0tv" secondAttribute="bottom" constant="32" id="Uda-fB-RXk"/>
+                            <constraint firstItem="vJh-5s-Pfx" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="cb6-xi-dmy"/>
+                            <constraint firstItem="PA0-hO-Gkq" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="eLK-jA-9Qx"/>
+                            <constraint firstItem="5c5-fQ-vKH" firstAttribute="top" secondItem="W8F-Rv-QWw" secondAttribute="bottom" constant="8" id="hw4-XL-21U"/>
+                            <constraint firstItem="k9V-Ku-XAP" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="i1X-Cn-JIl"/>
+                            <constraint firstItem="oAd-nP-5RK" firstAttribute="top" secondItem="k9V-Ku-XAP" secondAttribute="bottom" constant="36" id="qQD-mw-gvz"/>
+                            <constraint firstItem="oAd-nP-5RK" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="vqv-R4-FuB"/>
+                            <constraint firstItem="W8F-Rv-QWw" firstAttribute="top" secondItem="vJh-5s-Pfx" secondAttribute="bottom" constant="28" id="w0Q-z3-Cp7"/>
+                            <constraint firstItem="k9V-Ku-XAP" firstAttribute="top" secondItem="PA0-hO-Gkq" secondAttribute="bottom" constant="36" id="zQ2-D3-NYe"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Details" id="vIb-fU-Dq4"/>
                 </viewController>
@@ -81,7 +138,7 @@
         <!--Alerts-->
         <scene sceneID="npV-km-Nbm">
             <objects>
-                <viewController title="Alerts" id="fLY-pm-3T2" sceneMemberID="viewController">
+                <viewController title="Alerts" id="fLY-pm-3T2" customClass="EventsViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hmE-bw-E9a"/>
                         <viewControllerLayoutGuide type="bottom" id="RG5-hf-6CE"/>
