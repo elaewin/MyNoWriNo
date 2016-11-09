@@ -9,6 +9,8 @@
 import UIKit
 import EventKit
 
+typealias CalendarQueueCompletion = (Bool) -> ()
+
 protocol NewProjectControllerDelegate: class {
     func newProjectCreated(project: Project)
 }
@@ -56,7 +58,20 @@ class NewProjectViewController: UIViewController {
         
     }
     
-    func writeToCalendar(projectTitle: String, deadline: Date) {
+    
+    
+    func createCalendarQueue(projectTitle: String, deadline: Date, completion: @escaping CalendarQueueCompletion) {
+        let mySerialQueue = OperationQueue()
+        
+        mySerialQueue.addOperation {
+            
+            self.writeToCalendar(projectTitle: projectTitle, deadline: deadline, completion: completion)
+        }
+        
+    }
+    
+    
+    func writeToCalendar(projectTitle: String, deadline: Date, completion: CalendarQueueCompletion) {
         
         let eventStore = CalendarService.shared
         
@@ -70,10 +85,17 @@ class NewProjectViewController: UIViewController {
             newEvent.endDate = deadline
             
             do {
-                try eventStore.save(newEvent, span: .thisEvent)
+                try eventStore.save(newEvent, span: .thisEvent, commit: true)
+                completion(true)
                 
             } catch {
-                print("add error handling here.")
+                
+                let alert = UIAlertController(title: "Alert", message: "Your Project Could Not Be Saved", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
+                completion(false)
+                
             }
         }
         
@@ -81,21 +103,34 @@ class NewProjectViewController: UIViewController {
     
     
     @IBAction func createButtonPressed(_ sender: Any) {
-       
+        
+        
         
         guard let delegate = self.delegate else { return }
         
         if projectTitleTextField.text != "" && wordCountTextField.text != "" && newDate != nil {
             print("Create button pressed")
             let wordCount = Int(wordCountTextField.text!)
-            self.newProject = Project(name: projectTitleTextField.text!, targetWordCount: wordCount!, deadline: self.newDate!)            
+            self.newProject = Project(name: projectTitleTextField.text!, targetWordCount: wordCount!, deadline: self.newDate!)
             if let genre = genreTextField.text {
                 newProject?.genre = genre
             }
+            
             if saveDeadlineSwitch.isOn {
                 CalendarService.shared.getAccessToCalendar()
-                writeToCalendar(projectTitle: projectTitleTextField.text!, deadline: deadlineDatePicker.date)
+                 self.createCalendarQueue(projectTitle: projectTitleTextField.text!, deadline: deadlineDatePicker.date, completion: { (completion) in
+                    
+                    if completion {
+                        OperationQueue.main.addOperation {
+                            let alert = UIAlertController(title: "Alert", message: "Your Project Has Been Saved In The Calendar!", preferredStyle: UIAlertControllerStyle.alert)
+                            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    }
+                })
             }
+            
+            
             delegate.newProjectCreated(project: newProject!)
 
         }
