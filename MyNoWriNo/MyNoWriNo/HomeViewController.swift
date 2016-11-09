@@ -23,6 +23,8 @@ class HomeViewController: UIViewController {
     
     let kDisplayColumns = 2
     
+    var selectedProject: Project?
+    
     weak var delegate: HomeViewControllerDelegate?
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -56,9 +58,10 @@ class HomeViewController: UIViewController {
         if let destinationController = segue.destination as? NewProjectViewController {
             destinationController.delegate = self
         }
-        
         if let tabBarController = segue.destination as? ProjectTabBarController {
-            var selectedProject = self.collectionView.indexPath(for: ProjectCollectionCell)
+            if let project = self.selectedProject {
+                tabBarController.project = project
+            }
         }
         
     }
@@ -103,7 +106,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         if indexPath.row == allProjects.count {
             self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
         } else {
-            var selectedProject = collectionView.cellForItem(at: indexPath) as! ProjectCollectionCell
+            self.selectedProject = allProjects[indexPath.row]
             self.performSegue(withIdentifier: "projectTabBarSegue", sender: nil)
         }
         
