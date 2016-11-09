@@ -44,11 +44,11 @@ class StatsViewController: UIViewController {
             
             self.finalWordCountAtPaceLabel.text = "\(calculateWordCountAtPace(count: project.cumulativeWordCount, daysRemaining: project.daysRemaining, daysElapsed: project.daysElapsed))"
             
-//            self.averageWordsPerDayLabel.text = "\(calculateDailyAverage(count: project.cumulativeWordCount, days: project.daysElapsed))"
-//            
-//            self.averageWordsPerWeekLabel.text = "\(calculateWeeklyAverage(count: project.cumulativeWordCount, days: project.daysElapsed))"
-//            
-//            self.averageWordsPerMonthLabel.text = "\(calculateMonthlyAverage(count: project.cumulativeWordCount, days: project.daysElapsed))"
+            self.averageWordsPerDayLabel.text = "\(calculateDailyAverage(count: project.cumulativeWordCount, days: project.daysElapsed))"
+            
+            self.averageWordsPerWeekLabel.text = "\(calculateWeeklyAverage(count: project.cumulativeWordCount, days: project.daysElapsed))"
+            
+            self.averageWordsPerMonthLabel.text = "\(calculateMonthlyAverage(count: project.cumulativeWordCount, days: project.daysElapsed))"
         
         }
         
@@ -65,29 +65,27 @@ class StatsViewController: UIViewController {
         }
     }
     
-//    func calculateDailyAverage(count: Int, days: Int) -> Int {
-//        return count / days
-//    }
-//    
-//    func calculateWeeklyAverage(count: Int, days: Int) -> Int {
-//        if days < 7 {
-//            return count
-//        } else {
-//        return (count / days) * 7
-//        }
-//    }
-//        
-//    func calculateMonthlyAverage(count: Int, days: Int) -> Int {
-//        if days < 30 {
-//            return count
-//        } else {
-//            return (count / days) * 30
-//        }
-//    }
+    func calculateDailyAverage(count: Int, days: Int) -> Int {
+        if days > 0 {
+            return count / days
+        } else {
+            return 0
+        }
+    }
     
-    
-    
-    
-    
-    
+    func calculateWeeklyAverage(count: Int, days: Int) -> Int {
+        if days < 7 {
+            return count
+        } else {
+        return (count / days) * 7
+        }
+    }
+        
+    func calculateMonthlyAverage(count: Int, days: Int) -> Int {
+        if days < 30 {
+            return count
+        } else {
+            return (count / days) * 30
+        }
+    }
 }
