@@ -264,13 +264,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Stats" id="eQK-Da-QgU"/>
                     <connections>
-                        <outlet property="averageWordsPerDayLabel" destination="wSj-j5-4R7" id="cu4-ge-WW7"/>
-                        <outlet property="averageWordsPerMonthLabel" destination="lpG-zD-Pnk" id="Qmy-k9-1HZ"/>
-                        <outlet property="averageWordsPerWeekLabel" destination="Uak-Tg-fqL" id="d9C-Qg-A2o"/>
-                        <outlet property="dailyWordCountLabel" destination="f1H-NM-Wqc" id="lCo-v3-OvT"/>
-                        <outlet property="percentCompleteLabel" destination="W5B-TQ-v9C" id="6qt-H1-vLi"/>
+                        <outlet property="averageWordsPerDayLabel" destination="wSj-j5-4R7" id="tKE-RD-w3Z"/>
+                        <outlet property="averageWordsPerMonthLabel" destination="lpG-zD-Pnk" id="cze-Qx-3EO"/>
+                        <outlet property="averageWordsPerWeekLabel" destination="Uak-Tg-fqL" id="cUm-o7-k1m"/>
+                        <outlet property="dailyWordCountLabel" destination="f1H-NM-Wqc" id="OuU-hI-suQ"/>
+                        <outlet property="finalWordCountAtPaceLabel" destination="dEJ-sJ-heh" id="RmY-Ms-Vfy"/>
+                        <outlet property="percentCompleteLabel" destination="W5B-TQ-v9C" id="dHg-CE-qOa"/>
                         <outlet property="wordCountAtPaceLabel" destination="dEJ-sJ-heh" id="h5E-d1-ufA"/>
-                        <outlet property="wordsToTargetLabel" destination="k5b-dz-Rlw" id="ecq-SO-Q9A"/>
+                        <outlet property="wordsToTargetLabel" destination="k5b-dz-Rlw" id="SI4-K6-QUt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGz-j7-1vA" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -58,8 +58,7 @@ class HomeViewController: UIViewController {
         }
         
         if let tabBarController = segue.destination as? ProjectTabBarController {
-            var selectedIndex = collectionView.indexPath(for: ProjectCollectionCell)
-            tabBarController.project = selectedCell.
+            var selectedProject = self.collectionView.indexPath(for: ProjectCollectionCell)
         }
         
     }
@@ -104,6 +103,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         if indexPath.row == allProjects.count {
             self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
         } else {
+            var selectedProject = collectionView.cellForItem(at: indexPath) as! ProjectCollectionCell
             self.performSegue(withIdentifier: "projectTabBarSegue", sender: nil)
         }
         

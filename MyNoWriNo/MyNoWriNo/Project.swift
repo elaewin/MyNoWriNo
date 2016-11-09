@@ -17,8 +17,9 @@ class Project: NSObject {
     
     var cumulativeWordCount: Int = 0
     var percentComplete: Int = 0
-    var currentDate: Date
+    var startDate: Date
     var wordsRemaining: Int
+    var daysElapsed: Int
     var daysRemaining: Int
     
     var dailyWordCount: [Date: Int]?
@@ -30,14 +31,23 @@ class Project: NSObject {
         self.name = name
         self.targetWordCount = targetWordCount
         self.deadline = deadline // how to get this date?
-        self.currentDate = Date()
+        self.startDate = Date()
         self.wordsRemaining = self.targetWordCount - self.cumulativeWordCount
         
-        if !(self.currentDate > self.deadline) {
-            let interval = (DateInterval(start: self.currentDate, end: self.deadline)).duration / 86400
+        if !(self.startDate > self.deadline) {
+            let currentDate = Date()
+            let interval = (DateInterval(start: currentDate, end: self.deadline)).duration / 86400
             self.daysRemaining = Int(interval.rounded())
         } else {
             self.daysRemaining = 0
+        }
+        
+        if !(self.startDate > self.deadline) {
+            let currentDate = Date()
+            let interval = (DateInterval(start: self.startDate, end: currentDate)).duration / 86400
+            self.daysElapsed = Int(interval.rounded())
+        } else {
+            self.daysElapsed = 0
         }
         
         self.wordsPerDayForTarget = self.wordsRemaining / self.daysRemaining
