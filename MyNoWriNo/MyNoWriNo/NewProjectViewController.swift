@@ -34,6 +34,9 @@ class NewProjectViewController: UIViewController {
     @IBOutlet weak var createButton: UIButton!
     
     
+    @IBOutlet weak var saveDeadlineSwitch: UISwitch!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -86,6 +89,9 @@ class NewProjectViewController: UIViewController {
             
             if let genre = genreTextField.text {
                 newProject?.genre = genre
+            }
+            if saveDeadlineSwitch.isOn {
+                CalendarService.shared.getAccessToCalendar()
             }
             delegate.newProjectCreated(project: newProject!)
 

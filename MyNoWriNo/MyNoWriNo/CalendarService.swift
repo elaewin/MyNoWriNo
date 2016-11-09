@@ -12,16 +12,17 @@ import EventKit
 
 class CalendarService: EKEventStore {
     
-    let entityType = EKEntityType.event
-    
     static let shared = CalendarService()
     
-    override func requestAccess(to entityType: EKEntityType, completion: @escaping EKEventStoreRequestAccessCompletionHandler) {
-        
+    func getAccessToCalendar() {
+        self.requestAccess(to: .event, completion: {(granted: Bool, error: Error?) in
+            if !granted {
+                print("Access to store not granted")
+            }
+        })
     }
     
-    
-    
+
 }
     
    
