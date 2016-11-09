@@ -9,10 +9,32 @@
 import UIKit
 import EventKit
 
-
 class CalendarService: EKEventStore {
     
     static let shared = CalendarService()
+    
+    let newCalendar: EKCalendar
+    
+    override init() {
+        
+        self.newCalendar = EKCalendar(for: .event, eventStore: self)
+        
+        let sourcesInEventStore = self.sources
+        
+        newCalendar.source = sourcesInEventStore.filter({ (source: EKSource) -> Bool in
+            source.sourceType.rawValue == EKSourceType.local.rawValue
+        }).first!
+        
+        do {
+            try self.saveCalendar(newCalendar, commit: true)
+            UserDefaults.standard.set(newCalendar.calendarIdentifier, forKey: "MyNoWriNoPrimaryCalendar")
+        } catch {
+            print("Did not save calendar.")
+        }
+        
+        super.init()
+    }
+    
     
     func getAccessToCalendar() {
         self.requestAccess(to: .event, completion: {(granted: Bool, error: Error?) in
@@ -22,7 +44,12 @@ class CalendarService: EKEventStore {
         })
     }
     
-
 }
     
-   
+extension CalendarService: EventAddedDelegate {
+    
+    func newEventAdded() {
+        <#code#>
+    }
+    
+}
