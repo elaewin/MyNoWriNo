@@ -99,7 +99,6 @@ extension HomeViewController: NewProjectControllerDelegate {
             print("Project: \(project.name)")
         }
     }
-    
 }
 
 

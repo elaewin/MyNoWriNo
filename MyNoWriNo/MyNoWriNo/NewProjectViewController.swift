@@ -15,7 +15,8 @@ protocol NewProjectControllerDelegate: class {
 
 class NewProjectViewController: UIViewController {
     
-    weak var delegate: NewProjectControllerDelegate? 
+    weak var delegate: NewProjectControllerDelegate?
+    weak var newEventDelegate: EventAddedDelegate?
     
     var newProject: Project?
     
@@ -52,14 +53,15 @@ class NewProjectViewController: UIViewController {
         print("New Date Selected is: \(newDate)")
     }
     
+    func newEventAdded() {
+        
+    }
     
     func writeToCalendar(projectTitle: String, deadline: Date) {
         
-        let eventStore = EKEventStore()
+        let eventStore = CalendarService.shared
         
-        var calendar: EKCalendar!
-        
-        if let calendarForEvent = eventStore.calendar(withIdentifier: calendar.calendarIdentifier) {
+        if let calendarForEvent = eventStore.calendar(withIdentifier: "MyNoWriNoPrimaryCalendar") {
             
             let newEvent = EKEvent(eventStore: eventStore)
             
@@ -68,9 +70,11 @@ class NewProjectViewController: UIViewController {
             newEvent.startDate = deadline
             newEvent.endDate = deadline
             
+            do {
+                try eventStore.save(newEvent, span: .thisEvent)
+                delegate?.even
+            }
         }
-        
-        //error handling
         
     }
     
@@ -83,15 +87,13 @@ class NewProjectViewController: UIViewController {
         if projectTitleTextField.text != "" && wordCountTextField.text != "" && newDate != nil {
             print("Create button pressed")
             let wordCount = Int(wordCountTextField.text!)
-            self.newProject = Project(name: projectTitleTextField.text!, targetWordCount: wordCount!, deadline: self.newDate!)
-            
-            writeToCalendar(projectTitle: projectTitleTextField.text!, deadline: deadlineDatePicker.date)
-            
+            self.newProject = Project(name: projectTitleTextField.text!, targetWordCount: wordCount!, deadline: self.newDate!)            
             if let genre = genreTextField.text {
                 newProject?.genre = genre
             }
             if saveDeadlineSwitch.isOn {
                 CalendarService.shared.getAccessToCalendar()
+                writeToCalendar(projectTitle: projectTitleTextField.text!, deadline: deadlineDatePicker.date)
             }
             delegate.newProjectCreated(project: newProject!)
 
@@ -115,7 +117,6 @@ extension NewProjectViewController: UITextFieldDelegate {
             createButton.isEnabled = true
         }
     }
-
 }
 
 
