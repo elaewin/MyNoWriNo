@@ -12,6 +12,15 @@ class DetailsViewController: UIViewController {
 
     var project: Project!
     
+    @IBOutlet weak var projectTitleLabel: UILabel!
+    
+    @IBOutlet weak var deadlineLabel: UILabel!
+    
+    @IBOutlet weak var totalWordCountLabel: UILabel!
+    
+    @IBOutlet weak var daysLeftInProject: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,10 +28,19 @@ class DetailsViewController: UIViewController {
             self.project = projectTabBarController.project
         }
         
+        
         // Do any additional setup after loading the view.
     }
 
+    
+    // MARK: Actions
+    @IBAction func editButtonPressed(_ sender: Any) {
+    }
 
+    @IBAction func deleteButtonPressed(_ sender: Any) {
+    }
+    
+    
 }
 
 extension DetailsViewController: HomeViewControllerDelegate {

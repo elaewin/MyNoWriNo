@@ -77,6 +77,9 @@
                                 <state key="normal" title="Delete Project">
                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="nSx-Sr-bOT" eventType="touchUpInside" id="hzA-Nx-lWg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8F-Rv-QWw">
                                 <rect key="frame" x="133.5" y="128" width="109.5" height="30"/>
@@ -105,6 +108,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editButtonPressed:" destination="nSx-Sr-bOT" eventType="touchUpInside" id="5Sj-EF-3ci"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9V-Ku-XAP">
                                 <rect key="frame" x="95" y="280" width="185" height="42"/>
@@ -130,6 +136,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Details" id="vIb-fU-Dq4"/>
+                    <connections>
+                        <outlet property="daysLeftInProject" destination="PA0-hO-Gkq" id="9fB-i3-1e6"/>
+                        <outlet property="deadlineLabel" destination="5c5-fQ-vKH" id="H6L-kN-92L"/>
+                        <outlet property="projectTitleLabel" destination="vJh-5s-Pfx" id="TDT-fD-Jf2"/>
+                        <outlet property="totalWordCountLabel" destination="k9V-Ku-XAP" id="fj9-9D-Uvh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4s0-m5-468" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,7 +188,7 @@
         <!--Stats-->
         <scene sceneID="tw8-Rl-vuC">
             <objects>
-                <viewController title="Stats" id="rfq-GO-7WN" sceneMemberID="viewController">
+                <viewController title="Stats" id="rfq-GO-7WN" customClass="StatsViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mLd-Fj-ow4"/>
                         <viewControllerLayoutGuide type="bottom" id="VWL-dE-zLj"/>
@@ -251,6 +263,15 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stats" id="eQK-Da-QgU"/>
+                    <connections>
+                        <outlet property="averageWordsPerDayLabel" destination="wSj-j5-4R7" id="cu4-ge-WW7"/>
+                        <outlet property="averageWordsPerMonthLabel" destination="lpG-zD-Pnk" id="Qmy-k9-1HZ"/>
+                        <outlet property="averageWordsPerWeekLabel" destination="Uak-Tg-fqL" id="d9C-Qg-A2o"/>
+                        <outlet property="dailyWordCountLabel" destination="f1H-NM-Wqc" id="lCo-v3-OvT"/>
+                        <outlet property="percentCompleteLabel" destination="W5B-TQ-v9C" id="6qt-H1-vLi"/>
+                        <outlet property="wordCountAtPaceLabel" destination="dEJ-sJ-heh" id="h5E-d1-ufA"/>
+                        <outlet property="wordsToTargetLabel" destination="k5b-dz-Rlw" id="ecq-SO-Q9A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGz-j7-1vA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
