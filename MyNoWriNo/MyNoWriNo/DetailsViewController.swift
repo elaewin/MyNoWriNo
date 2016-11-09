@@ -59,7 +59,10 @@ class DetailsViewController: UIViewController {
         let alert = UIAlertController(title: "ALERT", message: "Are you sure you want to delete this project?", preferredStyle: .alert)
         let deleteAction = UIAlertAction(title: "Delete Project", style: .destructive) { (alert) in
             guard let delegate = self.delegate else { return }
+            
+            
             delegate.deleteProject(index: self.index)
+            
             self.dismiss(animated: true, completion: nil)
             }
     

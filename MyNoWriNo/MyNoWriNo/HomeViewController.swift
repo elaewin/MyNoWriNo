@@ -127,7 +127,7 @@ extension HomeViewController: DetailsViewControllerDelegate {
     
     func deleteProject(index: Int) {
         allProjects.remove(at: index)
-        print("Project at index \(index)")
+        print("Removed project at index \(index)")
     }
 }
 

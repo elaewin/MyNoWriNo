@@ -15,9 +15,7 @@ class StatsViewController: UIViewController {
     @IBOutlet weak var percentCompleteLabel: UILabel!
     
     @IBOutlet weak var wordsToTargetLabel: UILabel!
-    
-    @IBOutlet weak var dailyWordCountLabel: UILabel!
-    
+        
     @IBOutlet weak var finalWordCountAtPaceLabel: UILabel!
     
     @IBOutlet weak var averageWordsPerDayLabel: UILabel!
@@ -36,12 +34,7 @@ class StatsViewController: UIViewController {
             
             self.wordsToTargetLabel.text = "\(project.wordsRemaining)"
             
-            if let wordCount = project.dailyWordCount {
-                for (date, count) in wordCount {
-                    print("\(date), w/c: \(count)")
-                }
-            }
-            
+                        
             self.finalWordCountAtPaceLabel.text = "\(calculateWordCountAtPace(count: project.cumulativeWordCount, daysRemaining: project.daysRemaining, daysElapsed: project.daysElapsed))"
             
             self.averageWordsPerDayLabel.text = "\(calculateDailyAverage(count: project.cumulativeWordCount, days: project.daysElapsed))"
