@@ -9,6 +9,8 @@
 import UIKit
 import EventKit
 
+
+
 typealias CalendarQueueCompletion = (Bool) -> ()
 
 protocol NewProjectControllerDelegate: class {
@@ -59,36 +61,32 @@ class NewProjectViewController: UIViewController {
     }
     
     
-    
-    func createCalendarQueue(projectTitle: String, deadline: Date, completion: @escaping CalendarQueueCompletion) {
-        let mySerialQueue = OperationQueue()
-        
-        mySerialQueue.addOperation {
-            
-            self.writeToCalendar(projectTitle: projectTitle, deadline: deadline, completion: completion)
-        }
-        
-    }
-    
-    
-    func writeToCalendar(projectTitle: String, deadline: Date, completion: CalendarQueueCompletion) {
+    func writeToCalendar(projectTitle: String, deadline: Date, completion: @escaping CalendarQueueCompletion) {
         
         let eventStore = CalendarService.shared
         
-        if let calendarForEvent = eventStore.calendar(withIdentifier: "MyNoWriNoPrimaryCalendar") {
+        let calendarForEvent = eventStore.newCalendar
             
-            let newEvent = EKEvent(eventStore: eventStore)
+            let newEvent = EKEvent(eventStore: eventStore.store)
+            let eventAlarm = EKAlarm(absoluteDate: deadline)
             
             newEvent.calendar = calendarForEvent
             newEvent.title = projectTitle
             newEvent.startDate = deadline
             newEvent.endDate = deadline
-            
+            newEvent.isAllDay = true
+            eventAlarm.absoluteDate
+        
+        
             do {
-                try eventStore.save(newEvent, span: .thisEvent, commit: true)
-                completion(true)
+                try eventStore.store.save(newEvent, span: .thisEvent, commit: true)
+                
+                OperationQueue.main.addOperation {
+                    completion(true)
+                }
                 
             } catch {
+                print(error)
                 
                 let alert = UIAlertController(title: "Alert", message: "Your Project Could Not Be Saved", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
@@ -97,14 +95,11 @@ class NewProjectViewController: UIViewController {
                 completion(false)
                 
             }
-        }
-        
+
     }
     
     
     @IBAction func createButtonPressed(_ sender: Any) {
-        
-        
         
         guard let delegate = self.delegate else { return }
         
@@ -117,19 +112,21 @@ class NewProjectViewController: UIViewController {
             }
             
             if saveDeadlineSwitch.isOn {
-                CalendarService.shared.getAccessToCalendar()
-                 self.createCalendarQueue(projectTitle: projectTitleTextField.text!, deadline: deadlineDatePicker.date, completion: { (completion) in
+                CalendarService.shared.getAccessToCalendar {
                     
-                    if completion {
-                        OperationQueue.main.addOperation {
-                            let alert = UIAlertController(title: "Alert", message: "Your Project Has Been Saved In The Calendar!", preferredStyle: UIAlertControllerStyle.alert)
-                            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
-                            self.present(alert, animated: true, completion: nil)
+                    self.writeToCalendar(projectTitle: self.projectTitleTextField.text!, deadline: self.deadlineDatePicker.date, completion: { (completion) in
+                        
+                        if completion {
+                            OperationQueue.main.addOperation {
+                                let alert = UIAlertController(title: "Alert", message: "Your Project Has Been Saved In The Calendar!", preferredStyle: UIAlertControllerStyle.alert)
+                                alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+                                self.present(alert, animated: true, completion: nil)
+                            }
                         }
-                    }
-                })
+                    })
+                }
+
             }
-            
             
             delegate.newProjectCreated(project: newProject!)
 

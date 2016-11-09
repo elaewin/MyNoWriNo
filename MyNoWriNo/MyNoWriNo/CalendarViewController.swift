@@ -23,6 +23,7 @@ class CalendarViewController: UIViewController {
         
         let status = EKEventStore.authorizationStatus(for: EKEntityType.event)
         
+        
     }
 
     
