@@ -9,41 +9,33 @@
 import UIKit
 import EventKit
 
-class CalendarService: EKEventStore {
+class CalendarService {
     
     static let shared = CalendarService()
     
+    let store = EKEventStore()
+    
     var newCalendar: EKCalendar
     
-    override init() {
+     private init() {
         
-        self.newCalendar = EKCalendar(for: .event, eventStore: CalendarService.shared)
-        
-        super.init()
-        
-        let sourcesInEventStore = self.sources
-        
-        newCalendar.source = sourcesInEventStore.filter({ (source: EKSource) -> Bool in
-            source.sourceType.rawValue == EKSourceType.local.rawValue
-        }).first!
-        
-        do {
-            try self.saveCalendar(newCalendar, commit: true)
-            UserDefaults.standard.set(newCalendar.calendarIdentifier, forKey: "MyNoWriNoPrimaryCalendar")
-        } catch {
-            print("Did not save calendar.")
-        }
-        
-        
+        self.newCalendar = store.defaultCalendarForNewEvents
+
     }
     
     
-    func getAccessToCalendar() {
-        self.requestAccess(to: .event, completion: {(granted: Bool, error: Error?) in
-            if granted == false {
-                print("Access to store not granted")
-            }
-        })
+    func getAccessToCalendar(completion: @escaping ()->()) {
+            self.store.requestAccess(to: .event, completion: {(granted: Bool, error: Error?) in
+                print(error)
+                
+                if !granted {
+                    print("Access to store not granted")
+                } else {
+                    OperationQueue.main.addOperation {
+                        completion()
+                    }
+                }
+            })
     }
     
 }
