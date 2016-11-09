@@ -40,7 +40,7 @@ class CalendarService: EKEventStore {
     
     func getAccessToCalendar() {
         self.requestAccess(to: .event, completion: {(granted: Bool, error: Error?) in
-            if !granted {
+            if granted == false {
                 print("Access to store not granted")
             }
         })
