@@ -25,18 +25,9 @@ class CalendarViewController: UIViewController {
         
     }
 
-                
-            
-            
-
-    
-    }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkCalendarAuthStatus()
 
     }
     
@@ -47,3 +38,4 @@ class CalendarViewController: UIViewController {
     }
     
 }
+
