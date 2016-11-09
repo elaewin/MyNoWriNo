@@ -76,6 +76,7 @@ class NewProjectViewController: UIViewController {
             newEvent.startDate = deadline
             newEvent.endDate = deadline
             newEvent.isAllDay = true
+
         
             do {
                 try eventStore.store.save(newEvent, span: .thisEvent, commit: true)
