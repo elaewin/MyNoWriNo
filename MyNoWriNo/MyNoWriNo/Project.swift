@@ -61,6 +61,14 @@ class Project: NSObject {
         let interval = DateInterval(start: self.currentDate, end: self.deadline).duration / 86400
         self.daysRemaining = Int(interval.rounded())
     }
+    
+    func getReadableDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.locale = Locale(identifier: "en_US")
+        let dateAsString = formatter.string(from: date)
+        return dateAsString
+    }
 }
 
 extension Project: NSCoding {

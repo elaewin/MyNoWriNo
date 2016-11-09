@@ -20,7 +20,6 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var daysLeftInProject: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +27,10 @@ class DetailsViewController: UIViewController {
             self.project = projectTabBarController.project
         }
         
+        self.projectTitleLabel.text = self.project.name
+        self.deadlineLabel.text = self.project.getReadableDate(project.deadline)
+        self.totalWordCountLabel.text = "\(self.project.cumulativeWordCount) of \(self.project.targetWordCount) goal"
+        self.daysLeftInProject.text = "\(self.project.daysRemaining)"
         
         // Do any additional setup after loading the view.
     }
@@ -35,6 +38,7 @@ class DetailsViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func editButtonPressed(_ sender: Any) {
+        
     }
 
     @IBAction func deleteButtonPressed(_ sender: Any) {

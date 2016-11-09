@@ -44,12 +44,12 @@
                     <connections>
                         <outlet property="collectionView" destination="rT1-7g-icK" id="DQZ-1E-74C"/>
                         <segue destination="kmh-Eg-EgO" kind="presentation" identifier="NewProjectViewController" id="akj-kN-lun"/>
-                        <segue destination="nSx-Sr-bOT" kind="show" identifier="showProjectDetailsSegue" id="4qE-4H-UnY"/>
+                        <segue destination="ga8-Ji-gQn" kind="presentation" identifier="projectTabBarSegue" id="7rg-Ca-Iee"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.599999999999994" y="42.728635682158924"/>
+            <point key="canvasLocation" x="70" y="-342"/>
         </scene>
         <!--Details-->
         <scene sceneID="M77-7U-8Yo">
@@ -435,6 +435,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ga8-Ji-gQn" customClass="ProjectTabBarController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="WGG-Wm-QPp"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="DPw-le-27w">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -452,7 +453,4 @@
             <point key="canvasLocation" x="1999" y="-756"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="B3j-jO-P5p"/>
-    </inferredMetricsTieBreakers>
 </document>

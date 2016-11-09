@@ -55,13 +55,17 @@ class HomeViewController: UIViewController {
         
         if let destinationController = segue.destination as? NewProjectViewController {
             destinationController.delegate = self
-        } else if let destinationController = segue.destination as? DetailsViewController {
-            // do something here.
         }
+        
+        if let tabBarController = segue.destination as? ProjectTabBarController {
+            var selectedIndex = collectionView.indexPath(for: ProjectCollectionCell)
+            tabBarController.project = selectedCell.
+        }
+        
     }
 
 
-    
+
     //MARK: Actions
     @IBAction func newProjectButtonPressed(_ sender: AnyObject) {
         self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
@@ -100,14 +104,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         if indexPath.row == allProjects.count {
             self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
         } else {
-            let selectedProject = self.collectionView.cellForItem(at: indexPath) as! ProjectCollectionCell
-            
-//            let detailsViewController = segue.destination as! DetailsViewController
-//            detailsViewController.project = selectedProject
-            
-            self.performSegue(withIdentifier: DetailsViewController.identifier, sender: nil)
-            print("User clicked on project at index \(indexPath.row)")
-            
+            self.performSegue(withIdentifier: "projectTabBarSegue", sender: nil)
         }
         
     }
