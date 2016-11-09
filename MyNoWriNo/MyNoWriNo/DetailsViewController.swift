@@ -12,6 +12,15 @@ class DetailsViewController: UIViewController {
 
     var project: Project!
     
+    @IBOutlet weak var projectTitleLabel: UILabel!
+    
+    @IBOutlet weak var deadlineLabel: UILabel!
+    
+    @IBOutlet weak var totalWordCountLabel: UILabel!
+    
+    @IBOutlet weak var daysLeftInProject: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,23 +28,25 @@ class DetailsViewController: UIViewController {
             self.project = projectTabBarController.project
         }
         
+        
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: Actions
+    @IBAction func editButtonPressed(_ sender: Any) {
+    }
+
+    @IBAction func deleteButtonPressed(_ sender: Any) {
     }
     
+    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension DetailsViewController: HomeViewControllerDelegate {
+    
+    func getProject(project: Project) {
+        self.project = project
     }
-    */
-
+    
 }

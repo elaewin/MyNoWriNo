@@ -133,8 +133,8 @@
 		5547B15B1DCEE8430010CE9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				556294DE1DD29A4C00C87029 /* EventsViewController.swift */,
 				556294DC1DD2575900C87029 /* DetailsViewController.swift */,
+				556294DE1DD29A4C00C87029 /* EventsViewController.swift */,
 				5547B15C1DCEE8A30010CE9A /* HomeViewController.swift */,
 				010B7FCB1DD110970097A46F /* NewProjectViewController.swift */,
 				556294DA1DD255BB00C87029 /* ProjectTabBarController.swift */,

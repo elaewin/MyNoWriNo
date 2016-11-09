@@ -13,4 +13,6 @@ class CreateNewProjectCell: UICollectionViewCell {
     
     @IBOutlet weak var newProjectPlusSign: UIImageView!
     
+    
+    
 }

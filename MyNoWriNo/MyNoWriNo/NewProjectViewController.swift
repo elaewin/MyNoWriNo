@@ -34,7 +34,6 @@ class NewProjectViewController: UIViewController {
 
     @IBOutlet weak var createButton: UIButton!
     
-    
     @IBOutlet weak var saveDeadlineSwitch: UISwitch!
     
     
@@ -57,28 +56,28 @@ class NewProjectViewController: UIViewController {
         
     }
     
-    func writeToCalendar(projectTitle: String, deadline: Date) {
-        
-        let eventStore = CalendarService.shared
-        
-        if let calendarForEvent = eventStore.calendar(withIdentifier: "MyNoWriNoPrimaryCalendar") {
-            
-            let newEvent = EKEvent(eventStore: eventStore)
-            
-            newEvent.calendar = calendarForEvent
-            newEvent.title = projectTitle
-            newEvent.startDate = deadline
-            newEvent.endDate = deadline
-            
-            do {
-                try eventStore.save(newEvent, span: .thisEvent)
-                
-            } catch {
-                print("add error handling here.")
-            }
-        }
-        
-    }
+//    func writeToCalendar(projectTitle: String, deadline: Date) {
+//        
+//        let eventStore = CalendarService.shared
+//        
+//        if let calendarForEvent = eventStore.calendar(withIdentifier: "MyNoWriNoPrimaryCalendar") {
+//            
+//            let newEvent = EKEvent(eventStore: eventStore)
+//            
+//            newEvent.calendar = calendarForEvent
+//            newEvent.title = projectTitle
+//            newEvent.startDate = deadline
+//            newEvent.endDate = deadline
+//            
+//            do {
+//                try eventStore.save(newEvent, span: .thisEvent)
+//                
+//            } catch {
+//                print("add error handling here.")
+//            }
+//        }
+//        
+//    }
     
     
     @IBAction func createButtonPressed(_ sender: Any) {
@@ -94,8 +93,8 @@ class NewProjectViewController: UIViewController {
                 newProject?.genre = genre
             }
             if saveDeadlineSwitch.isOn {
-                CalendarService.shared.getAccessToCalendar()
-                writeToCalendar(projectTitle: projectTitleTextField.text!, deadline: deadlineDatePicker.date)
+//                CalendarService.shared.getAccessToCalendar()
+//                writeToCalendar(projectTitle: projectTitleTextField.text!, deadline: deadlineDatePicker.date)
             }
             delegate.newProjectCreated(project: newProject!)
 

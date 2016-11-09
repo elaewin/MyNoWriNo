@@ -9,6 +9,10 @@
 import UIKit
 import EventKit
 
+protocol HomeViewControllerDelegate: class {
+    func getProject(project: Project)
+}
+
 class HomeViewController: UIViewController {
 
     var allProjects = [Project]() {
@@ -19,12 +23,16 @@ class HomeViewController: UIViewController {
     
     let kDisplayColumns = 2
     
+    weak var delegate: HomeViewControllerDelegate?
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.collectionView.dataSource = self
+        self.collectionView.allowsMultipleSelection = false
+        
         self.collectionView.delegate = self
         
         
@@ -47,8 +55,12 @@ class HomeViewController: UIViewController {
         
         if let destinationController = segue.destination as? NewProjectViewController {
             destinationController.delegate = self
+        } else if let destinationController = segue.destination as? DetailsViewController {
+            // do something here.
         }
     }
+
+
     
     //MARK: Actions
     @IBAction func newProjectButtonPressed(_ sender: AnyObject) {
@@ -85,10 +97,34 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if indexPath.row == allProjects.count {
+            self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
+        } else {
+            let selectedProject = self.collectionView.cellForItem(at: indexPath) as! ProjectCollectionCell
+            
+            let detailsViewController = segue.destination as! DetailsViewController
+            detailsViewController.project = selectedProject
+            
+            self.performSegue(withIdentifier: DetailsViewController.identifier, sender: nil)
+            print("User clicked on project at index \(indexPath.row)")
+            
+        }
         
     }
 }
+
+//func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//    guard let delegate = self.delegate else { return }
+//    
+//    let selectedCell = self.collectionView.cellForItem(at: indexPath) as! GalleryCell
+//    
+//    let selectedImage = selectedCell.post?.image
+//    
+//    delegate.galleryViewController(selected: selectedImage!)
+//    
+//    Filters.shared.originalImage = selectedImage!
+//    
+//}
 
 
 extension HomeViewController: NewProjectControllerDelegate {
@@ -100,7 +136,6 @@ extension HomeViewController: NewProjectControllerDelegate {
         }
     }
 }
-
 
 
 

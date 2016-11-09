@@ -22,10 +22,9 @@ class ProjectCollectionCell: UICollectionViewCell {
         didSet {
             self.projectNameLabel.text = project.name
             
-            let dateFormatter = DateFormatter()
-            let dateAsString = dateFormatter.string(from: project.deadline)
+            let dateAsString = getReadableDate(project.deadline)
             
-            self.deadlineLabel.text = dateAsString
+            self.deadlineLabel.text = "Deadline: \(dateAsString)"
             self.percentCompleteLabel.text = String(project.percentComplete)
             if let genre = project.genre {
                 self.genreLabel.text = genre
@@ -35,5 +34,13 @@ class ProjectCollectionCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func getReadableDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.locale = Locale(identifier: "en_US")
+        let dateAsString = formatter.string(from: date)
+        return dateAsString
     }
 }
