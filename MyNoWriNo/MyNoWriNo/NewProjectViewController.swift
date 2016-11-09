@@ -93,8 +93,8 @@ class NewProjectViewController: UIViewController {
                 newProject?.genre = genre
             }
             if saveDeadlineSwitch.isOn {
-//                CalendarService.shared.getAccessToCalendar()
-//                writeToCalendar(projectTitle: projectTitleTextField.text!, deadline: deadlineDatePicker.date)
+                CalendarService.shared.getAccessToCalendar()
+                writeToCalendar(projectTitle: projectTitleTextField.text!, deadline: deadlineDatePicker.date)
             }
             delegate.newProjectCreated(project: newProject!)
 
