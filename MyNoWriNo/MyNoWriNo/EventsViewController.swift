@@ -19,7 +19,6 @@ class EventsViewController: UIViewController {
             self.project = projectTabBarController.project
         }
         
-        // Do any additional setup after loading the view.
     }
 
 }
