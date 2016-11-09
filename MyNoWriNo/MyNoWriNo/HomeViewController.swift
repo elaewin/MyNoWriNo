@@ -102,8 +102,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         } else {
             let selectedProject = self.collectionView.cellForItem(at: indexPath) as! ProjectCollectionCell
             
-            let detailsViewController = segue.destination as! DetailsViewController
-            detailsViewController.project = selectedProject
+//            let detailsViewController = segue.destination as! DetailsViewController
+//            detailsViewController.project = selectedProject
             
             self.performSegue(withIdentifier: DetailsViewController.identifier, sender: nil)
             print("User clicked on project at index \(indexPath.row)")
@@ -113,18 +113,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 }
 
-//func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//    guard let delegate = self.delegate else { return }
-//    
-//    let selectedCell = self.collectionView.cellForItem(at: indexPath) as! GalleryCell
-//    
-//    let selectedImage = selectedCell.post?.image
-//    
-//    delegate.galleryViewController(selected: selectedImage!)
-//    
-//    Filters.shared.originalImage = selectedImage!
-//    
-//}
 
 
 extension HomeViewController: NewProjectControllerDelegate {
