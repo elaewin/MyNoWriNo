@@ -12,13 +12,14 @@
 		010B7FCE1DD1581E0097A46F /* NewProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010B7FCD1DD1581E0097A46F /* NewProjectCell.xib */; };
 		010B7FD01DD15EC90097A46F /* CreateNewProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B7FCF1DD15EC90097A46F /* CreateNewProjectCell.swift */; };
 		0150994B1DD2921B009A3E42 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150994A1DD2921B009A3E42 /* CalendarService.swift */; };
+		552652281DD3DB0100710F1A /* WordCountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552652271DD3DB0100710F1A /* WordCountCell.xib */; };
+		5526522A1DD3DC9500710F1A /* WordCountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552652291DD3DC9500710F1A /* WordCountCell.swift */; };
 		5547B1471DCEE7570010CE9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B1461DCEE7570010CE9A /* AppDelegate.swift */; };
 		5547B14C1DCEE7570010CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5547B14A1DCEE7570010CE9A /* Main.storyboard */; };
 		5547B14E1DCEE7570010CE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5547B14D1DCEE7570010CE9A /* Assets.xcassets */; };
 		5547B1511DCEE7570010CE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5547B14F1DCEE7570010CE9A /* LaunchScreen.storyboard */; };
 		5547B15D1DCEE8A30010CE9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B15C1DCEE8A30010CE9A /* HomeViewController.swift */; };
 		5547B15F1DCEE8EE0010CE9A /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B15E1DCEE8EE0010CE9A /* Project.swift */; };
-		5547B1611DD0FDF80010CE9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B1601DD0FDF80010CE9A /* Extensions.swift */; };
 		5547B1631DD117A60010CE9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B1621DD117A60010CE9A /* User.swift */; };
 		5547B1671DD11AFB0010CE9A /* projectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5547B1661DD11AFB0010CE9A /* projectCell.xib */; };
 		5547B16B1DD1208C0010CE9A /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B16A1DD1208C0010CE9A /* StatsViewController.swift */; };
@@ -36,6 +37,8 @@
 		010B7FCD1DD1581E0097A46F /* NewProjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewProjectCell.xib; sourceTree = "<group>"; };
 		010B7FCF1DD15EC90097A46F /* CreateNewProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewProjectCell.swift; sourceTree = "<group>"; };
 		0150994A1DD2921B009A3E42 /* CalendarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
+		552652271DD3DB0100710F1A /* WordCountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordCountCell.xib; sourceTree = "<group>"; };
+		552652291DD3DC9500710F1A /* WordCountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCountCell.swift; sourceTree = "<group>"; };
 		5547B1431DCEE7570010CE9A /* MyNoWriNo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoWriNo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5547B1461DCEE7570010CE9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5547B14B1DCEE7570010CE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,7 +47,6 @@
 		5547B1521DCEE7570010CE9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5547B15C1DCEE8A30010CE9A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5547B15E1DCEE8EE0010CE9A /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		5547B1601DD0FDF80010CE9A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5547B1621DD117A60010CE9A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5547B1661DD11AFB0010CE9A /* projectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = projectCell.xib; sourceTree = "<group>"; };
 		5547B16A1DD1208C0010CE9A /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				0150994A1DD2921B009A3E42 /* CalendarService.swift */,
 				556294E01DD2C0F400C87029 /* Protocols.swift */,
 				5547B14A1DCEE7570010CE9A /* Main.storyboard */,
+				552652271DD3DB0100710F1A /* WordCountCell.xib */,
 				010B7FCD1DD1581E0097A46F /* NewProjectCell.xib */,
 				5547B15E1DCEE8EE0010CE9A /* Project.swift */,
 				5547B1661DD11AFB0010CE9A /* projectCell.xib */,
@@ -115,6 +118,7 @@
 				010B7FCF1DD15EC90097A46F /* CreateNewProjectCell.swift */,
 				5547B16E1DD125B20010CE9A /* HomeCollectionViewFlowLayout.swift */,
 				5547B16C1DD121600010CE9A /* ProjectCollectionCell.swift */,
+				552652291DD3DC9500710F1A /* WordCountCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -124,7 +128,6 @@
 			children = (
 				5547B1461DCEE7570010CE9A /* AppDelegate.swift */,
 				5547B14D1DCEE7570010CE9A /* Assets.xcassets */,
-				5547B1601DD0FDF80010CE9A /* Extensions.swift */,
 				5547B1521DCEE7570010CE9A /* Info.plist */,
 			);
 			name = Supporting;
@@ -133,13 +136,13 @@
 		5547B15B1DCEE8430010CE9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */,
 				556294DC1DD2575900C87029 /* DetailsViewController.swift */,
 				556294DE1DD29A4C00C87029 /* EventsViewController.swift */,
 				5547B15C1DCEE8A30010CE9A /* HomeViewController.swift */,
 				010B7FCB1DD110970097A46F /* NewProjectViewController.swift */,
 				556294DA1DD255BB00C87029 /* ProjectTabBarController.swift */,
 				5547B16A1DD1208C0010CE9A /* StatsViewController.swift */,
-				010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				5547B14E1DCEE7570010CE9A /* Assets.xcassets in Resources */,
 				5547B14C1DCEE7570010CE9A /* Main.storyboard in Resources */,
 				5547B1671DD11AFB0010CE9A /* projectCell.xib in Resources */,
+				552652281DD3DB0100710F1A /* WordCountCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +223,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5547B1611DD0FDF80010CE9A /* Extensions.swift in Sources */,
 				010B7FCA1DD0E6C50097A46F /* CalendarViewController.swift in Sources */,
 				5547B1631DD117A60010CE9A /* User.swift in Sources */,
 				5547B1471DCEE7570010CE9A /* AppDelegate.swift in Sources */,
@@ -231,6 +234,7 @@
 				5547B16B1DD1208C0010CE9A /* StatsViewController.swift in Sources */,
 				556294DD1DD2575900C87029 /* DetailsViewController.swift in Sources */,
 				556294DF1DD29A4C00C87029 /* EventsViewController.swift in Sources */,
+				5526522A1DD3DC9500710F1A /* WordCountCell.swift in Sources */,
 				010B7FD01DD15EC90097A46F /* CreateNewProjectCell.swift in Sources */,
 				0150994B1DD2921B009A3E42 /* CalendarService.swift in Sources */,
 				5547B16D1DD121600010CE9A /* ProjectCollectionCell.swift in Sources */,
