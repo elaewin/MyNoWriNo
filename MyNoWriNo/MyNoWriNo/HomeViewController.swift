@@ -9,10 +9,6 @@
 import UIKit
 import EventKit
 
-protocol HomeViewControllerDelegate: class {
-    func getProject(project: Project)
-}
-
 class HomeViewController: UIViewController {
 
     var allProjects = [Project]() {
@@ -24,8 +20,7 @@ class HomeViewController: UIViewController {
     let kDisplayColumns = 2
     
     var selectedProject: Project?
-    
-    weak var delegate: HomeViewControllerDelegate?
+    var selectedIndex: Int?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -61,6 +56,10 @@ class HomeViewController: UIViewController {
         if let tabBarController = segue.destination as? ProjectTabBarController {
             if let project = self.selectedProject {
                 tabBarController.project = project
+            }
+            if let index = self.selectedIndex {
+                tabBarController.indexPassedThrough = index
+                print("Index: \(self.selectedIndex)")
             }
         }
         
@@ -107,13 +106,12 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
         } else {
             self.selectedProject = allProjects[indexPath.row]
+            self.selectedIndex = indexPath.row
             self.performSegue(withIdentifier: "projectTabBarSegue", sender: nil)
         }
         
     }
 }
-
-
 
 extension HomeViewController: NewProjectControllerDelegate {
     
@@ -125,10 +123,13 @@ extension HomeViewController: NewProjectControllerDelegate {
     }
 }
 
-
-
-
-
+extension HomeViewController: DetailsViewControllerDelegate {
+    
+    func deleteProject(index: Int) {
+        allProjects.remove(at: index)
+        print("Project at index \(index)")
+    }
+}
 
 
 

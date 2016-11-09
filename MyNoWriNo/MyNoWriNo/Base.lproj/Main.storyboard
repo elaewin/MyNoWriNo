@@ -118,11 +118,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Io-HQ-Yb2">
+                                <rect key="frame" x="8" y="16" width="91" height="30"/>
+                                <state key="normal" title="&lt; All Projects"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="nSx-Sr-bOT" eventType="touchUpInside" id="pvz-z5-O7X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8Io-HQ-Yb2" firstAttribute="top" secondItem="Gwj-eW-W9V" secondAttribute="top" constant="16" id="BFP-0i-4Ay"/>
                             <constraint firstItem="PA0-hO-Gkq" firstAttribute="top" secondItem="5c5-fQ-vKH" secondAttribute="bottom" constant="12" id="DBX-sb-wUb"/>
                             <constraint firstItem="W8F-Rv-QWw" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="DOZ-Kf-4Xd"/>
+                            <constraint firstItem="8Io-HQ-Yb2" firstAttribute="leading" secondItem="Gwj-eW-W9V" secondAttribute="leading" constant="8" id="Exk-kU-mHh"/>
                             <constraint firstItem="5c5-fQ-vKH" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="QMe-Vd-FZs"/>
                             <constraint firstItem="vJh-5s-Pfx" firstAttribute="top" secondItem="WpF-de-0tv" secondAttribute="bottom" constant="32" id="Uda-fB-RXk"/>
                             <constraint firstItem="vJh-5s-Pfx" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="cb6-xi-dmy"/>
@@ -177,6 +186,15 @@
                     <view key="view" contentMode="scaleToFill" id="Bu7-Eg-lbv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8h-ln-aG7">
+                                <rect key="frame" x="132" y="524" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" id="xCC-YQ-HoU"/>
