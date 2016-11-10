@@ -283,7 +283,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vg6-Ds-DNC">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vg6-Ds-DNC">
                                 <rect key="frame" x="87" y="513" width="200" height="45"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.19259159479999999" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -331,6 +331,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addWordCountButton" destination="Vg6-Ds-DNC" id="0J4-br-Gaa"/>
                         <outlet property="cancelButtonPressed" destination="mUQ-Dw-b6d" id="yBt-49-dNY"/>
                         <outlet property="datePicker" destination="tkG-dr-Wkp" id="V8f-ji-P1s"/>
                         <outlet property="totalWordsTextBox" destination="Cwm-C2-Ywd" id="bmJ-Ld-2IG"/>
@@ -661,7 +662,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPs-O3-2qb">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="31"/>
                                                 <subviews>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBH-ms-Pqo">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SBH-ms-Pqo">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                     </switch>
                                                 </subviews>
