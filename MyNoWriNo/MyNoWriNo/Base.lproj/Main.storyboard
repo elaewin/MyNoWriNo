@@ -9,6 +9,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--About View Controller-->
+        <scene sceneID="RKg-Re-vST">
+            <objects>
+                <viewController id="arg-Lf-Bvq" customClass="AboutViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dRW-pC-HRZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="OOU-Sa-cmw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6hS-nK-lT7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G2n-ku-KfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-777" y="748"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -175,14 +193,20 @@
                                 <state key="normal" title="STOP">
                                     <color key="titleColor" red="1" green="0.075491325060000003" blue="0.095587976579999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopTimer:" destination="fLY-pm-3T2" eventType="touchUpInside" id="CO3-kl-c1t"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcF-fb-fuS">
                                 <rect key="frame" x="196" y="536" width="180" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startTimer:" destination="fLY-pm-3T2" eventType="touchUpInside" id="GrH-5L-Jew"/>
+                                </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="k7V-z7-iCu">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="k7V-z7-iCu">
                                 <rect key="frame" x="0.0" y="175" width="376" height="286"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="500424623.70901102">
@@ -203,62 +227,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Alerts" id="jEf-d6-34R"/>
                     <connections>
-                        <segue destination="Z54-8v-Prd" kind="presentation" id="ggz-VK-uZZ"/>
+                        <outlet property="sprintTimer" destination="k7V-z7-iCu" id="lXA-x8-J6V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ynx-GY-0kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3040.8000000000002" y="42.728635682158924"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="5WU-SI-tQU">
-            <objects>
-                <viewController id="Z54-8v-Prd" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MyV-eO-C0o"/>
-                        <viewControllerLayoutGuide type="bottom" id="sEe-au-EYm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="19U-8Q-q4H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You've completed your sprint! How many words did you write?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUI-Wt-6zL">
-                                <rect key="frame" x="16" y="182" width="343" height="194"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TIME!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvy-yi-NGs">
-                                <rect key="frame" x="16" y="95" width="343" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number Of Words.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zZn-L8-8ck">
-                                <rect key="frame" x="115" y="456" width="145" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Nv-8t-wdX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="IXR-bl-8Be">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="dbX-8c-HcM"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5QX-y2-QMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3040.8000000000002" y="739.88005997001505"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="rjK-hX-pPL">
@@ -557,6 +531,15 @@
                                     <action selector="newDueDateSelected:" destination="kmh-Eg-EgO" eventType="valueChanged" id="6st-nX-jca"/>
                                 </connections>
                             </datePicker>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="about-icon" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-fq-Kq6">
+                                <rect key="frame" x="0.0" y="0.0" width="26" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -590,11 +573,14 @@
                         <outlet property="projectTitleTextField" destination="8N3-Yh-HfB" id="PjF-wp-jKq"/>
                         <outlet property="saveDeadlineSwitch" destination="SBH-ms-Pqo" id="gKh-pn-15i"/>
                         <outlet property="wordCountTextField" destination="Wa5-UB-LM3" id="qDs-gz-ma3"/>
+                        <segue destination="arg-Lf-Bvq" kind="popoverPresentation" id="9YG-fy-GdP">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhX-Rh-5eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.599999999999994" y="747.9760119940031"/>
+            <point key="canvasLocation" x="84" y="777.66116941529242"/>
         </scene>
         <!--Project Tab Bar Controller-->
         <scene sceneID="se1-54-fya">
@@ -619,4 +605,7 @@
             <point key="canvasLocation" x="1999" y="-756"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="about-icon" width="120" height="120"/>
+    </resources>
 </document>
