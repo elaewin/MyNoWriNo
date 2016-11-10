@@ -32,6 +32,13 @@ class CalendarViewController: UIViewController {
         let nib = UINib(nibName: "WordCountCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: WordCountCell.identifier)
     }
+    
+    @IBAction func addNewButtonPressed(_ sender: Any) {
+        
+        
+        
+    }
+    
 }
 
 
