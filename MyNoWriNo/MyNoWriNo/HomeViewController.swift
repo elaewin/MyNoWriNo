@@ -40,6 +40,10 @@ class HomeViewController: UIViewController {
         self.collectionView.register(nib, forCellWithReuseIdentifier: ProjectCollectionCell.identifier)
         
         self.collectionView.collectionViewLayout = HomeCollectionViewFlowLayout(columns: kDisplayColumns)
+        
+        if allProjects.count < 1 {
+            self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {

@@ -73,7 +73,8 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension CalendarViewController: AddCountViewControllerDelegate {
-    func addNewWordCount(newDate: Date, newCount: Int) -> (date: Date, count: Int) {
-        return (date: newDate, count: newCount)
+    func addNewWordCount(newDate: Date, newCount: Int) {
+        let newRecord = (date: newDate, count: newCount)
+        self.project.dailyWordCount?.append(newRecord)
     }
 }
