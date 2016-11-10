@@ -12,6 +12,7 @@
 		010B7FCE1DD1581E0097A46F /* NewProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010B7FCD1DD1581E0097A46F /* NewProjectCell.xib */; };
 		010B7FD01DD15EC90097A46F /* CreateNewProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B7FCF1DD15EC90097A46F /* CreateNewProjectCell.swift */; };
 		0150994B1DD2921B009A3E42 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150994A1DD2921B009A3E42 /* CalendarService.swift */; };
+		017960DE1DD52F2200498F9E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017960DD1DD52F2200498F9E /* AboutViewController.swift */; };
 		552652281DD3DB0100710F1A /* WordCountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552652271DD3DB0100710F1A /* WordCountCell.xib */; };
 		5526522A1DD3DC9500710F1A /* WordCountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552652291DD3DC9500710F1A /* WordCountCell.swift */; };
 		552652341DD4150F00710F1A /* AddCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552652331DD4150F00710F1A /* AddCountViewController.swift */; };
@@ -39,6 +40,7 @@
 		010B7FCD1DD1581E0097A46F /* NewProjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewProjectCell.xib; sourceTree = "<group>"; };
 		010B7FCF1DD15EC90097A46F /* CreateNewProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewProjectCell.swift; sourceTree = "<group>"; };
 		0150994A1DD2921B009A3E42 /* CalendarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
+		017960DD1DD52F2200498F9E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		552652271DD3DB0100710F1A /* WordCountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordCountCell.xib; sourceTree = "<group>"; };
 		552652291DD3DC9500710F1A /* WordCountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCountCell.swift; sourceTree = "<group>"; };
 		552652331DD4150F00710F1A /* AddCountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCountViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				556294DC1DD2575900C87029 /* DetailsViewController.swift */,
 				556294DE1DD29A4C00C87029 /* EventsViewController.swift */,
 				5547B15C1DCEE8A30010CE9A /* HomeViewController.swift */,
+				017960DD1DD52F2200498F9E /* AboutViewController.swift */,
 				010B7FCB1DD110970097A46F /* NewProjectViewController.swift */,
 				556294DA1DD255BB00C87029 /* ProjectTabBarController.swift */,
 				5547B16A1DD1208C0010CE9A /* StatsViewController.swift */,
@@ -238,6 +241,7 @@
 				5547B15D1DCEE8A30010CE9A /* HomeViewController.swift in Sources */,
 				556A7A101DD4DF1F00307E51 /* Extensions.swift in Sources */,
 				5547B15F1DCEE8EE0010CE9A /* Project.swift in Sources */,
+				017960DE1DD52F2200498F9E /* AboutViewController.swift in Sources */,
 				010B7FCC1DD110970097A46F /* NewProjectViewController.swift in Sources */,
 				5547B16B1DD1208C0010CE9A /* StatsViewController.swift in Sources */,
 				556294DD1DD2575900C87029 /* DetailsViewController.swift in Sources */,

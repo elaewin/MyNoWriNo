@@ -31,6 +31,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.collectionView.dataSource = self
         self.collectionView.allowsMultipleSelection = false
         
@@ -48,6 +49,7 @@ class HomeViewController: UIViewController {
         if allProjects.count < 1 {
             self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
         }
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -61,6 +63,7 @@ class HomeViewController: UIViewController {
         if let destinationController = segue.destination as? NewProjectViewController {
             destinationController.delegate = self
         }
+        
         if let tabBarController = segue.destination as? ProjectTabBarController {
             if let project = self.selectedProject {
                 tabBarController.project = project
