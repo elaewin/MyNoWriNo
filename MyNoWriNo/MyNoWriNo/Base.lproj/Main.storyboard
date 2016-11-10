@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -615,7 +615,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YI-dy-rka">
-                                <rect key="frame" x="57.5" y="514" width="260" height="60"/>
+                                <rect key="frame" x="58" y="514" width="260" height="60"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="aXp-Pu-FCu"/>
@@ -628,7 +628,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gj-ED-LdW">
-                                <rect key="frame" x="57.5" y="590" width="260" height="60"/>
+                                <rect key="frame" x="58" y="590" width="260" height="60"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="T9B-si-Mbk"/>
@@ -677,13 +677,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a New Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhd-af-kvY">
-                                <rect key="frame" x="80.5" y="28" width="215.5" height="26.5"/>
+                                <rect key="frame" x="80" y="28" width="215.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QeR-Pg-9h4">
-                                <rect key="frame" x="27.5" y="139" width="320" height="216"/>
+                                <rect key="frame" x="28" y="139" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="500241883.04997498">
                                     <!--2016-11-07 20:04:43 +0000-->
                                 </date>
@@ -691,14 +691,17 @@
                                     <action selector="newDueDateSelected:" destination="kmh-Eg-EgO" eventType="valueChanged" id="6st-nX-jca"/>
                                 </connections>
                             </datePicker>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="about-icon" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-fq-Kq6">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about-icon" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-fq-Kq6">
                                 <rect key="frame" x="0.0" y="0.0" width="26" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="AboutViewController">
+                                    <accessibilityTraits key="traits" button="YES" image="YES" notEnabled="YES"/>
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="cap-FS-wIN"/>
+                                    <constraint firstAttribute="height" constant="24" id="j6W-MY-xtu"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -720,6 +723,8 @@
                             <constraint firstItem="0Gj-ED-LdW" firstAttribute="top" secondItem="8YI-dy-rka" secondAttribute="bottom" constant="16" id="c5h-PB-gnV"/>
                             <constraint firstAttribute="trailing" secondItem="8N3-Yh-HfB" secondAttribute="trailing" constant="16" id="iLB-bl-UPa"/>
                             <constraint firstItem="8N3-Yh-HfB" firstAttribute="top" secondItem="Lhd-af-kvY" secondAttribute="bottom" constant="8" id="llD-BZ-Ues"/>
+                            <constraint firstItem="SQH-fq-Kq6" firstAttribute="leading" secondItem="a7p-zF-c8x" secondAttribute="leading" id="pZ0-Sy-buD"/>
+                            <constraint firstItem="SQH-fq-Kq6" firstAttribute="top" secondItem="a7p-zF-c8x" secondAttribute="top" id="qlg-KC-rFd"/>
                             <constraint firstItem="0Gj-ED-LdW" firstAttribute="centerX" secondItem="a7p-zF-c8x" secondAttribute="centerX" id="ucX-7Q-myL"/>
                             <constraint firstItem="jjQ-vb-bdF" firstAttribute="leading" secondItem="a7p-zF-c8x" secondAttribute="leading" constant="16" id="uvs-ba-ale"/>
                             <constraint firstItem="8N3-Yh-HfB" firstAttribute="leading" secondItem="a7p-zF-c8x" secondAttribute="leading" constant="16" id="vNa-xO-FB5"/>
@@ -733,9 +738,7 @@
                         <outlet property="projectTitleTextField" destination="8N3-Yh-HfB" id="PjF-wp-jKq"/>
                         <outlet property="saveDeadlineSwitch" destination="SBH-ms-Pqo" id="gKh-pn-15i"/>
                         <outlet property="wordCountTextField" destination="Wa5-UB-LM3" id="qDs-gz-ma3"/>
-                        <segue destination="arg-Lf-Bvq" kind="popoverPresentation" id="9YG-fy-GdP">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
+                        <segue destination="arg-Lf-Bvq" kind="presentation" identifier="AboutViewController" modalTransitionStyle="flipHorizontal" id="9YG-fy-GdP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhX-Rh-5eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
