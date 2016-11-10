@@ -27,16 +27,12 @@ class CalendarViewController: UIViewController {
 
         if let projectTabBarController = self.tabBarController as? ProjectTabBarController {
             self.project = projectTabBarController.project
-            
-            if let wordCount = project.dailyWordCount {
-                for (date, count) in wordCount {
-                    print("\(date), w/c: \(count)")
-                }
-            }
         }
-
+        
+        let nib = UINib(nibName: "WordCountCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: WordCountCell.identifier)
     }
-    
+
 }
 
 extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
@@ -51,11 +47,13 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: WordCountCell.identifier, for: indexPath) as! WordCountCell
         
-        for dictionary in project.dailyWordCount?.sorted(by: { $0.key, $1.key } )
+        let wordCountArray = project.dailyWordCount
         
-        let currentRecord = self.project.dailyWordCount[indexPath.row]
+        let sorted = wordCountArray?.sorted(by: { $0.date < $1.date })
         
-        cell.record = (currentRecord.key, currentRecord.value)
+        let currentCount = sorted![indexPath.row]
+        
+        cell.wordCount = currentCount
         
         return cell
     }

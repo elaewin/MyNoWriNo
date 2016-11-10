@@ -61,6 +61,9 @@ class HomeViewController: UIViewController {
                 tabBarController.indexPassedThrough = index
                 print("Index: \(self.selectedIndex)")
             }
+            if let detailsViewController = tabBarController.viewControllers?[0] as? DetailsViewController {
+                detailsViewController.delegate = self
+            }
         }
         
     }
