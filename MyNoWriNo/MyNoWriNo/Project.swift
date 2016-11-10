@@ -21,6 +21,7 @@ class Project: NSObject {
     var wordsRemaining: Int
     var daysElapsed: Int
     var daysRemaining: Int
+    var daysOfWriting: Int
     
     var dailyWordCount: [(date: Date, count: Int)]?
     var genre: String?
@@ -57,6 +58,8 @@ class Project: NSObject {
         }
         
         self.dailyWordCount = []
+        
+        self.daysOfWriting = (self.dailyWordCount?.count)!
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -72,6 +75,7 @@ class Project: NSObject {
         dailyWordCount = aDecoder.decodeObject(forKey: "dailyWordCount") as? [(date: Date, count: Int)]
         genre = aDecoder.decodeObject(forKey: "genre") as? String
         wordsPerDayForTarget = aDecoder.decodeObject(forKey: "wordsPerDayForTarget") as! Int?
+        daysOfWriting = aDecoder.decodeInteger(forKey: "daysOfWriting")
         
         super.init()
     }
@@ -105,5 +109,6 @@ extension Project: NSCoding {
         aCoder.encode(dailyWordCount, forKey: "dailyWordCount")
         aCoder.encode(genre, forKey: "genre")
         aCoder.encode(wordsPerDayForTarget, forKey: "wordsPerDayForTarget")
+        aCoder.encode(daysOfWriting, forKey: "daysOfWriting")
     }
 }

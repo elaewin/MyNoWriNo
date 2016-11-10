@@ -27,6 +27,13 @@ class StatsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         if let projectTabBarController = self.tabBarController as? ProjectTabBarController {
             self.project = projectTabBarController.project
             
@@ -34,18 +41,16 @@ class StatsViewController: UIViewController {
             
             self.wordsToTargetLabel.text = "\(project.wordsRemaining)"
             
-                        
             self.finalWordCountAtPaceLabel.text = "\(calculateWordCountAtPace(count: project.cumulativeWordCount, daysRemaining: project.daysRemaining, daysElapsed: project.daysElapsed))"
             
-            self.averageWordsPerDayLabel.text = "\(calculateDailyAverage(count: project.cumulativeWordCount, days: project.daysElapsed))"
+            self.averageWordsPerDayLabel.text = "\(calculateDailyAverage(count: project.cumulativeWordCount, days: project.daysOfWriting))"
             
             self.averageWordsPerWeekLabel.text = "\(calculateWeeklyAverage(count: project.cumulativeWordCount, days: project.daysElapsed))"
             
             self.averageWordsPerMonthLabel.text = "\(calculateMonthlyAverage(count: project.cumulativeWordCount, days: project.daysElapsed))"
-        
+            
         }
-        
-        // Do any additional setup after loading the view.
+
     }
 
     func calculateWordCountAtPace(count: Int, daysRemaining: Int, daysElapsed: Int) -> Int {

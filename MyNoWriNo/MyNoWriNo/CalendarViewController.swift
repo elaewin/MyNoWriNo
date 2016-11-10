@@ -77,7 +77,15 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    
+    func getUniqueDates() -> Int {
+        var datesArray = [String]()
+        for item in self.project.dailyWordCount! {
+            let date = self.project.getReadableDate(item.date)
+            datesArray.append(date)
+        }
+        let datesSet = Set(datesArray)
+        return datesSet.count
+    }
 }
 
 extension CalendarViewController: AddCountViewControllerDelegate {
@@ -85,9 +93,12 @@ extension CalendarViewController: AddCountViewControllerDelegate {
         let newRecord = (date: newDate, count: newCount)
         print(newRecord)
         self.project.dailyWordCount?.append(newRecord)
-        print("\(self.project.dailyWordCount?.count)")
-//        for item in self.project.dailyWordCount! {
-//            print(item)
-//        }
+        self.project.daysOfWriting = getUniqueDates()
+        if let projectTabBarController = self.tabBarController as? ProjectTabBarController {
+            print("\(projectTabBarController.project.dailyWordCount?.count)")
+            for item in projectTabBarController.project.dailyWordCount! {
+                print(item)
+            }
+        }
     }
 }
