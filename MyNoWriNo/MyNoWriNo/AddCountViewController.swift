@@ -22,6 +22,8 @@ class AddCountViewController: UIViewController {
     
     @IBOutlet weak var totalWordsTextBox: UILabel!
     
+    @IBOutlet weak var totalWordsTextField: UITextField!
+    
     @IBOutlet weak var addWordCountButton: UIButton!
     
     override func viewDidLoad() {
@@ -34,32 +36,48 @@ class AddCountViewController: UIViewController {
         newDate = datePicker.date
     }
     
+    @IBAction func addWordsNumberEntered(_ sender: Any) {
+        if totalWordsTextField.text != "" {
+            addWordCountButton.isEnabled = true
+        }
+    }
+    
     @IBAction func addWordCountButtonPressed(_ sender: Any) {
         guard let delegate = self.delegate else { return }
 
         if newDate == nil && totalWordsTextBox.text != "" {
             let date = Date()
             let count = Int(totalWordsTextBox.text!)
-            delegate.addNewWordCount(newDate: date, newCount: count!)
+            if count != 0 {
+                delegate.addNewWordCount(newDate: date, newCount: count!)
+            } else {
+                //fire off alert.
+            }
         }
         
         if newDate != nil && totalWordsTextBox.text != "" {
             let date = datePicker.date
             let count = Int(totalWordsTextBox.text!)
-            delegate.addNewWordCount(newDate: date, newCount: count!)
+            if count != 0 {
+                delegate.addNewWordCount(newDate: date, newCount: count!)
+            } else {
+                //fire off alert
+            }
         }
     }
 
     @IBAction func cancelButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
 
 extension AddCountViewController: UITextFieldDelegate {
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if totalWordsTextBox.text != "" {
-            addWordCountButton.isEnabled = true
+       
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if !(string.numberIsValid) {
+            let lastIndex = string.index(before: string.endIndex)
+            totalWordsTextField.text = string.substring(to: lastIndex)
         }
+        return true
     }
 }

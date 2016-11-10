@@ -282,6 +282,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="addWordsNumberEntered:" destination="YBB-Tm-A2d" eventType="editingChanged" id="GET-CW-DaP"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vg6-Ds-DNC">
                                 <rect key="frame" x="87" y="513" width="200" height="45"/>
@@ -332,9 +335,9 @@
                     </view>
                     <connections>
                         <outlet property="addWordCountButton" destination="Vg6-Ds-DNC" id="0J4-br-Gaa"/>
-                        <outlet property="cancelButtonPressed" destination="mUQ-Dw-b6d" id="yBt-49-dNY"/>
                         <outlet property="datePicker" destination="tkG-dr-Wkp" id="V8f-ji-P1s"/>
                         <outlet property="totalWordsTextBox" destination="Cwm-C2-Ywd" id="bmJ-Ld-2IG"/>
+                        <outlet property="totalWordsTextField" destination="yaC-aG-xtQ" id="8mo-kW-dY3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghq-lC-1Dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
