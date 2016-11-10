@@ -13,7 +13,10 @@ class HomeViewController: UIViewController {
 
     var allProjects = [Project]() {
         didSet {
-            collectionView.reloadData()
+            saveProjectData(allProjects)
+            if collectionView != nil {
+                collectionView.reloadData()
+            }
         }
     }
     
@@ -21,6 +24,7 @@ class HomeViewController: UIViewController {
     
     var selectedProject: Project?
     var selectedIndex: Int?
+    var defaults = UserDefaults.standard
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -72,13 +76,19 @@ class HomeViewController: UIViewController {
         
     }
 
-
+    func saveProjectData(_ array: [Project]) {
+        let savedData = NSKeyedArchiver.archivedData(withRootObject: array)
+        self.defaults.set(savedData, forKey: "projects")
+        
+        self.defaults.synchronize()
+    }
 
     //MARK: Actions
     @IBAction func newProjectButtonPressed(_ sender: AnyObject) {
         self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
     }
 
+    
     
 }
 

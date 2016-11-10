@@ -50,22 +50,28 @@ class Project: NSObject {
             self.daysElapsed = 0
         }
         
-        self.wordsPerDayForTarget = self.wordsRemaining / self.daysRemaining
+        if self.daysRemaining != 0 {
+            self.wordsPerDayForTarget = self.wordsRemaining / self.daysRemaining
+        } else {
+            self.wordsPerDayForTarget = self.wordsRemaining
+        }
     }
     
     required init(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObject(forKey: "name") as! String
-        targetWordCount = aDecoder.decodeObject(forKey: "targetWordCount") as! Int
+        targetWordCount = aDecoder.decodeInteger(forKey: "targetWordCount")
         deadline = aDecoder.decodeObject(forKey: "deadline") as! Date
-        cumulativeWordCount = aDecoder.decodeObject(forKey: "cumulativeWordCount") as! Int
-        percentComplete = aDecoder.decodeObject(forKey: "percentComplete") as! Int
-        startDate = aDecoder.decodeObject(forKey: "currentDate") as! Date
-        wordsRemaining = aDecoder.decodeObject(forKey: "wordsRemaining") as! Int
-        daysElapsed = aDecoder.decodeObject(forKey: "daysElapsed") as! Int
-        daysRemaining = aDecoder.decodeObject(forKey: "daysRemaining") as! Int
-        dailyWordCount = aDecoder.decodeObject(forKey: "dailyWordCount") as! [(date: Date, count: Int)]?
-        genre = aDecoder.decodeObject(forKey: "genre") as! String?
+        cumulativeWordCount = aDecoder.decodeInteger(forKey: "cumulativeWordCount")
+        percentComplete = aDecoder.decodeInteger(forKey: "percentComplete")
+        startDate = aDecoder.decodeObject(forKey: "startDate") as! Date
+        wordsRemaining = aDecoder.decodeInteger(forKey: "wordsRemaining")
+        daysElapsed = aDecoder.decodeInteger(forKey: "daysElapsed")
+        daysRemaining = aDecoder.decodeInteger(forKey: "daysRemaining")
+        dailyWordCount = aDecoder.decodeObject(forKey: "dailyWordCount") as? [(date: Date, count: Int)]
+        genre = aDecoder.decodeObject(forKey: "genre") as? String
         wordsPerDayForTarget = aDecoder.decodeObject(forKey: "wordsPerDayForTarget") as! Int?
+        
+        super.init()
     }
     
     func getDaysRemaining(deadline: Date) {
