@@ -15,6 +15,7 @@
 		552652281DD3DB0100710F1A /* WordCountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552652271DD3DB0100710F1A /* WordCountCell.xib */; };
 		5526522A1DD3DC9500710F1A /* WordCountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552652291DD3DC9500710F1A /* WordCountCell.swift */; };
 		552652301DD3F0E500710F1A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5526522F1DD3F0E500710F1A /* Extensions.swift */; };
+		552652341DD4150F00710F1A /* AddCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552652331DD4150F00710F1A /* AddCountViewController.swift */; };
 		5547B1471DCEE7570010CE9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547B1461DCEE7570010CE9A /* AppDelegate.swift */; };
 		5547B14C1DCEE7570010CE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5547B14A1DCEE7570010CE9A /* Main.storyboard */; };
 		5547B14E1DCEE7570010CE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5547B14D1DCEE7570010CE9A /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		552652271DD3DB0100710F1A /* WordCountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordCountCell.xib; sourceTree = "<group>"; };
 		552652291DD3DC9500710F1A /* WordCountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCountCell.swift; sourceTree = "<group>"; };
 		5526522F1DD3F0E500710F1A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../../.Trash/Extensions.swift; sourceTree = "<group>"; };
+		552652331DD4150F00710F1A /* AddCountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCountViewController.swift; sourceTree = "<group>"; };
 		5547B1431DCEE7570010CE9A /* MyNoWriNo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNoWriNo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5547B1461DCEE7570010CE9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5547B14B1DCEE7570010CE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		5547B15B1DCEE8430010CE9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				552652331DD4150F00710F1A /* AddCountViewController.swift */,
 				010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */,
 				556294DC1DD2575900C87029 /* DetailsViewController.swift */,
 				556294DE1DD29A4C00C87029 /* EventsViewController.swift */,
@@ -230,6 +233,7 @@
 				5547B1631DD117A60010CE9A /* User.swift in Sources */,
 				5547B1471DCEE7570010CE9A /* AppDelegate.swift in Sources */,
 				5547B16F1DD125B20010CE9A /* HomeCollectionViewFlowLayout.swift in Sources */,
+				552652341DD4150F00710F1A /* AddCountViewController.swift in Sources */,
 				556294DB1DD255BB00C87029 /* ProjectTabBarController.swift in Sources */,
 				5547B15D1DCEE8A30010CE9A /* HomeViewController.swift in Sources */,
 				5547B15F1DCEE8EE0010CE9A /* Project.swift in Sources */,

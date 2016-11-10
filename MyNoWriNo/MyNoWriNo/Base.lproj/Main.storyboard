@@ -210,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="3040.8000000000002" y="42.728635682158924"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Count View Controller-->
         <scene sceneID="eWm-8Q-pvY">
             <objects>
-                <viewController id="YBB-Tm-A2d" sceneMemberID="viewController">
+                <viewController id="YBB-Tm-A2d" customClass="AddCountViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SbZ-SE-Prh"/>
                         <viewControllerLayoutGuide type="bottom" id="KHi-4p-juV"/>
@@ -227,6 +227,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="500437284.01014">
                                     <!--2016-11-10 02:21:24 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="newDatePicked:" destination="YBB-Tm-A2d" eventType="valueChanged" id="W8u-hk-Cuy"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Your Daily Word Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-tF-FPf">
                                 <rect key="frame" x="43" y="52" width="290" height="28"/>
@@ -265,6 +268,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Word Count"/>
+                                <connections>
+                                    <action selector="addWordCountButtonPressed:" destination="YBB-Tm-A2d" eventType="touchUpInside" id="uRo-Fx-HTr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUQ-Dw-b6d">
                                 <rect key="frame" x="112" y="598" width="150" height="45"/>
@@ -276,6 +282,9 @@
                                 <state key="normal" title="CANCEL">
                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="YBB-Tm-A2d" eventType="touchUpInside" id="4Uz-8d-Xmd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -297,6 +306,11 @@
                             <constraint firstItem="Vg6-Ds-DNC" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="xqp-Fx-dmh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButtonPressed" destination="mUQ-Dw-b6d" id="yBt-49-dNY"/>
+                        <outlet property="datePicker" destination="tkG-dr-Wkp" id="V8f-ji-P1s"/>
+                        <outlet property="totalWordsTextBox" destination="Cwm-C2-Ywd" id="bmJ-Ld-2IG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghq-lC-1Dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -395,7 +409,7 @@
                     <tabBarItem key="tabBarItem" title="Calendar" id="xCC-YQ-HoU"/>
                     <connections>
                         <outlet property="tableView" destination="cjo-zL-zS6" id="akq-KX-R7i"/>
-                        <segue destination="YBB-Tm-A2d" kind="presentation" id="di1-nH-6v2"/>
+                        <segue destination="YBB-Tm-A2d" kind="presentation" identifier="AddWordCountSegue" id="di1-nH-6v2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZo-4v-md2" userLabel="First Responder" sceneMemberID="firstResponder"/>
