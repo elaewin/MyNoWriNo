@@ -30,6 +30,16 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateData()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        updateData()
+    }
+    
+    func updateData() {
         if let projectTabBarController = self.tabBarController as? ProjectTabBarController {
             self.project = projectTabBarController.project
             self.index = projectTabBarController.indexPassedThrough
@@ -39,10 +49,7 @@ class DetailsViewController: UIViewController {
         self.deadlineLabel.text = self.project.getReadableDate(project.deadline)
         self.totalWordCountLabel.text = "\(self.project.cumulativeWordCount) of \(self.project.targetWordCount) goal"
         self.daysLeftInProject.text = "(\(self.project.daysRemaining) days remaining)"
-        
-        // Do any additional setup after loading the view.
     }
-
     
     // MARK: Actions
     

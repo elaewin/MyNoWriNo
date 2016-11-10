@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
     var selectedProject: Project?
     var selectedIndex: Int?
     var defaults = UserDefaults.standard
-    
+        
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -118,7 +118,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {        
         if indexPath.row == allProjects.count {
             self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
         } else {
