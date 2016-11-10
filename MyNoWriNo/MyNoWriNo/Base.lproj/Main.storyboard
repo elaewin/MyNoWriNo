@@ -20,17 +20,70 @@
                     <view key="view" contentMode="scaleToFill" id="6hS-nK-lT7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Z1-De-IGm">
+                                <rect key="frame" x="161.5" y="627" width="53" height="32"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="DmO-ri-s7g"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Novel Write Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crX-bb-tv9">
+                                <rect key="frame" x="39" y="60" width="297.5" height="44"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="33"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="-1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkN-6r-NLo">
+                                <rect key="frame" x="41" y="134" width="293" height="398"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="398" id="QY9-1Y-Q1Z"/>
+                                </constraints>
+                                <string key="text">Create a project and monitor your progress along the way with My Novel Write Now! You can view project statistics, set a timer for a writing sprint, and add the due date to your device's calendar. We're here to help you stay on track. </string>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made for writers, inspired by writers." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evb-pc-0iC">
+                                <rect key="frame" x="43" y="540" width="289" height="20"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Evb-pc-0iC" firstAttribute="top" secondItem="kkN-6r-NLo" secondAttribute="bottom" constant="8" symbolic="YES" id="1zh-ol-TUU"/>
+                            <constraint firstItem="5Z1-De-IGm" firstAttribute="centerY" secondItem="6hS-nK-lT7" secondAttribute="centerY" constant="309" id="5Bd-aC-zvp"/>
+                            <constraint firstItem="5Z1-De-IGm" firstAttribute="centerX" secondItem="6hS-nK-lT7" secondAttribute="centerX" id="7gI-1f-Lr4"/>
+                            <constraint firstItem="crX-bb-tv9" firstAttribute="top" secondItem="dRW-pC-HRZ" secondAttribute="bottom" constant="40" id="AU7-bP-fUa"/>
+                            <constraint firstItem="Evb-pc-0iC" firstAttribute="leading" secondItem="6hS-nK-lT7" secondAttribute="leading" constant="43" id="B2a-Cj-NPs"/>
+                            <constraint firstItem="Evb-pc-0iC" firstAttribute="top" secondItem="kkN-6r-NLo" secondAttribute="bottom" constant="8" id="EzW-8D-gd0"/>
+                            <constraint firstItem="crX-bb-tv9" firstAttribute="top" secondItem="dRW-pC-HRZ" secondAttribute="bottom" constant="40" id="MxR-n6-hp4"/>
+                            <constraint firstItem="crX-bb-tv9" firstAttribute="centerX" secondItem="6hS-nK-lT7" secondAttribute="centerX" id="TiS-uT-bvt"/>
+                            <constraint firstItem="5Z1-De-IGm" firstAttribute="top" secondItem="Evb-pc-0iC" secondAttribute="bottom" constant="67" id="gdb-tT-54t"/>
+                            <constraint firstItem="kkN-6r-NLo" firstAttribute="leading" secondItem="6hS-nK-lT7" secondAttribute="leading" constant="41" id="rUw-CP-rvO"/>
+                            <constraint firstAttribute="trailing" secondItem="kkN-6r-NLo" secondAttribute="trailing" constant="41" id="rn5-xr-lBo"/>
+                            <constraint firstItem="kkN-6r-NLo" firstAttribute="centerX" secondItem="Evb-pc-0iC" secondAttribute="centerX" id="sVg-lA-k7L"/>
+                            <constraint firstItem="kkN-6r-NLo" firstAttribute="centerX" secondItem="6hS-nK-lT7" secondAttribute="centerX" id="uMn-MB-sRm"/>
+                            <constraint firstItem="kkN-6r-NLo" firstAttribute="centerY" secondItem="6hS-nK-lT7" secondAttribute="centerY" id="xsP-7v-bn0"/>
+                            <constraint firstAttribute="trailing" secondItem="Evb-pc-0iC" secondAttribute="trailing" constant="43" id="y8N-NQ-bLR"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G2n-ku-KfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-549" y="778"/>
+            <point key="canvasLocation" x="-778.39999999999998" y="-342.27886056971516"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="HomeViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -40,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rT1-7g-icK">
-                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="599"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8iF-Zp-meX">
                                     <size key="itemSize" width="122" height="104"/>
@@ -50,13 +103,27 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfZ-Mt-XC3">
+                                <rect key="frame" x="167" y="627" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="G6Y-nJ-PSc"/>
+                                    <constraint firstAttribute="width" constant="40" id="ddD-Jx-Rsw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="xuF-01-Zbf"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="about-icon"/>
+                                <connections>
+                                    <segue destination="arg-Lf-Bvq" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="1AK-Fp-ijO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zfZ-Mt-XC3" secondAttribute="bottom" id="4bJ-tT-qZq"/>
                             <constraint firstAttribute="trailing" secondItem="rT1-7g-icK" secondAttribute="trailing" id="HPh-Ix-Ls0"/>
                             <constraint firstItem="rT1-7g-icK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HUN-XI-Bkx"/>
                             <constraint firstItem="rT1-7g-icK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="R0P-W2-zlU"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rT1-7g-icK" secondAttribute="bottom" id="maY-XN-o6Y"/>
+                            <constraint firstItem="zfZ-Mt-XC3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tle-dC-SVo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rT1-7g-icK" secondAttribute="bottom" constant="40" id="maY-XN-o6Y"/>
                         </constraints>
                     </view>
                     <connections>
@@ -67,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="-342"/>
+            <point key="canvasLocation" x="69.599999999999994" y="-342.27886056971516"/>
         </scene>
         <!--Details-->
         <scene sceneID="M77-7U-8Yo">
@@ -692,18 +759,6 @@
                                     <action selector="newDueDateSelected:" destination="kmh-Eg-EgO" eventType="valueChanged" id="6st-nX-jca"/>
                                 </connections>
                             </datePicker>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about-icon" translatesAutoresizingMaskIntoConstraints="NO" id="SQH-fq-Kq6">
-                                <rect key="frame" x="0.0" y="0.0" width="26" height="24"/>
-                                <accessibility key="accessibilityConfiguration" identifier="AboutViewController">
-                                    <accessibilityTraits key="traits" button="YES" image="YES" notEnabled="YES"/>
-                                    <bool key="isElement" value="YES"/>
-                                </accessibility>
-                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="26" id="cap-FS-wIN"/>
-                                    <constraint firstAttribute="height" constant="24" id="j6W-MY-xtu"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -724,8 +779,6 @@
                             <constraint firstItem="0Gj-ED-LdW" firstAttribute="top" secondItem="8YI-dy-rka" secondAttribute="bottom" constant="16" id="c5h-PB-gnV"/>
                             <constraint firstAttribute="trailing" secondItem="8N3-Yh-HfB" secondAttribute="trailing" constant="16" id="iLB-bl-UPa"/>
                             <constraint firstItem="8N3-Yh-HfB" firstAttribute="top" secondItem="Lhd-af-kvY" secondAttribute="bottom" constant="8" id="llD-BZ-Ues"/>
-                            <constraint firstItem="SQH-fq-Kq6" firstAttribute="leading" secondItem="a7p-zF-c8x" secondAttribute="leading" id="pZ0-Sy-buD"/>
-                            <constraint firstItem="SQH-fq-Kq6" firstAttribute="top" secondItem="a7p-zF-c8x" secondAttribute="top" id="qlg-KC-rFd"/>
                             <constraint firstItem="0Gj-ED-LdW" firstAttribute="centerX" secondItem="a7p-zF-c8x" secondAttribute="centerX" id="ucX-7Q-myL"/>
                             <constraint firstItem="jjQ-vb-bdF" firstAttribute="leading" secondItem="a7p-zF-c8x" secondAttribute="leading" constant="16" id="uvs-ba-ale"/>
                             <constraint firstItem="8N3-Yh-HfB" firstAttribute="leading" secondItem="a7p-zF-c8x" secondAttribute="leading" constant="16" id="vNa-xO-FB5"/>
@@ -739,7 +792,6 @@
                         <outlet property="projectTitleTextField" destination="8N3-Yh-HfB" id="PjF-wp-jKq"/>
                         <outlet property="saveDeadlineSwitch" destination="SBH-ms-Pqo" id="gKh-pn-15i"/>
                         <outlet property="wordCountTextField" destination="Wa5-UB-LM3" id="qDs-gz-ma3"/>
-                        <segue destination="arg-Lf-Bvq" kind="presentation" identifier="AboutViewController" modalTransitionStyle="flipHorizontal" id="9YG-fy-GdP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhX-Rh-5eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
