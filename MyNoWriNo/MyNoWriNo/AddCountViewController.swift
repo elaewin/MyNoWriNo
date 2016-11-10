@@ -45,21 +45,23 @@ class AddCountViewController: UIViewController {
     @IBAction func addWordCountButtonPressed(_ sender: Any) {
         guard let delegate = self.delegate else { return }
 
-        if newDate == nil && totalWordsTextBox.text != "" {
+        if newDate == nil && totalWordsTextField.text != "" {
             let date = Date()
-            let count = Int(totalWordsTextBox.text!)
-            if count != 0 {
+            let count = Int(totalWordsTextField.text!)
+            if count != 0 && count != nil {
                 delegate.addNewWordCount(newDate: date, newCount: count!)
+                self.dismiss(animated: true, completion: nil)
             } else {
-                //fire off alert.
+                print("did not save new word count data.")
             }
         }
         
-        if newDate != nil && totalWordsTextBox.text != "" {
+        if newDate != nil && totalWordsTextField.text != "" {
             let date = datePicker.date
-            let count = Int(totalWordsTextBox.text!)
+            let count = Int(totalWordsTextField.text!)
             if count != 0 {
                 delegate.addNewWordCount(newDate: date, newCount: count!)
+                self.dismiss(animated: true, completion: nil)
             } else {
                 //fire off alert
             }
