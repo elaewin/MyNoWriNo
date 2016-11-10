@@ -26,10 +26,9 @@ class CalendarService {
     
     func getAccessToCalendar(completion: @escaping ()->()) {
             self.store.requestAccess(to: .event, completion: {(granted: Bool, error: Error?) in
-                print(error)
                 
                 if !granted {
-                    print("Access to store not granted")
+                    print("Access to store not granted with possible error: \(error)")
                 } else {
                     OperationQueue.main.addOperation {
                         completion()

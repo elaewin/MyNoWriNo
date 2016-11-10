@@ -143,11 +143,14 @@ class NewProjectViewController: UIViewController {
 
 extension NewProjectViewController: UITextFieldDelegate {
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         if projectTitleTextField.text != "" && wordCountTextField.text != "" {
             createButton.isEnabled = true
         }
     }
+    
+    
+
 }
 
 

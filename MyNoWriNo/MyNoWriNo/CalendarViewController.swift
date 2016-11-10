@@ -42,7 +42,7 @@ class CalendarViewController: UIViewController {
     }
         
     @IBAction func addNewButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: AddCountViewController.identifier, sender: nil)
+        self.performSegue(withIdentifier: "AddWordCountSegue", sender: nil)
     }
     
 }
@@ -70,6 +70,8 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    
 }
 
 extension CalendarViewController: AddCountViewControllerDelegate {
