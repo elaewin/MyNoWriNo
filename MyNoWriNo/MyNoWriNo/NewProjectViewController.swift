@@ -78,6 +78,7 @@ class NewProjectViewController: UIViewController {
             newEvent.isAllDay = true
 
         
+        
             do {
                 try eventStore.store.save(newEvent, span: .thisEvent, commit: true)
                 
