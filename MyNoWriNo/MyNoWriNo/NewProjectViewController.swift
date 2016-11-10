@@ -95,9 +95,7 @@ class NewProjectViewController: UIViewController {
                 completion(false)
                 
             }
-
     }
-    
     
     @IBAction func createButtonPressed(_ sender: Any) {
         

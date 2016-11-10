@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AddCountViewControllerDelegate: class {
-    func addNewWordCount(newDate: Date, newCount: Int) -> (date: Date, count: Int)
+    func addNewWordCount(newDate: Date, newCount: Int)
 }
 
 class AddCountViewController: UIViewController {
@@ -21,6 +21,8 @@ class AddCountViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var totalWordsTextBox: UILabel!
+    
+    @IBOutlet weak var addWordCountButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +58,9 @@ class AddCountViewController: UIViewController {
 extension AddCountViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if wordCountTextField.text != "" {
-            createButton.isEnabled = true
+        if totalWordsTextBox.text != "" {
+            addWordCountButton.isEnabled = true
         }
     }
 }
+
