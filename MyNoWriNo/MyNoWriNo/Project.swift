@@ -55,6 +55,8 @@ class Project: NSObject {
         } else {
             self.wordsPerDayForTarget = self.wordsRemaining
         }
+        
+        self.dailyWordCount = []
     }
     
     required init(coder aDecoder: NSCoder) {

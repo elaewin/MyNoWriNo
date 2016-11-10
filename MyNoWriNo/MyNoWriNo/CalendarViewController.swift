@@ -33,6 +33,12 @@ class CalendarViewController: UIViewController {
         self.tableView.register(nib, forCellReuseIdentifier: WordCountCell.identifier)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
@@ -77,6 +83,11 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
 extension CalendarViewController: AddCountViewControllerDelegate {
     func addNewWordCount(newDate: Date, newCount: Int) {
         let newRecord = (date: newDate, count: newCount)
+        print(newRecord)
         self.project.dailyWordCount?.append(newRecord)
+        print("\(self.project.dailyWordCount?.count)")
+//        for item in self.project.dailyWordCount! {
+//            print(item)
+//        }
     }
 }
