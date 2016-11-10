@@ -22,7 +22,7 @@ class Project: NSObject {
     var daysElapsed: Int
     var daysRemaining: Int
     
-    var dailyWordCount: [[Date: Int]?]?
+    var dailyWordCount: [(date: Date, count: Int)]?
     var genre: String?
     
     var wordsPerDayForTarget: Int?
@@ -63,7 +63,7 @@ class Project: NSObject {
         wordsRemaining = aDecoder.decodeObject(forKey: "wordsRemaining") as! Int
         daysElapsed = aDecoder.decodeObject(forKey: "daysElapsed") as! Int
         daysRemaining = aDecoder.decodeObject(forKey: "daysRemaining") as! Int
-        dailyWordCount = aDecoder.decodeObject(forKey: "dailyWordCount") as! [[Date: Int]?]?
+        dailyWordCount = aDecoder.decodeObject(forKey: "dailyWordCount") as! [(date: Date, count: Int)]?
         genre = aDecoder.decodeObject(forKey: "genre") as! String?
         wordsPerDayForTarget = aDecoder.decodeObject(forKey: "wordsPerDayForTarget") as! Int?
     }
