@@ -32,8 +32,21 @@ class CalendarViewController: UIViewController {
         let nib = UINib(nibName: "WordCountCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: WordCountCell.identifier)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let destinationController = segue.destination as? AddCountViewController {
+            destinationController.delegate = self
+        }
+    }
+        
+    @IBAction func addNewButtonPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: AddCountViewController.identifier, sender: nil)
+    }
+    
 }
+
 
 extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -56,5 +69,11 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
         cell.wordCount = currentCount
         
         return cell
+    }
+}
+
+extension CalendarViewController: AddCountViewControllerDelegate {
+    func addNewWordCount(newDate: Date, newCount: Int) -> (date: Date, count: Int) {
+        return (date: newDate, count: newCount)
     }
 }

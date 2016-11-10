@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -210,6 +210,112 @@
             </objects>
             <point key="canvasLocation" x="3040.8000000000002" y="42.728635682158924"/>
         </scene>
+        <!--Add Count View Controller-->
+        <scene sceneID="eWm-8Q-pvY">
+            <objects>
+                <viewController id="YBB-Tm-A2d" customClass="AddCountViewController" customModule="MyNoWriNo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SbZ-SE-Prh"/>
+                        <viewControllerLayoutGuide type="bottom" id="KHi-4p-juV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xCM-3S-WsX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tkG-dr-Wkp">
+                                <rect key="frame" x="0.0" y="150" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="500437284.01014">
+                                    <!--2016-11-10 02:21:24 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="newDatePicked:" destination="YBB-Tm-A2d" eventType="valueChanged" id="W8u-hk-Cuy"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Your Daily Word Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-tF-FPf">
+                                <rect key="frame" x="43" y="52" width="290" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw4-r5-LbW">
+                                <rect key="frame" x="16" y="118" width="80" height="24"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Words Written" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwm-C2-Ywd">
+                                <rect key="frame" x="99.5" y="396" width="176" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaC-aG-xtQ">
+                                <rect key="frame" x="112.5" y="428" width="150" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Bry-Ga-ZAY"/>
+                                    <constraint firstAttribute="height" constant="45" id="g7f-Ry-kVw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vg6-Ds-DNC">
+                                <rect key="frame" x="87" y="513" width="200" height="45"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.19259159479999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Zvr-wb-1fR"/>
+                                    <constraint firstAttribute="width" constant="200" id="fNf-KM-36Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Word Count"/>
+                                <connections>
+                                    <action selector="addWordCountButtonPressed:" destination="YBB-Tm-A2d" eventType="touchUpInside" id="uRo-Fx-HTr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUQ-Dw-b6d">
+                                <rect key="frame" x="112" y="598" width="150" height="45"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0pV-Sx-Rd0"/>
+                                    <constraint firstAttribute="height" constant="45" id="ZFP-V2-wL9"/>
+                                </constraints>
+                                <state key="normal" title="CANCEL">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="YBB-Tm-A2d" eventType="touchUpInside" id="4Uz-8d-Xmd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mUQ-Dw-b6d" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="6ZN-hU-usN"/>
+                            <constraint firstItem="yaC-aG-xtQ" firstAttribute="top" secondItem="Cwm-C2-Ywd" secondAttribute="bottom" constant="8" id="9PG-Ur-3DW"/>
+                            <constraint firstItem="mUQ-Dw-b6d" firstAttribute="top" secondItem="Vg6-Ds-DNC" secondAttribute="bottom" constant="40" id="Dof-QA-U7v"/>
+                            <constraint firstItem="Gw4-r5-LbW" firstAttribute="top" secondItem="H9i-tF-FPf" secondAttribute="bottom" constant="38" id="ESR-sJ-N42"/>
+                            <constraint firstItem="tkG-dr-Wkp" firstAttribute="top" secondItem="Gw4-r5-LbW" secondAttribute="bottom" constant="8" id="FnI-AZ-wPg"/>
+                            <constraint firstItem="Cwm-C2-Ywd" firstAttribute="top" secondItem="tkG-dr-Wkp" secondAttribute="bottom" constant="30" id="NNv-OJ-Av2"/>
+                            <constraint firstItem="tkG-dr-Wkp" firstAttribute="centerX" secondItem="H9i-tF-FPf" secondAttribute="centerX" id="Ufd-Zc-ZnY"/>
+                            <constraint firstItem="H9i-tF-FPf" firstAttribute="top" secondItem="SbZ-SE-Prh" secondAttribute="bottom" constant="32" id="dqH-OM-nQS"/>
+                            <constraint firstItem="H9i-tF-FPf" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="fHW-j6-nIF"/>
+                            <constraint firstItem="Cwm-C2-Ywd" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="gbO-Mi-VFd"/>
+                            <constraint firstItem="yaC-aG-xtQ" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="htz-Yt-pZG"/>
+                            <constraint firstItem="Gw4-r5-LbW" firstAttribute="leading" secondItem="xCM-3S-WsX" secondAttribute="leading" constant="16" id="lw3-TK-zA0"/>
+                            <constraint firstItem="Vg6-Ds-DNC" firstAttribute="top" secondItem="yaC-aG-xtQ" secondAttribute="bottom" constant="40" id="nSH-3x-6s9"/>
+                            <constraint firstItem="tkG-dr-Wkp" firstAttribute="leading" secondItem="xCM-3S-WsX" secondAttribute="leading" id="vGm-CQ-zgq"/>
+                            <constraint firstItem="Vg6-Ds-DNC" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="xqp-Fx-dmh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButtonPressed" destination="mUQ-Dw-b6d" id="yBt-49-dNY"/>
+                        <outlet property="datePicker" destination="tkG-dr-Wkp" id="V8f-ji-P1s"/>
+                        <outlet property="totalWordsTextBox" destination="Cwm-C2-Ywd" id="bmJ-Ld-2IG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ghq-lC-1Dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2357.5999999999999" y="754.27286356821594"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="5WU-SI-tQU">
             <objects>
@@ -258,7 +364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5QX-y2-QMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3040.8000000000002" y="739.88005997001505"/>
+            <point key="canvasLocation" x="3041" y="748"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="rjK-hX-pPL">
@@ -285,6 +391,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="ADD NEW WORD COUNT"/>
+                                <connections>
+                                    <action selector="addNewButtonPressed:" destination="WJt-KD-1T7" eventType="touchUpInside" id="Hy3-D6-EYK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -300,6 +409,7 @@
                     <tabBarItem key="tabBarItem" title="Calendar" id="xCC-YQ-HoU"/>
                     <connections>
                         <outlet property="tableView" destination="cjo-zL-zS6" id="akq-KX-R7i"/>
+                        <segue destination="YBB-Tm-A2d" kind="presentation" identifier="AddWordCountSegue" id="di1-nH-6v2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZo-4v-md2" userLabel="First Responder" sceneMemberID="firstResponder"/>
