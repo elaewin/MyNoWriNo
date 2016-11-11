@@ -16,7 +16,7 @@ class WordCountCell: UITableViewCell {
     
     var wordCount: WordsTuple! {
         didSet {
-            self.dateLabel.text = getReadableDate(wordCount.date)
+            self.dateLabel.text = Projects.shared.getReadableDateMedium(wordCount.date)
             self.wordCountLabel.text = "\(wordCount.count)"
         }
     }
@@ -30,14 +30,6 @@ class WordCountCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    func getReadableDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.locale = Locale(identifier: "en_US")
-        let dateAsString = formatter.string(from: date)
-        return dateAsString
     }
 
 }

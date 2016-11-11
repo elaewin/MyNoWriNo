@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G2n-ku-KfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-778.39999999999998" y="-342.27886056971516"/>
+            <point key="canvasLocation" x="70" y="-1064"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -152,18 +152,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Project Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vJh-5s-Pfx">
-                                <rect key="frame" x="46" y="52" width="283" height="112"/>
+                                <rect key="frame" x="46" y="52" width="283" height="128"/>
                                 <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="40"/>
                                 <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7F-uC-UtL">
-                                <rect key="frame" x="99.5" y="526" width="175" height="42"/>
+                                <rect key="frame" x="57" y="517" width="260" height="60"/>
                                 <color key="backgroundColor" red="0.61568627450980395" green="0.88235294117647056" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="nwn-lA-SGY"/>
+                                    <constraint firstAttribute="width" constant="260" id="nwn-lA-SGY"/>
+                                    <constraint firstAttribute="height" constant="60" id="vaT-h0-kgW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
                                 <state key="normal" title="Delete Project">
                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -172,46 +173,46 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8F-Rv-QWw">
-                                <rect key="frame" x="128.5" y="204" width="119.5" height="35"/>
-                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="29"/>
+                                <rect key="frame" x="136" y="192" width="103" height="30"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
                                 <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5c5-fQ-vKH">
-                                <rect key="frame" x="152.5" y="263" width="70" height="40.5"/>
+                                <rect key="frame" x="152.5" y="234" width="70" height="40.5"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="35"/>
                                 <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA0-hO-Gkq">
-                                <rect key="frame" x="111" y="315.5" width="153.5" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="PA0-hO-Gkq">
+                                <rect key="frame" x="111" y="286.5" width="153.5" height="28"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
                                 <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAd-nP-5RK">
-                                <rect key="frame" x="99.5" y="456" width="175" height="40"/>
+                                <rect key="frame" x="57" y="427" width="260" height="60"/>
                                 <color key="backgroundColor" red="0.61568627450980395" green="0.88235294117647056" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="L9r-Z4-cjO"/>
-                                    <constraint firstAttribute="height" constant="40" id="xHH-KO-dSD"/>
+                                    <constraint firstAttribute="width" constant="260" id="L9r-Z4-cjO"/>
+                                    <constraint firstAttribute="height" constant="60" id="xHH-KO-dSD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
                                 <state key="normal" title="Edit">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="editButtonPressed:" destination="nSx-Sr-bOT" eventType="touchUpInside" id="5Sj-EF-3ci"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9V-Ku-XAP">
-                                <rect key="frame" x="108.5" y="379.5" width="158" height="34.5"/>
+                                <rect key="frame" x="108.5" y="350.5" width="158" height="34.5"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
                                 <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Io-HQ-Yb2">
-                                <rect key="frame" x="8" y="16" width="109" height="35"/>
+                                <rect key="frame" x="8" y="24" width="109" height="35"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <state key="normal" title="&lt; All Projects">
                                     <color key="titleColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -223,24 +224,23 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92549019607843142" green="0.97647058823529409" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="8Io-HQ-Yb2" firstAttribute="top" secondItem="Gwj-eW-W9V" secondAttribute="top" constant="16" id="BFP-0i-4Ay"/>
+                            <constraint firstItem="8Io-HQ-Yb2" firstAttribute="top" secondItem="Gwj-eW-W9V" secondAttribute="top" constant="24" id="BFP-0i-4Ay"/>
                             <constraint firstItem="PA0-hO-Gkq" firstAttribute="top" secondItem="5c5-fQ-vKH" secondAttribute="bottom" constant="12" id="DBX-sb-wUb"/>
                             <constraint firstItem="W8F-Rv-QWw" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="DOZ-Kf-4Xd"/>
                             <constraint firstItem="8Io-HQ-Yb2" firstAttribute="leading" secondItem="Gwj-eW-W9V" secondAttribute="leading" constant="8" id="Exk-kU-mHh"/>
-                            <constraint firstItem="bM8-NI-V9T" firstAttribute="top" secondItem="D7F-uC-UtL" secondAttribute="bottom" constant="50" id="KZp-wz-Cmu"/>
                             <constraint firstItem="5c5-fQ-vKH" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="QMe-Vd-FZs"/>
                             <constraint firstItem="D7F-uC-UtL" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="RX9-c5-buT"/>
                             <constraint firstItem="vJh-5s-Pfx" firstAttribute="top" secondItem="WpF-de-0tv" secondAttribute="bottom" constant="32" id="Uda-fB-RXk"/>
                             <constraint firstItem="D7F-uC-UtL" firstAttribute="top" secondItem="oAd-nP-5RK" secondAttribute="bottom" constant="30" id="VXv-Ew-MfP"/>
                             <constraint firstItem="vJh-5s-Pfx" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="cb6-xi-dmy"/>
                             <constraint firstItem="PA0-hO-Gkq" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="eLK-jA-9Qx"/>
-                            <constraint firstItem="5c5-fQ-vKH" firstAttribute="top" secondItem="W8F-Rv-QWw" secondAttribute="bottom" constant="24" id="hw4-XL-21U"/>
+                            <constraint firstItem="5c5-fQ-vKH" firstAttribute="top" secondItem="W8F-Rv-QWw" secondAttribute="bottom" constant="12" id="hw4-XL-21U"/>
                             <constraint firstItem="k9V-Ku-XAP" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="i1X-Cn-JIl"/>
                             <constraint firstItem="oAd-nP-5RK" firstAttribute="top" secondItem="k9V-Ku-XAP" secondAttribute="bottom" constant="42" id="qQD-mw-gvz"/>
                             <constraint firstItem="vJh-5s-Pfx" firstAttribute="leading" secondItem="Gwj-eW-W9V" secondAttribute="leadingMargin" constant="30" id="tbX-ST-fmd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vJh-5s-Pfx" secondAttribute="trailing" constant="30" id="tbe-52-A0H"/>
                             <constraint firstItem="oAd-nP-5RK" firstAttribute="centerX" secondItem="Gwj-eW-W9V" secondAttribute="centerX" id="vqv-R4-FuB"/>
-                            <constraint firstItem="W8F-Rv-QWw" firstAttribute="top" secondItem="vJh-5s-Pfx" secondAttribute="bottom" constant="40" id="w0Q-z3-Cp7"/>
+                            <constraint firstItem="W8F-Rv-QWw" firstAttribute="top" secondItem="vJh-5s-Pfx" secondAttribute="bottom" constant="12" id="w0Q-z3-Cp7"/>
                             <constraint firstItem="D7F-uC-UtL" firstAttribute="centerY" secondItem="Gwj-eW-W9V" secondAttribute="centerY" constant="213.5" id="wud-7w-kKq"/>
                             <constraint firstItem="k9V-Ku-XAP" firstAttribute="top" secondItem="PA0-hO-Gkq" secondAttribute="bottom" constant="36" id="zQ2-D3-NYe"/>
                         </constraints>
@@ -251,11 +251,128 @@
                         <outlet property="deadlineLabel" destination="5c5-fQ-vKH" id="H6L-kN-92L"/>
                         <outlet property="projectTitleLabel" destination="vJh-5s-Pfx" id="TDT-fD-Jf2"/>
                         <outlet property="totalWordCountLabel" destination="k9V-Ku-XAP" id="fj9-9D-Uvh"/>
+                        <segue destination="ZXh-Iz-0yj" kind="presentation" identifier="EditCurrentProjectSegue" modalTransitionStyle="flipHorizontal" id="cBL-FW-BQe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4s0-m5-468" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="956" y="42.728635682158924"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WSO-uE-4Fu">
+            <objects>
+                <viewController id="ZXh-Iz-0yj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CIr-g7-q9B"/>
+                        <viewControllerLayoutGuide type="bottom" id="jQv-o9-OTP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WAl-BM-Ulg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Your Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6M-SV-7yJ">
+                                <rect key="frame" x="93.5" y="52" width="187.5" height="30"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="g0H-t2-Q1O">
+                                <rect key="frame" x="39.5" y="196.5" width="296" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="xNm-si-fbQ"/>
+                                    <constraint firstAttribute="width" constant="296" id="yth-9x-eLf"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="500534192.65853399">
+                                    <!--2016-11-11 05:16:32 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Update Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pHS-aK-eTs">
+                                <rect key="frame" x="27.5" y="102" width="320" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DZd-bE-AOm"/>
+                                    <constraint firstAttribute="width" constant="320" id="jUd-RD-9vi"/>
+                                </constraints>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Deadline:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO2-57-fXu">
+                                <rect key="frame" x="117.5" y="162" width="139.5" height="26.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Target Word Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHo-ea-erB">
+                                <rect key="frame" x="69.5" y="404" width="237" height="26.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Update Target" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKS-yT-xz3">
+                                <rect key="frame" x="87.5" y="438" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4yw-J0-0fJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="dNp-4q-MQ3"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOw-s3-TyC">
+                                <rect key="frame" x="58" y="494" width="260" height="60"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.88235294119999996" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ok9-wx-GcP"/>
+                                    <constraint firstAttribute="width" constant="260" id="uEm-zR-9L1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
+                                <state key="normal" title="Update Project"/>
+                                <connections>
+                                    <action selector="createButtonPressed:" destination="kmh-Eg-EgO" eventType="touchUpInside" id="x2k-vA-eEQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1Q-Ha-8ac">
+                                <rect key="frame" x="58" y="570" width="260" height="60"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.88235294119999996" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="84k-iV-RTH"/>
+                                    <constraint firstAttribute="height" constant="60" id="RCf-PA-Pql"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="kmh-Eg-EgO" eventType="touchUpInside" id="xks-Ak-SSc"/>
+                                    <action selector="createButtonPressed:" destination="kmh-Eg-EgO" eventType="touchUpInside" id="dVU-mC-0TB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.97647058819999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="T1Q-Ha-8ac" firstAttribute="top" secondItem="ZOw-s3-TyC" secondAttribute="bottom" constant="16" id="2DY-rR-8oZ"/>
+                            <constraint firstItem="T1Q-Ha-8ac" firstAttribute="centerX" secondItem="WAl-BM-Ulg" secondAttribute="centerX" id="457-Ip-2Wi"/>
+                            <constraint firstItem="g0H-t2-Q1O" firstAttribute="centerX" secondItem="WAl-BM-Ulg" secondAttribute="centerX" id="7qo-ti-oQs"/>
+                            <constraint firstItem="GKS-yT-xz3" firstAttribute="top" secondItem="KHo-ea-erB" secondAttribute="bottom" constant="8" id="9Uv-Lq-PA1"/>
+                            <constraint firstItem="pHS-aK-eTs" firstAttribute="top" secondItem="U6M-SV-7yJ" secondAttribute="bottom" constant="20" id="9kD-9o-rYL"/>
+                            <constraint firstItem="KHo-ea-erB" firstAttribute="centerX" secondItem="WAl-BM-Ulg" secondAttribute="centerX" id="9pn-qd-d17"/>
+                            <constraint firstItem="g0H-t2-Q1O" firstAttribute="top" secondItem="mO2-57-fXu" secondAttribute="bottom" constant="8" id="ERR-vU-aLX"/>
+                            <constraint firstItem="mO2-57-fXu" firstAttribute="top" secondItem="pHS-aK-eTs" secondAttribute="bottom" constant="20" id="FQL-Oz-ZHV"/>
+                            <constraint firstItem="mO2-57-fXu" firstAttribute="centerX" secondItem="WAl-BM-Ulg" secondAttribute="centerX" id="HA1-b0-CNo"/>
+                            <constraint firstItem="g0H-t2-Q1O" firstAttribute="top" secondItem="mO2-57-fXu" secondAttribute="bottom" constant="8" id="IJr-Fq-Bio"/>
+                            <constraint firstItem="ZOw-s3-TyC" firstAttribute="top" secondItem="GKS-yT-xz3" secondAttribute="bottom" constant="16" id="ZQp-UH-2Gv"/>
+                            <constraint firstItem="U6M-SV-7yJ" firstAttribute="top" secondItem="CIr-g7-q9B" secondAttribute="bottom" constant="32" id="c2d-MI-Lx2"/>
+                            <constraint firstItem="KHo-ea-erB" firstAttribute="top" secondItem="g0H-t2-Q1O" secondAttribute="bottom" constant="8" id="fYg-ta-saw"/>
+                            <constraint firstItem="ZOw-s3-TyC" firstAttribute="centerX" secondItem="WAl-BM-Ulg" secondAttribute="centerX" id="htq-eC-fQ8"/>
+                            <constraint firstItem="GKS-yT-xz3" firstAttribute="centerX" secondItem="WAl-BM-Ulg" secondAttribute="centerX" id="sS1-oc-quf"/>
+                            <constraint firstItem="U6M-SV-7yJ" firstAttribute="centerX" secondItem="WAl-BM-Ulg" secondAttribute="centerX" id="smw-fI-STx"/>
+                            <constraint firstItem="pHS-aK-eTs" firstAttribute="centerX" secondItem="WAl-BM-Ulg" secondAttribute="centerX" id="yeN-Uo-o8e"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4C-x1-sE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="753.37331334332839"/>
         </scene>
         <!--Events-->
         <scene sceneID="npV-km-Nbm">
@@ -330,7 +447,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tkG-dr-Wkp">
-                                <rect key="frame" x="0.0" y="150" width="375" height="216"/>
+                                <rect key="frame" x="39.5" y="145.5" width="296" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="0Gj-Ge-G8A"/>
+                                    <constraint firstAttribute="height" constant="200" id="BKR-cS-hgT"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="500437284.01014">
                                     <!--2016-11-10 02:21:24 +0000-->
                                 </date>
@@ -339,57 +460,58 @@
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Your Daily Word Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-tF-FPf">
-                                <rect key="frame" x="43" y="52" width="290" height="28"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="32.5" y="52" width="310" height="30"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw4-r5-LbW">
-                                <rect key="frame" x="16" y="118" width="80" height="24"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For Date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw4-r5-LbW">
+                                <rect key="frame" x="16" y="112" width="343" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Words Written" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwm-C2-Ywd">
-                                <rect key="frame" x="100" y="396" width="176" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="96" y="375.5" width="184.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaC-aG-xtQ">
-                                <rect key="frame" x="113" y="428" width="150" height="45"/>
+                                <rect key="frame" x="113" y="409" width="150" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Bry-Ga-ZAY"/>
                                     <constraint firstAttribute="height" constant="45" id="g7f-Ry-kVw"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="addWordsNumberEntered:" destination="YBB-Tm-A2d" eventType="editingChanged" id="GET-CW-DaP"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vg6-Ds-DNC">
-                                <rect key="frame" x="87" y="513" width="200" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vg6-Ds-DNC">
+                                <rect key="frame" x="87" y="494" width="200" height="45"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.19259159479999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Zvr-wb-1fR"/>
                                     <constraint firstAttribute="width" constant="200" id="fNf-KM-36Q"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
                                 <state key="normal" title="Add Word Count"/>
                                 <connections>
                                     <action selector="addWordCountButtonPressed:" destination="YBB-Tm-A2d" eventType="touchUpInside" id="uRo-Fx-HTr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUQ-Dw-b6d">
-                                <rect key="frame" x="112" y="598" width="150" height="45"/>
+                                <rect key="frame" x="112" y="579" width="150" height="45"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="0pV-Sx-Rd0"/>
                                     <constraint firstAttribute="height" constant="45" id="ZFP-V2-wL9"/>
                                 </constraints>
-                                <state key="normal" title="CANCEL">
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -397,22 +519,22 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.97647058819999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mUQ-Dw-b6d" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="6ZN-hU-usN"/>
                             <constraint firstItem="yaC-aG-xtQ" firstAttribute="top" secondItem="Cwm-C2-Ywd" secondAttribute="bottom" constant="8" id="9PG-Ur-3DW"/>
                             <constraint firstItem="mUQ-Dw-b6d" firstAttribute="top" secondItem="Vg6-Ds-DNC" secondAttribute="bottom" constant="40" id="Dof-QA-U7v"/>
-                            <constraint firstItem="Gw4-r5-LbW" firstAttribute="top" secondItem="H9i-tF-FPf" secondAttribute="bottom" constant="38" id="ESR-sJ-N42"/>
+                            <constraint firstItem="Gw4-r5-LbW" firstAttribute="top" secondItem="H9i-tF-FPf" secondAttribute="bottom" constant="30" id="ESR-sJ-N42"/>
                             <constraint firstItem="tkG-dr-Wkp" firstAttribute="top" secondItem="Gw4-r5-LbW" secondAttribute="bottom" constant="8" id="FnI-AZ-wPg"/>
                             <constraint firstItem="Cwm-C2-Ywd" firstAttribute="top" secondItem="tkG-dr-Wkp" secondAttribute="bottom" constant="30" id="NNv-OJ-Av2"/>
+                            <constraint firstItem="tkG-dr-Wkp" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="PTT-Pe-Grx"/>
                             <constraint firstItem="tkG-dr-Wkp" firstAttribute="centerX" secondItem="H9i-tF-FPf" secondAttribute="centerX" id="Ufd-Zc-ZnY"/>
+                            <constraint firstItem="Gw4-r5-LbW" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="ZEI-Yx-8Pf"/>
                             <constraint firstItem="H9i-tF-FPf" firstAttribute="top" secondItem="SbZ-SE-Prh" secondAttribute="bottom" constant="32" id="dqH-OM-nQS"/>
-                            <constraint firstItem="H9i-tF-FPf" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="fHW-j6-nIF"/>
                             <constraint firstItem="Cwm-C2-Ywd" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="gbO-Mi-VFd"/>
                             <constraint firstItem="yaC-aG-xtQ" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="htz-Yt-pZG"/>
                             <constraint firstItem="Gw4-r5-LbW" firstAttribute="leading" secondItem="xCM-3S-WsX" secondAttribute="leading" constant="16" id="lw3-TK-zA0"/>
                             <constraint firstItem="Vg6-Ds-DNC" firstAttribute="top" secondItem="yaC-aG-xtQ" secondAttribute="bottom" constant="40" id="nSH-3x-6s9"/>
-                            <constraint firstItem="tkG-dr-Wkp" firstAttribute="leading" secondItem="xCM-3S-WsX" secondAttribute="leading" id="vGm-CQ-zgq"/>
                             <constraint firstItem="Vg6-Ds-DNC" firstAttribute="centerX" secondItem="xCM-3S-WsX" secondAttribute="centerX" id="xqp-Fx-dmh"/>
                         </constraints>
                     </view>
@@ -500,7 +622,7 @@
                                     <constraint firstAttribute="height" constant="50" id="dw9-G0-0t3"/>
                                     <constraint firstAttribute="width" constant="320" id="gq3-df-8go"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <state key="normal" title="ADD NEW WORD COUNT">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -563,8 +685,8 @@
                                 <color key="textColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Words to Target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5b-dz-Rlw">
-                                <rect key="frame" x="114.5" y="224.5" width="146" height="25.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Words Left to Target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5b-dz-Rlw">
+                                <rect key="frame" x="94.5" y="224.5" width="186.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
                                 <color key="textColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -624,13 +746,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Word Count Per Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KES-hB-mIA">
-                                <rect key="frame" x="41.5" y="510" width="292" height="25.5"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <rect key="frame" x="30.5" y="510" width="314" height="26.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="22"/>
                                 <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="workdcount/month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpG-zD-Pnk">
-                                <rect key="frame" x="100.5" y="543.5" width="174" height="25.5"/>
+                                <rect key="frame" x="100.5" y="544.5" width="174" height="25.5"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
                                 <color key="textColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -693,52 +815,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Title..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8N3-Yh-HfB">
-                                <rect key="frame" x="16" y="62.5" width="343" height="42"/>
+                                <rect key="frame" x="16" y="66" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="elO-dP-rAa"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjQ-vb-bdF">
-                                <rect key="frame" x="16" y="112.5" width="92" height="26.5"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Your Deadline:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjQ-vb-bdF">
+                                <rect key="frame" x="16" y="116" width="343" height="26.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genre..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6iE-9j-jvj">
-                                <rect key="frame" x="50" y="458" width="275" height="40"/>
+                                <rect key="frame" x="50" y="441.5" width="275" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5cW-eJ-m3u"/>
                                     <constraint firstAttribute="width" constant="275" id="K7O-ZU-p0P"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YI-dy-rka">
-                                <rect key="frame" x="58" y="514" width="260" height="60"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="58" y="497.5" width="260" height="60"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.88235294119999996" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="aXp-Pu-FCu"/>
                                     <constraint firstAttribute="width" constant="260" id="cx2-79-FT1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="CREATE"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
+                                <state key="normal" title="Create New"/>
                                 <connections>
                                     <action selector="createButtonPressed:" destination="kmh-Eg-EgO" eventType="touchUpInside" id="Zvs-5V-fk0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gj-ED-LdW">
-                                <rect key="frame" x="58" y="590" width="260" height="60"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="58" y="573.5" width="260" height="60"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.88235294119999996" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="T9B-si-Mbk"/>
                                     <constraint firstAttribute="height" constant="60" id="hQn-Am-PqO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="CANCEL">
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
+                                <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -747,19 +869,19 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Target Word Count" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Wa5-UB-LM3">
-                                <rect key="frame" x="85" y="402" width="205" height="40"/>
+                                <rect key="frame" x="89.5" y="385.5" width="196.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="M8U-3Q-ceR"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2hU-kw-Rvv">
-                                <rect key="frame" x="42.5" y="355" width="290.5" height="31"/>
+                                <rect key="frame" x="34.5" y="338.5" width="306" height="31"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wjL-9Z-wkw">
-                                        <rect key="frame" x="0.0" y="0.0" width="290.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="306" height="31"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPs-O3-2qb">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="31"/>
@@ -770,9 +892,9 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Deadline to Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyW-XN-NBi">
-                                                <rect key="frame" x="61" y="0.0" width="229.5" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="61" y="0.0" width="245" height="31"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -780,13 +902,17 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a New Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhd-af-kvY">
-                                <rect key="frame" x="80.5" y="28" width="215.5" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="68.5" y="28" width="239" height="30"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="25"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QeR-Pg-9h4">
-                                <rect key="frame" x="28" y="139" width="320" height="216"/>
+                                <rect key="frame" x="28" y="150.5" width="320" height="180"/>
+                                <color key="tintColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="DD0-e5-D2j"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="500241883.04997498">
                                     <!--2016-11-07 20:04:43 +0000-->
                                 </date>
@@ -795,10 +921,10 @@
                                 </connections>
                             </datePicker>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.97647058819999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8N3-Yh-HfB" firstAttribute="top" secondItem="Lhd-af-kvY" secondAttribute="bottom" constant="8" id="0qR-Zg-P6V"/>
-                            <constraint firstItem="2hU-kw-Rvv" firstAttribute="top" secondItem="QeR-Pg-9h4" secondAttribute="bottom" id="1FL-KM-6lc"/>
+                            <constraint firstItem="2hU-kw-Rvv" firstAttribute="top" secondItem="QeR-Pg-9h4" secondAttribute="bottom" constant="8" id="1FL-KM-6lc"/>
                             <constraint firstItem="2hU-kw-Rvv" firstAttribute="centerX" secondItem="a7p-zF-c8x" secondAttribute="centerX" id="4z7-0r-wQh"/>
                             <constraint firstItem="6iE-9j-jvj" firstAttribute="centerX" secondItem="a7p-zF-c8x" secondAttribute="centerX" id="86T-mj-lHg"/>
                             <constraint firstItem="6iE-9j-jvj" firstAttribute="top" secondItem="Wa5-UB-LM3" secondAttribute="bottom" constant="16" id="9PE-UL-kSF"/>
@@ -810,7 +936,8 @@
                             <constraint firstItem="Wa5-UB-LM3" firstAttribute="top" secondItem="2hU-kw-Rvv" secondAttribute="bottom" constant="16" id="KDF-iJ-CDq"/>
                             <constraint firstItem="QeR-Pg-9h4" firstAttribute="centerX" secondItem="a7p-zF-c8x" secondAttribute="centerX" id="M4z-B7-Waa"/>
                             <constraint firstItem="Lhd-af-kvY" firstAttribute="top" secondItem="vGQ-Zy-klz" secondAttribute="bottom" constant="8" id="OFu-UG-PnK"/>
-                            <constraint firstItem="QeR-Pg-9h4" firstAttribute="top" secondItem="jjQ-vb-bdF" secondAttribute="bottom" id="X0K-uK-DIW"/>
+                            <constraint firstItem="jjQ-vb-bdF" firstAttribute="centerX" secondItem="a7p-zF-c8x" secondAttribute="centerX" id="VHx-0N-mbv"/>
+                            <constraint firstItem="QeR-Pg-9h4" firstAttribute="top" secondItem="jjQ-vb-bdF" secondAttribute="bottom" constant="8" id="X0K-uK-DIW"/>
                             <constraint firstItem="0Gj-ED-LdW" firstAttribute="top" secondItem="8YI-dy-rka" secondAttribute="bottom" constant="16" id="c5h-PB-gnV"/>
                             <constraint firstAttribute="trailing" secondItem="8N3-Yh-HfB" secondAttribute="trailing" constant="16" id="iLB-bl-UPa"/>
                             <constraint firstItem="8N3-Yh-HfB" firstAttribute="top" secondItem="Lhd-af-kvY" secondAttribute="bottom" constant="8" id="llD-BZ-Ues"/>
@@ -831,7 +958,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhX-Rh-5eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="84" y="777.66116941529242"/>
+            <point key="canvasLocation" x="70" y="416"/>
         </scene>
         <!--Project Tab Bar Controller-->
         <scene sceneID="se1-54-fya">

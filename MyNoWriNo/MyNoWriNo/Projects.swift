@@ -27,4 +27,12 @@ class Projects {
         self.defaults.synchronize()
     }
     
+    func getReadableDateMedium(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.locale = Locale(identifier: "en_US")
+        let dateAsString = formatter.string(from: date)
+        return dateAsString
+    }
+    
 }
