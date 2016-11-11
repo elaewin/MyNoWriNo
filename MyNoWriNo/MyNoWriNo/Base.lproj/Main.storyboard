@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,57 +23,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Z1-De-IGm">
-                                <rect key="frame" x="161" y="627" width="53" height="32"/>
+                                <rect key="frame" x="161" y="626.5" width="53" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Home">
-                                    <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="flipHorizontal" id="MHw-Qa-gpf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Novel Write Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crX-bb-tv9">
-                                <rect key="frame" x="39" y="60" width="298" height="44"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="33"/>
-                                <color key="textColor" red="0.20392156862745098" green="0.36862745098039218" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="25.5" y="60" width="325" height="43"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="33"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <size key="shadowOffset" width="-1" height="1"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made for writers, inspired by writers." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evb-pc-0iC">
+                                <rect key="frame" x="87" y="495" width="200" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="SYZ-XS-ZWZ"/>
+                                    <constraint firstAttribute="height" constant="60" id="VUo-zx-UgS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkN-6r-NLo">
-                                <rect key="frame" x="41" y="134" width="293" height="398"/>
+                                <rect key="frame" x="41" y="89" width="293" height="398"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="398" id="QY9-1Y-Q1Z"/>
                                 </constraints>
                                 <string key="text">Create a project and monitor your progress along the way with My Novel Write Now! You can view project statistics, set a timer for a writing sprint, and add the due date to your device's calendar. We're here to help you stay on track. </string>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made for writers, inspired by writers." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evb-pc-0iC">
-                                <rect key="frame" x="43" y="540" width="289" height="20"/>
-                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.97647058819999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Evb-pc-0iC" firstAttribute="top" secondItem="kkN-6r-NLo" secondAttribute="bottom" constant="8" symbolic="YES" id="1zh-ol-TUU"/>
                             <constraint firstItem="5Z1-De-IGm" firstAttribute="centerY" secondItem="6hS-nK-lT7" secondAttribute="centerY" constant="309" id="5Bd-aC-zvp"/>
                             <constraint firstItem="5Z1-De-IGm" firstAttribute="centerX" secondItem="6hS-nK-lT7" secondAttribute="centerX" id="7gI-1f-Lr4"/>
                             <constraint firstItem="crX-bb-tv9" firstAttribute="top" secondItem="dRW-pC-HRZ" secondAttribute="bottom" constant="40" id="AU7-bP-fUa"/>
-                            <constraint firstItem="Evb-pc-0iC" firstAttribute="leading" secondItem="6hS-nK-lT7" secondAttribute="leading" constant="43" id="B2a-Cj-NPs"/>
-                            <constraint firstItem="Evb-pc-0iC" firstAttribute="top" secondItem="kkN-6r-NLo" secondAttribute="bottom" constant="8" id="EzW-8D-gd0"/>
+                            <constraint firstItem="Evb-pc-0iC" firstAttribute="centerX" secondItem="6hS-nK-lT7" secondAttribute="centerX" id="HmP-aC-tqe"/>
                             <constraint firstItem="crX-bb-tv9" firstAttribute="top" secondItem="dRW-pC-HRZ" secondAttribute="bottom" constant="40" id="MxR-n6-hp4"/>
                             <constraint firstItem="crX-bb-tv9" firstAttribute="centerX" secondItem="6hS-nK-lT7" secondAttribute="centerX" id="TiS-uT-bvt"/>
-                            <constraint firstItem="5Z1-De-IGm" firstAttribute="top" secondItem="Evb-pc-0iC" secondAttribute="bottom" constant="67" id="gdb-tT-54t"/>
                             <constraint firstItem="kkN-6r-NLo" firstAttribute="leading" secondItem="6hS-nK-lT7" secondAttribute="leading" constant="41" id="rUw-CP-rvO"/>
                             <constraint firstAttribute="trailing" secondItem="kkN-6r-NLo" secondAttribute="trailing" constant="41" id="rn5-xr-lBo"/>
-                            <constraint firstItem="kkN-6r-NLo" firstAttribute="centerX" secondItem="Evb-pc-0iC" secondAttribute="centerX" id="sVg-lA-k7L"/>
                             <constraint firstItem="kkN-6r-NLo" firstAttribute="centerX" secondItem="6hS-nK-lT7" secondAttribute="centerX" id="uMn-MB-sRm"/>
-                            <constraint firstItem="kkN-6r-NLo" firstAttribute="centerY" secondItem="6hS-nK-lT7" secondAttribute="centerY" id="xsP-7v-bn0"/>
-                            <constraint firstAttribute="trailing" secondItem="Evb-pc-0iC" secondAttribute="trailing" constant="43" id="y8N-NQ-bLR"/>
+                            <constraint firstItem="kkN-6r-NLo" firstAttribute="centerY" secondItem="6hS-nK-lT7" secondAttribute="centerY" constant="-45.5" id="xsP-7v-bn0"/>
+                            <constraint firstItem="5Z1-De-IGm" firstAttribute="top" secondItem="Evb-pc-0iC" secondAttribute="bottom" constant="71.5" id="ywa-GR-T8I"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -154,17 +153,17 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Project Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vJh-5s-Pfx">
                                 <rect key="frame" x="46" y="52" width="283" height="112"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="40"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7F-uC-UtL">
-                                <rect key="frame" x="112" y="526" width="150" height="42"/>
+                                <rect key="frame" x="99.5" y="526" width="175" height="42"/>
                                 <color key="backgroundColor" red="0.61568627450980395" green="0.88235294117647056" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="nwn-lA-SGY"/>
+                                    <constraint firstAttribute="width" constant="175" id="nwn-lA-SGY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
                                 <state key="normal" title="Delete Project">
                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -173,47 +172,50 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8F-Rv-QWw">
-                                <rect key="frame" x="133" y="204" width="110" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="128.5" y="204" width="119.5" height="35"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="29"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5c5-fQ-vKH">
-                                <rect key="frame" x="151" y="258" width="73" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="152.5" y="263" width="70" height="40.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="35"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA0-hO-Gkq">
-                                <rect key="frame" x="115" y="312" width="145" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="111" y="315.5" width="153.5" height="28"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAd-nP-5RK">
-                                <rect key="frame" x="112" y="456" width="150" height="40"/>
+                                <rect key="frame" x="99.5" y="456" width="175" height="40"/>
                                 <color key="backgroundColor" red="0.61568627450980395" green="0.88235294117647056" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="L9r-Z4-cjO"/>
+                                    <constraint firstAttribute="width" constant="175" id="L9r-Z4-cjO"/>
                                     <constraint firstAttribute="height" constant="40" id="xHH-KO-dSD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
                                 <state key="normal" title="Edit">
-                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="editButtonPressed:" destination="nSx-Sr-bOT" eventType="touchUpInside" id="5Sj-EF-3ci"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9V-Ku-XAP">
-                                <rect key="frame" x="95" y="372" width="185" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="108.5" y="379.5" width="158" height="34.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Io-HQ-Yb2">
-                                <rect key="frame" x="8" y="16" width="91" height="30"/>
-                                <state key="normal" title="&lt; All Projects"/>
+                                <rect key="frame" x="8" y="16" width="109" height="35"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <state key="normal" title="&lt; All Projects">
+                                    <color key="titleColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="nSx-Sr-bOT" eventType="touchUpInside" id="pvz-z5-O7X"/>
                                 </connections>
@@ -488,32 +490,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cjo-zL-zS6">
-                                <rect key="frame" x="0.0" y="75" width="375" height="468"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="471"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.97647058819999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANm-aa-NJ3">
                                 <rect key="frame" x="27" y="555" width="320" height="50"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.1925915948275862" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.88235294119999996" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dw9-G0-0t3"/>
                                     <constraint firstAttribute="width" constant="320" id="gq3-df-8go"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="ADD NEW WORD COUNT"/>
+                                <state key="normal" title="ADD NEW WORD COUNT">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="addNewButtonPressed:" destination="WJt-KD-1T7" eventType="touchUpInside" id="Hy3-D6-EYK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2l-hA-5lo">
-                                <rect key="frame" x="16" y="28" width="67" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="16" y="28" width="64.5" height="36"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClS-hx-uvs">
-                                <rect key="frame" x="268" y="28" width="91" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="270" y="28" width="89" height="36"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -554,91 +558,91 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percent Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5B-TQ-v9C">
-                                <rect key="frame" x="107" y="146" width="161" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="106.5" y="144.5" width="163" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Words to Target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5b-dz-Rlw">
-                                <rect key="frame" x="117" y="229" width="142" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="114.5" y="224.5" width="146" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Daily Word Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1H-NM-Wqc">
-                                <rect key="frame" x="56" y="273" width="264" height="27"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="57" y="270" width="261" height="26.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="final wordcount at current pace" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-sJ-heh">
-                                <rect key="frame" x="48" y="395" width="279" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="46.5" y="384.5" width="282.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average wpd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSj-j5-4R7">
-                                <rect key="frame" x="129" y="312" width="117" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="129.5" y="304.5" width="116.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wordcount/week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uak-Tg-fqL">
-                                <rect key="frame" x="113" y="478" width="150" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="112.5" y="464.5" width="151.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Stats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyE-hL-Ea1">
-                                <rect key="frame" x="93" y="52" width="190" height="39"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="90" y="52" width="196" height="42"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="35"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdQ-z9-b9U">
-                                <rect key="frame" x="79" y="107" width="218" height="27"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="84" y="110" width="208.5" height="26.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Words to Target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WS-8D-44L">
-                                <rect key="frame" x="108" y="190" width="159" height="27"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="108.5" y="190" width="159.5" height="26.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final Word Count at Current Pace" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzK-74-Kul">
-                                <rect key="frame" x="21" y="356" width="334" height="27"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="22" y="350" width="331" height="26.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Word Count Per Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYT-6v-87F">
-                                <rect key="frame" x="33" y="439" width="309" height="27"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="35" y="430" width="305" height="26.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Word Count Per Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KES-hB-mIA">
-                                <rect key="frame" x="29" y="522" width="317" height="27"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="41.5" y="510" width="292" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="workdcount/month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpG-zD-Pnk">
-                                <rect key="frame" x="103" y="561" width="170" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="100.5" y="543.5" width="174" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.40000000000000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019607843142" green="0.97647058823529409" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="wSj-j5-4R7" firstAttribute="top" secondItem="f1H-NM-Wqc" secondAttribute="bottom" constant="8" id="3fw-gc-XN3"/>
                             <constraint firstItem="5WS-8D-44L" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="3qO-km-aew"/>
-                            <constraint firstItem="wSj-j5-4R7" firstAttribute="top" secondItem="f1H-NM-Wqc" secondAttribute="bottom" constant="12" id="6aB-WD-alP"/>
                             <constraint firstItem="W5B-TQ-v9C" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="74Q-4P-5ip"/>
                             <constraint firstItem="lpG-zD-Pnk" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="8hl-q3-jYD"/>
-                            <constraint firstItem="k5b-dz-Rlw" firstAttribute="top" secondItem="5WS-8D-44L" secondAttribute="bottom" constant="12" id="9WX-iV-kaZ"/>
+                            <constraint firstItem="k5b-dz-Rlw" firstAttribute="top" secondItem="5WS-8D-44L" secondAttribute="bottom" constant="8" id="9WX-iV-kaZ"/>
                             <constraint firstItem="KES-hB-mIA" firstAttribute="top" secondItem="Uak-Tg-fqL" secondAttribute="bottom" constant="20" id="BYn-ie-EB5"/>
                             <constraint firstItem="dEJ-sJ-heh" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="EEu-xL-Ca0"/>
                             <constraint firstItem="5WS-8D-44L" firstAttribute="top" secondItem="W5B-TQ-v9C" secondAttribute="bottom" constant="20" id="Haj-fZ-DGX"/>
@@ -646,8 +650,7 @@
                             <constraint firstItem="OyE-hL-Ea1" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="JM1-Xu-J2t"/>
                             <constraint firstItem="SYT-6v-87F" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="Lc8-bW-J2D"/>
                             <constraint firstItem="wSj-j5-4R7" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="S0K-iY-IHl"/>
-                            <constraint firstItem="W5B-TQ-v9C" firstAttribute="top" secondItem="CdQ-z9-b9U" secondAttribute="bottom" constant="12" id="Sph-ho-JfA"/>
-                            <constraint firstItem="Uak-Tg-fqL" firstAttribute="top" secondItem="SYT-6v-87F" secondAttribute="bottom" constant="12" id="Wzj-Yq-R1c"/>
+                            <constraint firstItem="W5B-TQ-v9C" firstAttribute="top" secondItem="CdQ-z9-b9U" secondAttribute="bottom" constant="8" id="Sph-ho-JfA"/>
                             <constraint firstItem="SYT-6v-87F" firstAttribute="top" secondItem="dEJ-sJ-heh" secondAttribute="bottom" constant="20" id="Zmn-ij-zlc"/>
                             <constraint firstItem="Uak-Tg-fqL" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="aew-bH-Ruc"/>
                             <constraint firstItem="k5b-dz-Rlw" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="dhB-UG-vgc"/>
@@ -656,12 +659,11 @@
                             <constraint firstItem="CdQ-z9-b9U" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="gf7-NS-pfe"/>
                             <constraint firstItem="f1H-NM-Wqc" firstAttribute="top" secondItem="k5b-dz-Rlw" secondAttribute="bottom" constant="20" id="hMq-Sc-KZ8"/>
                             <constraint firstItem="SzK-74-Kul" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="hj1-vm-skg"/>
-                            <constraint firstItem="lpG-zD-Pnk" firstAttribute="top" secondItem="KES-hB-mIA" secondAttribute="bottom" constant="12" id="n5X-9Y-QMZ"/>
-                            <constraint firstItem="Uak-Tg-fqL" firstAttribute="top" secondItem="SYT-6v-87F" secondAttribute="bottom" constant="12" id="nND-OP-bz8"/>
+                            <constraint firstItem="lpG-zD-Pnk" firstAttribute="top" secondItem="KES-hB-mIA" secondAttribute="bottom" constant="8" id="n5X-9Y-QMZ"/>
                             <constraint firstItem="KES-hB-mIA" firstAttribute="centerX" secondItem="33i-rg-gfV" secondAttribute="centerX" id="nYG-FR-add"/>
-                            <constraint firstItem="dEJ-sJ-heh" firstAttribute="top" secondItem="SzK-74-Kul" secondAttribute="bottom" constant="12" id="tkp-v7-eh2"/>
+                            <constraint firstItem="Uak-Tg-fqL" firstAttribute="top" secondItem="SYT-6v-87F" secondAttribute="bottom" constant="8" id="qU8-4X-gcd"/>
+                            <constraint firstItem="dEJ-sJ-heh" firstAttribute="top" secondItem="SzK-74-Kul" secondAttribute="bottom" constant="8" id="tkp-v7-eh2"/>
                             <constraint firstItem="CdQ-z9-b9U" firstAttribute="top" secondItem="OyE-hL-Ea1" secondAttribute="bottom" constant="16" id="uHE-ry-bGk"/>
-                            <constraint firstItem="wSj-j5-4R7" firstAttribute="top" secondItem="f1H-NM-Wqc" secondAttribute="bottom" constant="12" id="zan-J9-QkT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stats" image="bars-chart" id="eQK-Da-QgU"/>
