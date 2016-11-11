@@ -38,11 +38,16 @@ class NewProjectViewController: UIViewController {
 
     @IBOutlet weak var createButton: UIButton!
     
+    @IBOutlet weak var cancelButton: UIButton!
+    
     @IBOutlet weak var saveDeadlineSwitch: UISwitch!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.createButton.layer.cornerRadius = 5
+        self.cancelButton.layer.cornerRadius = 5
         
         deadlineDatePicker.minimumDate = Date()
         

@@ -17,8 +17,12 @@ class CalendarViewController: UIViewController {
    
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var addNewButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.addNewButton.layer.cornerRadius = 5
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
