@@ -29,8 +29,11 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var dailyWordsRequiredLabel: UILabel!
     
+    @IBOutlet weak var deleteButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.deleteButton.layer.cornerRadius = 5
         
         updateData()
     }

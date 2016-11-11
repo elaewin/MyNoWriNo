@@ -26,9 +26,15 @@ class AddCountViewController: UIViewController {
     
     @IBOutlet weak var addWordCountButton: UIButton!
     
+    @IBOutlet weak var cancelButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.addWordCountButton.layer.cornerRadius = 5
+        
+        self.cancelButton.layer.cornerRadius = 5
         datePicker.maximumDate = Date()
         
         // Do any additional setup after loading the view.

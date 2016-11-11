@@ -18,6 +18,8 @@ class HomeViewController: UIViewController {
         
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var aboutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +28,8 @@ class HomeViewController: UIViewController {
         self.collectionView.allowsMultipleSelection = false
         
         self.collectionView.delegate = self
+        
+        self.aboutButton.layer.cornerRadius = 20
         
         
         let newProjectNib = UINib(nibName: "NewProjectCell", bundle: nil)
