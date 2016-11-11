@@ -44,9 +44,9 @@ class StatsViewController: UIViewController {
             
             self.averageWordsPerDayLabel.text = "\(calculateDailyAverage(count: project.cumulativeWordCount, days: project.daysOfWriting))"
             
-            self.averageWordsPerWeekLabel.text = "\(calculateWeeklyAverage(count: project.cumulativeWordCount, days: project.daysElapsed))"
+            self.averageWordsPerWeekLabel.text = "\(calculateWeeklyAverage(count: project.cumulativeWordCount, days: project.daysOfWriting))"
             
-            self.averageWordsPerMonthLabel.text = "\(calculateMonthlyAverage(count: project.cumulativeWordCount, days: project.daysElapsed))"
+            self.averageWordsPerMonthLabel.text = "\(calculateMonthlyAverage(count: project.cumulativeWordCount, days: project.daysOfWriting))"
             
         }
 
@@ -60,7 +60,7 @@ class StatsViewController: UIViewController {
             print("current", currentPace)
             let projectedPace = currentPace * daysRemaining
             print("Projected", projectedPace)
-            return projectedPace
+            return projectedPace + count
         }
     }
     

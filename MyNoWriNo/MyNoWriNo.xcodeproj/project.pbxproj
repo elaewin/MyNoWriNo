@@ -34,6 +34,7 @@
 		556A7A101DD4DF1F00307E51 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A7A0F1DD4DF1F00307E51 /* Extensions.swift */; };
 		559428681DD55A5D00E7DB0D /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559428671DD55A5D00E7DB0D /* Projects.swift */; };
 		5594286A1DD565C100E7DB0D /* WordsTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559428691DD565C100E7DB0D /* WordsTuple.swift */; };
+		5594286C1DD58EAA00E7DB0D /* EditProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5594286B1DD58EAA00E7DB0D /* EditProjectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		556A7A0F1DD4DF1F00307E51 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		559428671DD55A5D00E7DB0D /* Projects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		559428691DD565C100E7DB0D /* WordsTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsTuple.swift; sourceTree = "<group>"; };
+		5594286B1DD58EAA00E7DB0D /* EditProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		5547B15B1DCEE8430010CE9A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5594286B1DD58EAA00E7DB0D /* EditProjectViewController.swift */,
 				552652331DD4150F00710F1A /* AddCountViewController.swift */,
 				010B7FC91DD0E6C50097A46F /* CalendarViewController.swift */,
 				556294DC1DD2575900C87029 /* DetailsViewController.swift */,
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5594286C1DD58EAA00E7DB0D /* EditProjectViewController.swift in Sources */,
 				010B7FCA1DD0E6C50097A46F /* CalendarViewController.swift in Sources */,
 				5547B1631DD117A60010CE9A /* User.swift in Sources */,
 				5547B1471DCEE7570010CE9A /* AppDelegate.swift in Sources */,

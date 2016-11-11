@@ -29,6 +29,8 @@ class AddCountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        datePicker.maximumDate = Date()
+        
         // Do any additional setup after loading the view.
     }
 

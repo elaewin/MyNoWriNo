@@ -46,7 +46,7 @@ class DetailsViewController: UIViewController {
         }
         
         self.projectTitleLabel.text = self.project.name
-        self.deadlineLabel.text = self.project.getReadableDate(project.deadline)
+        self.deadlineLabel.text = Projects.shared.getReadableDateMedium(project.deadline)
         self.totalWordCountLabel.text = "\(self.project.cumulativeWordCount) of \(self.project.targetWordCount) goal"
         self.daysLeftInProject.text = "(\(self.project.daysRemaining) days remaining)"
     }
