@@ -86,6 +86,7 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
         let datesSet = Set(datesArray)
         return datesSet.count
     }
+    
 }
 
 extension CalendarViewController: AddCountViewControllerDelegate {
@@ -93,6 +94,7 @@ extension CalendarViewController: AddCountViewControllerDelegate {
         let newRecord = (date: newDate, count: newCount)
         print(newRecord)
         self.project.dailyWordCount?.append(newRecord)
+        self.project.cumulativeWordCount += newRecord.count
         self.project.daysOfWriting = getUniqueDates()
         if let projectTabBarController = self.tabBarController as? ProjectTabBarController {
             print("\(projectTabBarController.project.dailyWordCount?.count)")

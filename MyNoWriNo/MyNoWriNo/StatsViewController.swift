@@ -26,7 +26,6 @@ class StatsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         // Do any additional setup after loading the view.
     }
@@ -37,7 +36,7 @@ class StatsViewController: UIViewController {
         if let projectTabBarController = self.tabBarController as? ProjectTabBarController {
             self.project = projectTabBarController.project
             
-            self.percentCompleteLabel.text = "\(project.percentComplete)"
+            self.percentCompleteLabel.text = "\(updatePercentComplete(count: project.cumulativeWordCount, target: project.targetWordCount))%"
             
             self.wordsToTargetLabel.text = "\(project.wordsRemaining)"
             
@@ -84,6 +83,18 @@ class StatsViewController: UIViewController {
             return count
         } else {
             return (count / days) * 30
+        }
+    }
+    
+    func updatePercentComplete(count: Int, target: Int) -> Float {
+        if target != 0 {
+            print(count, target)
+            let percentage = (count / target) * 100
+            print("percentage: ", percentage)
+            return Float(percentage)
+        } else {
+            print("returning 0")
+            return 0
         }
     }
 }
