@@ -11,8 +11,6 @@ import EventKit
 
 typealias CalendarAuthCompletion = (Bool) -> ()
 
-
-
 class CalendarViewController: UIViewController {
     
     var project: Project!
@@ -52,7 +50,6 @@ class CalendarViewController: UIViewController {
     }
     
 }
-
 
 extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
     

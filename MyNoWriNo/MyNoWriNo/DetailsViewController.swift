@@ -27,6 +27,8 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var daysLeftInProject: UILabel!
     
+    @IBOutlet weak var dailyWordsRequiredLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +41,15 @@ class DetailsViewController: UIViewController {
         updateData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let destinationController = segue.destination as? EditProjectViewController {
+            destinationController.project = self.project
+//            destinationController.delegate = self
+        }
+    }
+    
     func updateData() {
         if let projectTabBarController = self.tabBarController as? ProjectTabBarController {
             self.project = projectTabBarController.project
@@ -49,6 +60,16 @@ class DetailsViewController: UIViewController {
         self.deadlineLabel.text = Projects.shared.getReadableDateMedium(project.deadline)
         self.totalWordCountLabel.text = "\(self.project.cumulativeWordCount) of \(self.project.targetWordCount) goal"
         self.daysLeftInProject.text = "(\(self.project.daysRemaining) days remaining)"
+        self.dailyWordsRequiredLabel.text = "\(getDailyWordCountRequired(daysRemaining: self.project.daysRemaining, targetNumber: self.project.targetWordCount, cumulativeWords: self.project.cumulativeWordCount))"
+    }
+    
+    func getDailyWordCountRequired(daysRemaining: Int, targetNumber: Int, cumulativeWords: Int) -> Int {
+        var dailyMinimum = 0
+        if daysRemaining != 0 && cumulativeWords < targetNumber {
+            let wordsRemaining = targetNumber - cumulativeWords
+            dailyMinimum = wordsRemaining / daysRemaining
+        }
+        return dailyMinimum
     }
     
     // MARK: Actions
@@ -57,9 +78,9 @@ class DetailsViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func editButtonPressed(_ sender: Any) {
-        
-    }
+//    @IBAction func editButtonPressed(_ sender: Any) {
+//        self.performSegue(withIdentifier: "EditCurrentProjectSegue", sender: nil)
+//    }
 
     @IBAction func deleteButtonPressed(_ sender: Any) {
         
@@ -77,6 +98,13 @@ class DetailsViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
-    
-    
 }
+
+//extension DetailsViewController: EditProjectViewControllerDelegate {
+//    func updateProject(newTitle: String, newDate: Date, newTarget: Int) {
+//        self.project.name = newTitle
+//        self.project.deadline = newDate
+//        self.project.targetWordCount = newTarget
+//        Projects.shared.saveProjectData()
+//    }
+//}
