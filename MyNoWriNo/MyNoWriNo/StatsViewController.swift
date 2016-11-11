@@ -89,9 +89,7 @@ class StatsViewController: UIViewController {
     func updatePercentComplete(count: Int, target: Int) -> Float {
         if target != 0 {
             print(count, target)
-            let percentage = (count / target) * 100
-            print("percentage: ", percentage)
-            return Float(percentage)
+            return (Float(count).divided(by: Float(target)) * 100)
         } else {
             print("returning 0")
             return 0
