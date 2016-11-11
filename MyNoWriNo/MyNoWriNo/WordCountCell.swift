@@ -14,7 +14,7 @@ class WordCountCell: UITableViewCell {
     
     @IBOutlet weak var wordCountLabel: UILabel!
     
-    var wordCount: (date: Date, count: Int)! {
+    var wordCount: WordsTuple! {
         didSet {
             self.dateLabel.text = getReadableDate(wordCount.date)
             self.wordCountLabel.text = "\(wordCount.count)"

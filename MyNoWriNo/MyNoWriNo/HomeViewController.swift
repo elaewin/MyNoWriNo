@@ -10,21 +10,11 @@ import UIKit
 import EventKit
 
 class HomeViewController: UIViewController {
-
-    var allProjects = [Project]() {
-        didSet {
-            saveProjectData(allProjects)
-            if collectionView != nil {
-                collectionView.reloadData()
-            }
-        }
-    }
     
     let kDisplayColumns = 2
     
     var selectedProject: Project?
     var selectedIndex: Int?
-    var defaults = UserDefaults.standard
         
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -46,7 +36,7 @@ class HomeViewController: UIViewController {
         
         self.collectionView.collectionViewLayout = HomeCollectionViewFlowLayout(columns: kDisplayColumns)
         
-        if allProjects.count < 1 {
+        if Projects.shared.allProjects.count < 1 {
             self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
         }
         
@@ -55,6 +45,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        self.collectionView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -79,13 +70,7 @@ class HomeViewController: UIViewController {
         
     }
 
-    func saveProjectData(_ array: [Project]) {
-        let savedData = NSKeyedArchiver.archivedData(withRootObject: array)
-        self.defaults.set(savedData, forKey: "projects")
-        
-        self.defaults.synchronize()
-    }
-
+    
     //MARK: Actions
     @IBAction func newProjectButtonPressed(_ sender: AnyObject) {
         self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
@@ -98,7 +83,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
  
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == allProjects.count {
+        if indexPath.row == Projects.shared.allProjects.count {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CreateNewProjectCell", for: indexPath) as! CreateNewProjectCell
             return cell
         } else {
@@ -107,7 +92,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             
             var currentProject: Project
             
-            currentProject = allProjects[indexPath.row]
+            currentProject = Projects.shared.allProjects[indexPath.row]
             
             cell.project = currentProject
             
@@ -117,15 +102,15 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
  
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return allProjects.count + 1
+        return Projects.shared.allProjects.count + 1
     }
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {        
-        if indexPath.row == allProjects.count {
+        if indexPath.row == Projects.shared.allProjects.count {
             self.performSegue(withIdentifier: NewProjectViewController.identifier, sender: nil)
         } else {
-            self.selectedProject = allProjects[indexPath.row]
+            self.selectedProject = Projects.shared.allProjects[indexPath.row]
             self.selectedIndex = indexPath.row
             self.performSegue(withIdentifier: "projectTabBarSegue", sender: nil)
         }
@@ -136,8 +121,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 extension HomeViewController: NewProjectControllerDelegate {
     
     func newProjectCreated(project: Project) {
-        allProjects.append(project)
-        for project in allProjects {
+        Projects.shared.allProjects.append(project)
+        for project in Projects.shared.allProjects {
             print("Project: \(project.name)")
         }
     }
@@ -146,7 +131,7 @@ extension HomeViewController: NewProjectControllerDelegate {
 extension HomeViewController: DetailsViewControllerDelegate {
     
     func deleteProject(index: Int) {
-        allProjects.remove(at: index)
+        Projects.shared.allProjects.remove(at: index)
         print("Removed project at index \(index)")
     }
 }

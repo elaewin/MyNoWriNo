@@ -15,22 +15,23 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="29"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iIP-pP-Avc" id="G1w-tZ-Ql9">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="28.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="28"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iud-UF-IRw">
-                        <rect key="frame" x="252" y="2.5" width="107" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="253.5" y="3.5" width="105.5" height="23"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                        <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-IG-Siz">
-                        <rect key="frame" x="16" y="2.5" width="42" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="16" y="3" width="40" height="23"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                        <color key="textColor" red="0.047058823530000002" green="0.1529411765" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.90196078431372551" green="1" blue="0.97647058823529409" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="c4a-IG-Siz" firstAttribute="centerY" secondItem="G1w-tZ-Ql9" secondAttribute="centerY" id="2Dc-fi-MXL"/>
                     <constraint firstItem="Iud-UF-IRw" firstAttribute="centerY" secondItem="G1w-tZ-Ql9" secondAttribute="centerY" id="Udy-2p-DPt"/>
