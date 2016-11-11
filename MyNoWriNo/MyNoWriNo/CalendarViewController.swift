@@ -95,6 +95,7 @@ extension CalendarViewController: AddCountViewControllerDelegate {
         print(newRecord)
         self.project.dailyWordCount.append(newRecord)
         self.project.cumulativeWordCount += newRecord.count
-        self.project.daysOfWriting = getUniqueDates()        
+        self.project.daysOfWriting = getUniqueDates()
+        Projects.shared.saveProjectData()
     }
 }
