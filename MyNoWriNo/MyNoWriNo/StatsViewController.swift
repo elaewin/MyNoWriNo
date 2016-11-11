@@ -40,7 +40,7 @@ class StatsViewController: UIViewController {
             
             self.wordsToTargetLabel.text = "\(project.wordsRemaining)"
             
-            self.finalWordCountAtPaceLabel.text = "\(calculateWordCountAtPace(count: project.cumulativeWordCount, daysRemaining: project.daysRemaining, daysElapsed: project.daysElapsed))"
+            self.finalWordCountAtPaceLabel.text = "\(calculateWordCountAtPace(count: project.cumulativeWordCount, daysRemaining: project.daysRemaining, daysOfWriting: project.daysOfWriting))"
             
             self.averageWordsPerDayLabel.text = "\(calculateDailyAverage(count: project.cumulativeWordCount, days: project.daysOfWriting))"
             
@@ -52,12 +52,14 @@ class StatsViewController: UIViewController {
 
     }
 
-    func calculateWordCountAtPace(count: Int, daysRemaining: Int, daysElapsed: Int) -> Int {
-        if daysElapsed == 0 {
+    func calculateWordCountAtPace(count: Int, daysRemaining: Int, daysOfWriting: Int) -> Int {
+        if daysOfWriting == 0 {
             return count
         } else {
-            let currentPace = count / daysElapsed
+            let currentPace = count / daysOfWriting
+            print("current", currentPace)
             let projectedPace = currentPace * daysRemaining
+            print("Projected", projectedPace)
             return projectedPace
         }
     }
