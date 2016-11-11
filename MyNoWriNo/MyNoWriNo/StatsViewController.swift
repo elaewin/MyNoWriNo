@@ -91,7 +91,7 @@ class StatsViewController: UIViewController {
             print(count, target)
             let percentage = (count / target) * 100
             print("percentage: ", percentage)
-            return Float(percentage)
+            return (Float(count).divided(by: Float(target)) * 100)
         } else {
             print("returning 0")
             return 0
