@@ -25,7 +25,9 @@ class ProjectCollectionCell: UICollectionViewCell {
             let dateAsString = project.getReadableDate(project.deadline)
             
             self.deadlineLabel.text = "Deadline: \(dateAsString)"
-            self.percentCompleteLabel.text = "\(self.project.updatePercentComplete(count: self.project.cumulativeWordCount, target: self.project.targetWordCount))"
+            
+            let rawPercentage = self.project.updatePercentComplete(count: self.project.cumulativeWordCount, target: self.project.targetWordCount)
+            self.percentCompleteLabel.text = "\(Projects.shared.roundToPlaces(value: rawPercentage, decimalPlaces: 1))"
             if let genre = project.genre {
                 self.genreLabel.text = genre
             }

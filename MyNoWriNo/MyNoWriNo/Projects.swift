@@ -35,4 +35,9 @@ class Projects {
         return dateAsString
     }
     
+    func roundToPlaces(value: Double, decimalPlaces: Int) -> Double {
+        let divisor = pow(10.0, Double(decimalPlaces))
+        return round(value * divisor) / divisor
+    }
+    
 }

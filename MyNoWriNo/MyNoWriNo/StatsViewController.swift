@@ -36,7 +36,10 @@ class StatsViewController: UIViewController {
         if let projectTabBarController = self.tabBarController as? ProjectTabBarController {
             self.project = projectTabBarController.project
             
-            self.percentCompleteLabel.text = "\(self.project.updatePercentComplete(count: project.cumulativeWordCount, target: project.targetWordCount))%"
+            let rawPercentage = self.project.updatePercentComplete(count: project.cumulativeWordCount, target: project.targetWordCount)
+            print(rawPercentage)
+            
+            self.percentCompleteLabel.text = "\(Projects.shared.roundToPlaces(value: rawPercentage, decimalPlaces: 1))%"
             
             self.wordsToTargetLabel.text = "\(project.wordsRemaining)"
             
