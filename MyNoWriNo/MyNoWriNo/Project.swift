@@ -94,10 +94,10 @@ class Project: NSObject {
         return dateAsString
     }
     
-    func updatePercentComplete(count: Int, target: Int) -> Float {
+    func updatePercentComplete(count: Int, target: Int) -> Double {
         if target != 0 {
             print(count, target)
-            return (Float(count).divided(by: Float(target)) * 100)
+            return (Double(count).divided(by: Double(target)) * 100)
         } else {
             print("returning 0")
             return 0
