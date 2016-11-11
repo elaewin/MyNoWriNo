@@ -57,10 +57,10 @@ class CalendarViewController: UIViewController {
 extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = self.project.dailyWordCount?.count {
-            return count
-        }
-        return 0
+//        if let count = self.project.dailyWordCount.count {
+            return self.project.dailyWordCount.count
+//        }
+//        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,9 +68,9 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
         
         let wordCountArray = project.dailyWordCount
         
-        let sorted = wordCountArray?.sorted(by: { $0.date < $1.date })
+        let sorted = wordCountArray.sorted(by: { $0.date < $1.date })
         
-        let currentCount = sorted![indexPath.row]
+        let currentCount = sorted[indexPath.row]
         
         cell.wordCount = currentCount
         
@@ -79,7 +79,7 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
     
     func getUniqueDates() -> Int {
         var datesArray = [String]()
-        for item in self.project.dailyWordCount! {
+        for item in self.project.dailyWordCount {
             let date = self.project.getReadableDate(item.date)
             datesArray.append(date)
         }
@@ -91,16 +91,10 @@ extension CalendarViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension CalendarViewController: AddCountViewControllerDelegate {
     func addNewWordCount(newDate: Date, newCount: Int) {
-        let newRecord = (date: newDate, count: newCount)
+        let newRecord = WordsTuple(date: newDate, count: newCount)
         print(newRecord)
-        self.project.dailyWordCount?.append(newRecord)
+        self.project.dailyWordCount.append(newRecord)
         self.project.cumulativeWordCount += newRecord.count
-        self.project.daysOfWriting = getUniqueDates()
-        if let projectTabBarController = self.tabBarController as? ProjectTabBarController {
-            print("\(projectTabBarController.project.dailyWordCount?.count)")
-            for item in projectTabBarController.project.dailyWordCount! {
-                print(item)
-            }
-        }
+        self.project.daysOfWriting = getUniqueDates()        
     }
 }

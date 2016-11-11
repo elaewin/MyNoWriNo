@@ -12,21 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    var homeController: HomeViewController?
     
     let defaults = UserDefaults.standard
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if let homeVC = window?.rootViewController as? HomeViewController{
-            self.homeController = homeVC
-        }
-        
         if let savedProjects = self.defaults.object(forKey: "projects") as? Data {
             print(savedProjects)
-            self.homeController?.allProjects = NSKeyedUnarchiver.unarchiveObject(with: savedProjects) as! [Project]
+            Projects.shared.allProjects = NSKeyedUnarchiver.unarchiveObject(with: savedProjects) as! [Project]
         }
         return true
     }
@@ -42,11 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         
-        if let projects = homeController?.allProjects {
-            saveProjectData(projects)
-        } else {
-            print("Error saving data to file.")
-        }
+        Projects.shared.saveProjectData()
     }
 }
 

@@ -686,7 +686,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Title..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8N3-Yh-HfB">
-                                <rect key="frame" x="16" y="63" width="343" height="42"/>
+                                <rect key="frame" x="16" y="62.5" width="343" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="elO-dP-rAa"/>
                                 </constraints>
@@ -695,13 +695,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadline:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjQ-vb-bdF">
-                                <rect key="frame" x="16" y="113" width="92" height="27"/>
+                                <rect key="frame" x="16" y="112.5" width="92" height="26.5"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genre..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6iE-9j-jvj">
-                                <rect key="frame" x="50" y="459" width="275" height="40"/>
+                                <rect key="frame" x="50" y="458" width="275" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5cW-eJ-m3u"/>
                                     <constraint firstAttribute="width" constant="275" id="K7O-ZU-p0P"/>
@@ -711,7 +711,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YI-dy-rka">
-                                <rect key="frame" x="58" y="515" width="260" height="60"/>
+                                <rect key="frame" x="58" y="514" width="260" height="60"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="aXp-Pu-FCu"/>
@@ -724,7 +724,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gj-ED-LdW">
-                                <rect key="frame" x="58" y="591" width="260" height="60"/>
+                                <rect key="frame" x="58" y="590" width="260" height="60"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="T9B-si-Mbk"/>
@@ -740,7 +740,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Target Word Count" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Wa5-UB-LM3">
-                                <rect key="frame" x="85" y="403" width="205" height="40"/>
+                                <rect key="frame" x="85" y="402" width="205" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="M8U-3Q-ceR"/>
                                 </constraints>
@@ -749,10 +749,10 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2hU-kw-Rvv">
-                                <rect key="frame" x="42" y="356" width="291" height="31"/>
+                                <rect key="frame" x="42.5" y="355" width="290.5" height="31"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wjL-9Z-wkw">
-                                        <rect key="frame" x="0.0" y="0.0" width="291" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290.5" height="31"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPs-O3-2qb">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="31"/>
@@ -763,7 +763,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Deadline to Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyW-XN-NBi">
-                                                <rect key="frame" x="61" y="0.0" width="230" height="31"/>
+                                                <rect key="frame" x="61" y="0.0" width="229.5" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -773,13 +773,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a New Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhd-af-kvY">
-                                <rect key="frame" x="80" y="28" width="216" height="27"/>
+                                <rect key="frame" x="80.5" y="28" width="215.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QeR-Pg-9h4">
-                                <rect key="frame" x="28" y="140" width="320" height="216"/>
+                                <rect key="frame" x="28" y="139" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="500241883.04997498">
                                     <!--2016-11-07 20:04:43 +0000-->
                                 </date>

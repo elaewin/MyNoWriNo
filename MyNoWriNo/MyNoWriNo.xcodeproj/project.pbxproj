@@ -32,6 +32,8 @@
 		556294DF1DD29A4C00C87029 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556294DE1DD29A4C00C87029 /* EventsViewController.swift */; };
 		556294E11DD2C0F400C87029 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556294E01DD2C0F400C87029 /* Protocols.swift */; };
 		556A7A101DD4DF1F00307E51 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556A7A0F1DD4DF1F00307E51 /* Extensions.swift */; };
+		559428681DD55A5D00E7DB0D /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559428671DD55A5D00E7DB0D /* Projects.swift */; };
+		5594286A1DD565C100E7DB0D /* WordsTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559428691DD565C100E7DB0D /* WordsTuple.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		556294DE1DD29A4C00C87029 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		556294E01DD2C0F400C87029 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		556A7A0F1DD4DF1F00307E51 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		559428671DD55A5D00E7DB0D /* Projects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
+		559428691DD565C100E7DB0D /* WordsTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsTuple.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +110,14 @@
 		5547B1581DCEE8100010CE9A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				559428691DD565C100E7DB0D /* WordsTuple.swift */,
 				0150994A1DD2921B009A3E42 /* CalendarService.swift */,
 				556294E01DD2C0F400C87029 /* Protocols.swift */,
 				5547B14A1DCEE7570010CE9A /* Main.storyboard */,
 				552652271DD3DB0100710F1A /* WordCountCell.xib */,
 				010B7FCD1DD1581E0097A46F /* NewProjectCell.xib */,
 				5547B15E1DCEE8EE0010CE9A /* Project.swift */,
+				559428671DD55A5D00E7DB0D /* Projects.swift */,
 				5547B1661DD11AFB0010CE9A /* projectCell.xib */,
 				5547B1621DD117A60010CE9A /* User.swift */,
 			);
@@ -239,6 +245,8 @@
 				552652341DD4150F00710F1A /* AddCountViewController.swift in Sources */,
 				556294DB1DD255BB00C87029 /* ProjectTabBarController.swift in Sources */,
 				5547B15D1DCEE8A30010CE9A /* HomeViewController.swift in Sources */,
+				5594286A1DD565C100E7DB0D /* WordsTuple.swift in Sources */,
+				559428681DD55A5D00E7DB0D /* Projects.swift in Sources */,
 				556A7A101DD4DF1F00307E51 /* Extensions.swift in Sources */,
 				5547B15F1DCEE8EE0010CE9A /* Project.swift in Sources */,
 				017960DE1DD52F2200498F9E /* AboutViewController.swift in Sources */,

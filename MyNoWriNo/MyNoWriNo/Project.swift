@@ -23,7 +23,7 @@ class Project: NSObject {
     var daysRemaining: Int
     var daysOfWriting: Int
     
-    var dailyWordCount: [(date: Date, count: Int)]?
+    var dailyWordCount: [WordsTuple] = []
     var genre: String?
     
     var wordsPerDayForTarget: Int?
@@ -57,9 +57,9 @@ class Project: NSObject {
             self.wordsPerDayForTarget = self.wordsRemaining
         }
         
-        self.dailyWordCount = []
+//        self.dailyWordCount = []
         
-        self.daysOfWriting = (self.dailyWordCount?.count)!
+        self.daysOfWriting = self.dailyWordCount.count
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -72,7 +72,7 @@ class Project: NSObject {
         wordsRemaining = aDecoder.decodeInteger(forKey: "wordsRemaining")
         daysElapsed = aDecoder.decodeInteger(forKey: "daysElapsed")
         daysRemaining = aDecoder.decodeInteger(forKey: "daysRemaining")
-        dailyWordCount = aDecoder.decodeObject(forKey: "dailyWordCount") as? [(date: Date, count: Int)]
+        dailyWordCount = aDecoder.decodeObject(forKey: "dailyWordCount") as! [WordsTuple]
         genre = aDecoder.decodeObject(forKey: "genre") as? String
         wordsPerDayForTarget = aDecoder.decodeObject(forKey: "wordsPerDayForTarget") as! Int?
         daysOfWriting = aDecoder.decodeInteger(forKey: "daysOfWriting")
@@ -92,6 +92,16 @@ class Project: NSObject {
         formatter.locale = Locale(identifier: "en_US")
         let dateAsString = formatter.string(from: date)
         return dateAsString
+    }
+    
+    func updatePercentComplete(count: Int, target: Int) -> Float {
+        if target != 0 {
+            print(count, target)
+            return (Float(count).divided(by: Float(target)) * 100)
+        } else {
+            print("returning 0")
+            return 0
+        }
     }
 }
 
