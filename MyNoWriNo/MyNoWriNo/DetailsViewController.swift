@@ -62,10 +62,10 @@ class DetailsViewController: UIViewController {
         self.projectTitleLabel.text = self.project.name
         self.deadlineLabel.text = Projects.shared.getReadableDateMedium(project.deadline)
         self.totalWordCountLabel.text = "\(self.project.cumulativeWordCount) of \(self.project.targetWordCount) goal"
-        self.daysLeftInProject.text = "(\(self.project.daysRemaining) days remaining)"
+        self.daysLeftInProject.text = "(\(getCurrentDaysRemaining(startDate: self.project.startDate, deadline: self.project.deadline)) days remaining)"
         self.dailyWordsRequiredLabel.text = "\(getDailyWordCountRequired(daysRemaining: self.project.daysRemaining, targetNumber: self.project.targetWordCount, cumulativeWords: self.project.cumulativeWordCount))"
     }
-    
+     
     func getDailyWordCountRequired(daysRemaining: Int, targetNumber: Int, cumulativeWords: Int) -> Int {
         var dailyMinimum = 0
         if daysRemaining != 0 && cumulativeWords < targetNumber {
@@ -73,6 +73,16 @@ class DetailsViewController: UIViewController {
             dailyMinimum = wordsRemaining / daysRemaining
         }
         return dailyMinimum
+    }
+    
+    func getCurrentDaysRemaining(startDate: Date, deadline: Date) -> Int {
+        if !(startDate > deadline) {
+            let currentDate = Date()
+            let interval = (DateInterval(start: currentDate, end: deadline)).duration / 86400
+            return Int(interval.rounded())
+        } else {
+            return 0
+        }
     }
     
     // MARK: Actions
