@@ -41,7 +41,7 @@ class StatsViewController: UIViewController {
             
             self.percentCompleteLabel.text = "\(Projects.shared.roundToPlaces(value: rawPercentage, decimalPlaces: 1))%"
             
-            self.wordsToTargetLabel.text = "\(project.wordsRemaining)"
+            self.wordsToTargetLabel.text = "\(self.wordsRemaining(count: self.project.cumulativeWordCount, target: self.project.targetWordCount))"
             
             self.finalWordCountAtPaceLabel.text = "\(calculateWordCountAtPace(count: project.cumulativeWordCount, daysRemaining: project.daysRemaining, daysOfWriting: project.daysOfWriting))"
             
@@ -88,6 +88,14 @@ class StatsViewController: UIViewController {
             return count
         } else {
             return (count / days) * 30
+        }
+    }
+    
+    func wordsRemaining(count: Int, target: Int) -> Int {
+        if count > target {
+            return 0
+        } else {
+            return target - count
         }
     }
     
