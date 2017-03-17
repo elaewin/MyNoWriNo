@@ -2,12 +2,13 @@
 ## A productivity app for writers.
 
 # What is My Novel Write Now?
-My Novel Write Now's main purpose is to provide an interface for writers, or anyone working on a writing project, to track their progress. Many writing projects (or competitions, such as National Novel Writing Month) have a minimum word count goal and a due date. My Novel Write Now allows the user to create a project that takes this information as input, allows the user to record their daily wordcount, and track their overall progress. My Novel Write Now can also save the project's deadline into the user's calendar (via the Calendar App) so that they are reminded of upcoming due dates.
+My Novel Write Now's provides a way writers to track their progress on writing projects, including daily word counts and the number of words required per day to reach a deadline. My Novel Write Now will also save a project's deadline to the user's calendar (via the Calendar App) so they are notified of upcoming due dates.
 
 ## Coming Soon!
 * A countdown timer, including a "Do Not Disturb" option, so writers can set timed "writing sprints" in order focus on writing without distractions.
 * The ability to post to social media, so users can share their progress with friends and other writers.
 * More statistics, including the ability for users to track the days and times in which they are most productive.
+* Google docs integration, so users who write in Google docs can update their daily word count more easily.
 
 ---
 
